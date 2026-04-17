@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keko's Burguer - Las Mejores Hamburguesas</title>
+    <link rel="icon" type="image/png" href="https://via.placeholder.com/32x32/FF6F00/FFFFFF?text=KB">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Tailwind Colors (if needed, otherwise rely on default orange-500/600/700) */
+        :root {
+            --color-keko-orange: #FF6F00; /* A vibrant orange */
+            --color-keko-white: #FFFFFF;
+            --color-keko-dark: #333333;
+        }
+        .bg-keko-orange { background-color: var(--color-keko-orange); }
+        .text-keko-orange { color: var(--color-keko-orange); }
+        .border-keko-orange { border-color: var(--color-keko-orange); }
+
+        /* Custom utility classes to ensure specific styles */
+        .hero-bg-image {
+            background-image: url('https://images.unsplash.com/photo-1571091718767-18b5b1479d2b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+
+    <!-- Header / Navigation -->
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="text-2xl font-bold text-keko-orange">Keko's Burguer</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#menu" class="text-gray-700 hover:text-keko-orange font-medium">Menú</a>
+                <a href="#nosotros" class="text-gray-700 hover:text-keko-orange font-medium">Nosotros</a>
+                <a href="#contacto" class="text-gray-700 hover:text-keko-orange font-medium">Contacto</a>
+                <a href="#pedir" class="bg-keko-orange text-white px-5 py-2 rounded-full hover:bg-orange-700 transition duration-300">Pedir Online</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6 text-keko-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg-image bg-cover bg-center h-[600px] flex items-center justify-center text-white relative">
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="container mx-auto px-6 text-center z-10">
+            <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-4 drop-shadow-lg">
+                Sabor Inigualable, Experiencia Keko's
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto drop-shadow-md">
+                Disfruta de las hamburguesas más jugosas y los ingredientes más frescos.
+            </p>
+            <a href="#menu" class="bg-keko-orange text-white text-lg font-semibold px-8 py-4 rounded-full hover:bg-orange-700 transition duration-300 transform hover:scale-105 shadow-lg">
+                Explorar Menú
+            </a>
+        </div>
+    </section>
+
+    <!-- Featured Burgers Section -->
+    <section id="menu" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">Nuestras Favoritas</h2>
+            <p class="text-lg text-gray-600 mb-12">Hechas con pasión y los mejores ingredientes.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Burger Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1568901346379-8ce8e6795f54?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Keko's Clásica" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Keko's Clásica</h3>
+                        <p class="text-gray-600 mb-4">Carne 100% res, queso cheddar, lechuga, tomate, cebolla, pepinillos y salsa especial Keko's.</p>
+                        <span class="text-3xl font-bold text-keko-orange">$12.50</span>
+                    </div>
+                </div>
+
+                <!-- Burger Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1603597811650-7171d3434ac2?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="La Picante de Keko" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">La Picante de Keko</h3>
+                        <p class="text-gray-600 mb-4">Doble carne, jalapeños, queso pepper jack, tocino crujiente y aderezo chipotle.</p>
+                        <span class="text-3xl font-bold text-keko-orange">$14.00</span>
+                    </div>
+                </div>
+
+                <!-- Burger Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1596180579914-1f6e6659f43f?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Keko's Veggie" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Keko's Veggie</h3>
+                        <p class="text-gray-600 mb-4">Hamburguesa de lentejas y champiñones, aguacate, tomate, cebolla morada y salsa verde.</p>
+                        <span class="text-3xl font-bold text-keko-orange">$13.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12">
+                <a href="#" class="bg-keko-orange text-white text-lg font-semibold px-8 py-4 rounded-full hover:bg-orange-700 transition duration-300 transform hover:scale-105 shadow-lg">
+                    Ver Menú Completo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="nosotros" class="py-16 bg-white">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1512152285474-5fe5c88b646c?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sobre Keko's Burguer" class="rounded-xl shadow-lg">
+            </div>
+            <div class="md:w-1/2 text-center md:text-left">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Nuestra Historia</h2>
+                <p class="text-lg text-gray-700 mb-6">
+                    En Keko's Burguer, creemos que una buena hamburguesa puede alegrar cualquier día. Desde nuestros humildes comienzos, nos hemos dedicado a perfeccionar el arte de la hamburguesa, utilizando solo los ingredientes más frescos y carnes de la más alta calidad.
+                </p>
+                <p class="text-lg text-gray-700 mb-6">
+                    Cada hamburguesa se prepara con amor y atención al detalle, asegurando una explosión de sabor en cada mordisco. Ven y descubre por qué somos el lugar favorito para los amantes de las hamburguesas.
+                </p>
+                <a href="#contacto" class="text-keko-orange hover:text-orange-700 font-semibold inline-flex items-center">
+                    Conoce más sobre nosotros
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Order Section -->
+    <section id="pedir" class="py-20 bg-keko-orange text-white text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-4">¿Listo para Tu Keko's Burguer?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                No esperes más para disfrutar de la mejor hamburguesa de la ciudad. Pide online ahora o visítanos.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="#" class="bg-white text-keko-orange text-lg font-semibold px-8 py-4 rounded-full hover:bg-gray-100 transition duration-300 transform hover:scale-105 shadow-lg">
+                    Pedir Online Ahora
+                </a>
+                <a href="#contacto" class="border-2 border-white text-white text-lg font-semibold px-8 py-4 rounded-full hover:bg-white hover:text-keko-orange transition duration-300 transform hover:scale-105 shadow-lg">
+                    Encuéntranos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">Contáctanos</h2>
+            <p class="text-lg text-gray-600 mb-12">Estamos listos para atenderte.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+                <!-- Contact Info -->
+                <div class="bg-white p-8 rounded-xl shadow-lg text-left">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Información de Contacto</h3>
+                    <p class="mb-3 text-gray-700"><strong class="font-medium">Dirección:</strong> Calle Ficticia 123, Ciudad Inventada, CP 45678</p>
+                    <p class="mb-3 text-gray-700"><strong class="font-medium">Teléfono:</strong> <a href="tel:+1234567890" class="text-keko-orange hover:underline">+1 (234) 567-890</a></p>
+                    <p class="mb-3 text-gray-700"><strong class="font-medium">Email:</strong> <a href="mailto:info@kekosburguer.com" class="text-keko-orange hover:underline">info@kekosburguer.com</a></p>
+                    <p class="mb-3 text-gray-700"><strong class="font-medium">Horario:</strong> Lunes - Sábado: 12:00 PM - 10:00 PM | Domingo: 1:00 PM - 9:00 PM</p>
+                </div>
+
+                <!-- Map Placeholder -->
+                <div class="bg-white p-8 rounded-xl shadow-lg flex items-center justify-center h-full">
+                    <div class="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center text-gray-500">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15049.435775535564!2d-99.1764619!3d19.4326079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff3510f01a7d%3A0x6a0c0e0b3c1a3b9d!2sCDMX%2C%20M%C3%A9xico!5e0!3m2!1ses!2sus!4v1701398400000!5m2!1ses!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-lg"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-6 text-center md:flex md:justify-between md:items-center">
+            <p class="mb-6 md:mb-0">&copy; 2023 Keko's Burguer. Todos los derechos reservados.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="hover:text-keko-orange transition duration-300">
+                    <img src="https://cdn.icon-icons.com/icons2/2368/PNG/512/facebook_logo_icon_143431.png" alt="Facebook" class="w-6 h-6">
+                </a>
+                <a href="#" class="hover:text-keko-orange transition duration-300">
+                    <img src="https://cdn.icon-icons.com/icons2/2368/PNG/512/instagram_logo_icon_143432.png" alt="Instagram" class="w-6 h-6">
+                </a>
+                <a href="#" class="hover:text-keko-orange transition duration-300">
+                    <img src="https://cdn.icon-icons.com/icons2/2368/PNG/512/twitter_logo_icon_143434.png" alt="Twitter" class="w-6 h-6">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
