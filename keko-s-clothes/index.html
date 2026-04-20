@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keko's Clothes | Moda Exclusiva</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          gold: {
+            light: '#F5E6C8',
+            DEFAULT: '#C9A227',
+            dark: '#A8861C'
+          }
+        },
+        fontFamily: {
+          serif: ['Playfair Display', 'serif'],
+          sans: ['Inter', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+<style>
+  body { font-family: 'Inter', sans-serif; }
+  .font-serif { font-family: 'Playfair Display', serif; }
+  .hero-bg {
+    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+  }
+  .gold-gradient {
+    background: linear-gradient(135deg, #C9A227 0%, #F5E6C8 50%, #C9A227 100%);
+  }
+  .gold-text {
+    background: linear-gradient(135deg, #C9A227 0%, #A8861C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .card-hover { transition: all 0.4s ease; }
+  .card-hover:hover { transform: translateY(-8px); box-shadow: 0 25px 50px -12px rgba(201, 162, 39, 0.25); }
+  .nav-link { position: relative; }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; left: 0;
+    width: 0; height: 2px;
+    background: #C9A227;
+    transition: width 0.3s ease;
+  }
+  .nav-link:hover::after { width: 100%; }
+</style>
+</head>
+<body class="bg-white text-gray-800">
+
+<!-- NAVBAR -->
+<header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+  <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2">
+      <span class="text-2xl font-serif font-black gold-text">Keko's</span>
+      <span class="text-2xl font-serif font-light text-gray-800">Clothes</span>
+    </a>
+    <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-700">
+      <li><a href="#inicio" class="nav-link">Inicio</a></li>
+      <li><a href="#servicios" class="nav-link">Servicios</a></li>
+      <li><a href="#tienda" class="nav-link">Tienda</a></li>
+      <li><a href="#turnos" class="nav-link">Turnos</a></li>
+      <li><a href="#contacto" class="nav-link">Contacto</a></li>
+    </ul>
+    <a href="#turnos" class="hidden md:inline-block bg-gold text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-gold-dark transition shadow-md">Reservar Turno</a>
+    <button id="menuBtn" class="md:hidden text-2xl text-gold">☰</button>
+  </nav>
+  <div id="mobileMenu" class="hidden md:hidden bg-white border-t px-6 py-4 space-y-3">
+    <a href="#inicio" class="block text-gray-700">Inicio</a>
+    <a href="#servicios" class="block text-gray-700">Servicios</a>
+    <a href="#tienda" class="block text-gray-700">Tienda</a>
+    <a href="#turnos" class="block text-gray-700">Turnos</a>
+    <a href="#contacto" class="block text-gray-700">Contacto</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="inicio" class="hero-bg min-h-screen flex items-center justify-center pt-20">
+  <div class="text-center px-6 max-w-4xl">
+    <p class="text-gold-light tracking-[0.3em] text-sm mb-4 uppercase">Colección Exclusiva 2025</p>
+    <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight mb-6">
+      Elegancia que <span class="gold-text">define</span> tu estilo
+    </h1>
+    <p class="text-gray-200 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light">
+      En Keko's Clothes combinamos moda, servicio personalizado y atención a medida para realzar tu identidad.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#tienda" class="bg-gold hover:bg-gold-dark text-white px-8 py-4 rounded-full font-semibold transition shadow-lg">Explorar Tienda</a>
+      <a href="#turnos" class="border-2 border-white text-white hover:bg-white hover:text-gold px-8 py-4 rounded-full font-semibold transition">Reservar Turno</a>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+    <div class="text-center p-6">
+      <div class="w-16 h-16 mx-auto mb-4 rounded-full gold-gradient flex items-center justify-center text-white text-2xl">✦</div>
+      <h3 class="font-serif text-xl font-bold mb-2">Calidad Premium</h3>
+      <p class="text-gray-600 text-sm">Prendas seleccionadas con los mejores materiales y acabados.</p>
+    </div>
+    <div class="text-center p-6">
+      <div class="w-16 h-16 mx-auto mb-4 rounded-full gold-gradient flex items-center justify-center text-white text-2xl">✦</div>
+      <h3 class="font-serif text-xl font-bold mb-2">Atención Personalizada</h3>
+      <p class="text-gray-600 text-sm">Asesoría individual para encontrar tu estilo perfecto.</p>
+    </div>
+    <div class="text-center p-6">
+      <div class="w-16 h-16 mx-auto mb-4 rounded-full gold-gradient flex items-center justify-center text-white text-2xl">✦</div>
+      <h3 class="font-serif text-xl font-bold mb-2">Envíos a Todo el País</h3>
+      <p class="text-gray-600 text-sm">Recibí tu pedido en la puerta de tu casa con total seguridad.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="py-24 bg-gradient-to-b from-white to-gold-light/20">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="text-gold tracking-[0.3em] text-sm mb-3 uppercase">Nuestros Servicios</p>
+      <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-900">Experiencia integral de moda</h2>
+      <div class="w-24 h-1 gold-gradient mx-auto mt-6"></div>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="card-hover bg-white rounded-2xl p-8 border border-gold/20 shadow-sm">
+        <div class="text-5xl mb-4">👗</div>
+        <h3 class="font-serif text-2xl font-bold mb-3 text-gray-900">Asesoría de Imagen</h3>
+        <p class="text-gray-600 mb-4">Descubrí el estilo que mejor refleja tu personalidad con nuestros expertos.</p>
+        <span class="gold-text font-semibold">Desde $15.000</span>
+      </div>
+      <div class="card-hover bg-white rounded-2xl p-8 border border-gold/20 shadow-sm">
+        <div class="text-5xl mb-4">✂️</div>
+        <h3 class="font-serif text-2xl font-bold mb-3 text-gray-900">Confección a Medida</h3>
+        <p class="text-gray-600 mb-4">Prendas únicas diseñadas y ajustadas perfectamente a tu cuerpo.</p>
+        <span class="gold-text font-semibold">Consultar</span>
+      </div>
+      <div class="card-hover bg-white rounded-2xl p-8 border border-gold/20 shadow-sm">
+        <div class="text-5xl mb-4">💎</div>
+        <h3 class="font-serif text-2xl font-bold mb-3 text-gray-900">Personal Shopper</h3>
+        <p class="text-gray-600 mb-4">Te acompañamos a elegir el outfit perfecto para cada ocasión.</p>
+        <span class="gold-text font-semibold">Desde $20.000</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIENDA -->
+<section id="tienda" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="text-gold tracking-[0.3em] text-sm mb-3 uppercase">Colección</p>
+      <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-900">Descubrí nuestra tienda</h2>
+      <div class="w-24 h-1 gold-gradient mx-auto mt-6"></div>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="card-hover group cursor-pointer">
+        <div class="overflow-hidden rounded-xl bg-gray-100 aspect-[3/4]">
+          <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+        </div>
+        <div class="pt-4">
+          <h4 class="font-serif text-lg font-bold">Vestido Dorado</h4>
+          <p class="gold-text font-semibold">$45.000</p>
+        </div>
+      </div>
+      <div class="card-hover group cursor-pointer">
+        <div class="overflow-hidden rounded-xl bg-gray-100 aspect-[3/4]">
+          <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+        </div>
+        <div class="pt-4">
+          <h4 class="font-serif text-lg font-bold">Blazer Elegante</h4>
+          <p class="gold-text font-semibold">$62.000</p>
+        </div>
+      </div>
+      <div class="card-hover group cursor-pointer">
+        <div class="overflow-hidden rounded-xl bg-gray-100 aspect-[3/4]">
+          <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+        </div>
+        <div class="pt-4">
+          <h4 class="font-serif text-lg font-bold">Conjunto Chic</h4>
+          <p class="gold-text font-semibold">$58.000</p>
+        </div>
+      </div>
+      <div class="card-hover group cursor-pointer">
+        <div class="overflow-hidden rounded-xl bg-gray-100 aspect-[3/4]">
+          <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+        </div>
+        <div class="pt-4">
+          <h4 class="font-serif text-lg font-bold">Abrigo Premium</h4>
+          <p class="gold-text font-semibold">$78.000</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-12">
+      <a href="#" class="inline-block bg-gold hover:bg-gold-dark text-white px-10 py-4 rounded-full font-semibold transition shadow-lg">Ver Catálogo Completo</a>
+    </div>
+  </div>
+</section>
+
+<!-- TURNOS -->
+<section id="turnos" class="py-24 bg-gray-900 text-white relative overflow-hidden">
+  <div class="absolute inset-0 opacity-10" style="background-image:url('https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1920&q=80');background-size:cover;"></div>
+  <div class="max-w-5xl mx-auto px-6 relative">
+    <div class="text-center mb-12">
+      <p class="text-gold tracking-[0.3em] text-sm mb-3 uppercase">Reservá tu lugar</p>
+      <h2 class="font-serif text-4xl md:text-5xl font-bold">Agendá tu turno online</h2>
+      <div class="w-24 h-1 gold-gradient mx-auto mt-6"></div>
+      <p class="text-gray-300 mt-6 max-w-2xl mx-auto">Completá el formulario y te contactaremos para confirmar la cita perfecta.</p>
+    </div>
+    <form class="bg-white/5 backdrop-blur-md border border-gold/30 rounded-2xl p-8 md:p-12 grid md:grid-cols-2 gap-6">
+      <div>
+        <label class="block text-sm text-gold mb-2">Nombre completo</label>
+        <input type="text" class="w-full bg-transparent border-b border-gray-500 focus:border-gold outline-none py-2 text-white">
+      </div>
+      <div>
+        <label class="block text-sm text-gold mb-2">Email</label>
+        <input type="email" class="w-full bg-transparent border-b border-gray-500 focus:border-gold outline-none py-2 text-white">
+      </div>
+      <div>
+        <label class="block text-sm text-gold mb-2">Teléfono</label>
+        <input type="tel" class="w-full bg-transparent border-b border-gray-500 focus:border-gold outline-none py-2 text-white">
+      </div>
+      <div>
+        <label class="block text-sm text-gold mb-2">Servicio</label>
+        <select class="w-full bg-transparent border-b border-gray-500 focus:border-gold outline-none py-2 text-white">
+          <option class="text-gray-900">Asesoría de Imagen</option>
+          <option class="text-gray-900">Confección a Medida</option>
+          <option class="text-gray-900">Personal Shopper</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-sm text-gold mb-2">Fecha</label>
+        <input type="date" class="w-full bg-transparent border-b border-gray-500 focus:border-gold outline-none py-2 text-white">
+      </div>
+      <div>
+        <label class="block text-sm text-gold mb-2">Hora</label>
+        <input type="time" class="w-full bg-transparent border-b border-gray-500 focus:border-gold outline-none py-2 text-white">
+      </div>
+      <div class="md:col-span-2">
+        <label class="block text-sm text-gold mb-2">Mensaje (opcional)</label>
+        <textarea rows="3" class="w-full bg-transparent border-b border-gray-500 focus:border-gold outline-none py-2 text-white"></textarea>
+      </div>
+      <div class="md:col-span-2 text-center">
+        <button type="submit" class="bg-gold hover:bg-gold-dark text-white px-12 py-4 rounded-full font-semibold transition shadow-lg">Confirmar Turno</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="py-24 bg-gold-light/20">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="text-gold tracking-[0.3em] text-sm mb-3 uppercase">Testimonios</p>
+      <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-900">Lo que dicen nuestras clientas</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-2xl shadow-sm">
+        <div class="text-gold text-2xl mb-4">★★★★★</div>
+        <p class="text-gray-700 italic mb-6">"Una experiencia única. La asesoría cambió totalmente mi forma de vestir."</p>
+        <p class="font-serif font-bold">— Camila R.</p>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-sm">
+        <div class="text-gold text-2xl mb-4">★★★★★</div>
+        <p class="text-gray-700 italic mb-6">"Prendas increíbles, atención cálida y diseños que enamoran."</p>
+        <p class="font-serif font-bold">— Sofía M.</p>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-sm">
+        <div class="text-gold text-2xl mb-4">★★★★★</div>
+        <p class="text-gray-700 italic mb-6">"Recomiendo Keko's 100%. Calidad, elegancia y estilo en un solo lugar."</p>
+        <p class="font-serif font-bold">— Lucía P.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contacto" class="bg-black text-gray-300 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
+    <div>
+      <h3 class="font-serif text-2xl font-bold mb-4"><span class="gold-text">Keko's</span> Clothes</h3>
+      <p class="text-sm text-gray-400">Moda, elegancia y atención personalizada para destacar tu estilo único.</p>
+    </div>
+    <div>
+      <h4 class="text-gold font-semibold mb-4">Enlaces</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#inicio" class="hover:text-gold transition">Inicio</a></li>
+        <li><a href="#servicios" class="hover:text-gold transition">Servicios</a></li>
+        <li><a href="#tienda" class="hover:text-gold transition">Tienda</a></li>
+        <li><a href="#turnos" class="hover:text-gold transition">Turnos</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-gold font-semibold mb-4">Contacto</h4>
+      <ul class="space-y-2 text-sm text-gray-400">
+        <li>📍 Av. Principal 1234, CABA</li>
+        <li>📞 +54 9 11 1234-5678</li>
+        <li>✉️ hola@kekosclothes.com</li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-gold font-semibold mb-4">Seguinos</h4>
+      <div class="flex gap-3">
+        <a href="#" class="w-10 h-10 rounded-full border border-gold/50 flex items-center justify-center hover:bg-gold hover:text-black transition">IG</a>
+        <a href="#" class="w-10 h-10 rounded-full border border-gold/50 flex items-center justify-center hover:bg-gold hover:text-black transition">FB</a>
+        <a href="#" class="w-10 h-10 rounded-full border border-gold/50 flex items-center justify-center hover:bg-gold hover:text-black transition">TK</a>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-gray-800 mt-12 pt-6 text-center text-sm text-gray-500">
+    © 2025 Keko's Clothes. Todos los derechos reservados.
+  </div>
+</footer>
+
+<script>
+  document.getElementById('menuBtn').addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.toggle('hidden');
+  });
+</script>
+</body>
+</html>
