@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Vinería de Keko | Vinos, Catas y Experiencias</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          wine: '#7B1E2B',
+          winedark: '#4A0E18',
+          gold: '#C9A961',
+          golddark: '#A8893F',
+          charcoal: '#2A2A2A',
+          graylight: '#F5F5F5',
+        },
+        fontFamily: {
+          serif: ['Playfair Display', 'serif'],
+          sans: ['Inter', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  body { font-family: 'Inter', sans-serif; }
+  .font-serif { font-family: 'Playfair Display', serif; }
+  .hero-bg {
+    background-image: linear-gradient(rgba(42,42,42,0.75), rgba(74,14,24,0.85)), url('https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+  }
+  .wine-card:hover { transform: translateY(-8px); }
+  .wine-card { transition: all 0.4s ease; }
+  .gold-line::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #C9A961;
+    margin: 1rem auto;
+  }
+  .btn-gold {
+    background: linear-gradient(135deg, #C9A961, #A8893F);
+    transition: all 0.3s ease;
+  }
+  .btn-gold:hover {
+    background: linear-gradient(135deg, #A8893F, #C9A961);
+    box-shadow: 0 8px 20px rgba(201,169,97,0.4);
+  }
+</style>
+</head>
+<body class="bg-graylight text-charcoal">
+
+<!-- NAVBAR -->
+<nav class="fixed w-full z-50 bg-charcoal/95 backdrop-blur-sm border-b border-gold/20">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center space-x-2">
+      <svg class="w-8 h-8 text-gold" fill="currentColor" viewBox="0 0 24 24"><path d="M8 2h8l-1 6a4 4 0 01-3 4v6h3v2H9v-2h3v-6a4 4 0 01-3-4L8 2z"/></svg>
+      <span class="font-serif text-xl md:text-2xl text-white">La Vinería <span class="text-gold">de Keko</span></span>
+    </div>
+    <ul class="hidden md:flex space-x-8 text-gray-300 text-sm font-medium">
+      <li><a href="#inicio" class="hover:text-gold transition">Inicio</a></li>
+      <li><a href="#vinos" class="hover:text-gold transition">Vinos</a></li>
+      <li><a href="#servicios" class="hover:text-gold transition">Servicios</a></li>
+      <li><a href="#turnos" class="hover:text-gold transition">Turnos</a></li>
+      <li><a href="#contacto" class="hover:text-gold transition">Contacto</a></li>
+    </ul>
+    <a href="#turnos" class="hidden md:inline-block btn-gold text-white px-5 py-2 rounded-full text-sm font-semibold">Reservar</a>
+    <button id="menuBtn" class="md:hidden text-white"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden bg-charcoal border-t border-gold/20">
+    <ul class="flex flex-col p-4 space-y-3 text-gray-300">
+      <li><a href="#inicio" class="hover:text-gold">Inicio</a></li>
+      <li><a href="#vinos" class="hover:text-gold">Vinos</a></li>
+      <li><a href="#servicios" class="hover:text-gold">Servicios</a></li>
+      <li><a href="#turnos" class="hover:text-gold">Turnos</a></li>
+      <li><a href="#contacto" class="hover:text-gold">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="inicio" class="hero-bg min-h-screen flex items-center justify-center text-center text-white pt-20">
+  <div class="container mx-auto px-6">
+    <p class="text-gold tracking-[0.3em] text-sm mb-4 font-medium">DESDE 2005 · MENDOZA</p>
+    <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
+      El arte de <span class="text-gold italic">saborear</span><br>la vida
+    </h1>
+    <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-10 font-light">
+      Bienvenido a <strong>La Vinería de Keko</strong>, tu espacio integral de vinos selectos, catas guiadas y experiencias sensoriales únicas.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#vinos" class="btn-gold text-white px-8 py-4 rounded-full font-semibold tracking-wide">Explorar Colección</a>
+      <a href="#turnos" class="border-2 border-gold text-gold hover:bg-gold hover:text-charcoal px-8 py-4 rounded-full font-semibold tracking-wide transition">Reservar una Cata</a>
+    </div>
+    <div class="mt-16 grid grid-cols-3 gap-4 max-w-2xl mx-auto">
+      <div><p class="font-serif text-3xl md:text-4xl text-gold">+200</p><p class="text-xs md:text-sm text-gray-300 tracking-wider">ETIQUETAS</p></div>
+      <div><p class="font-serif text-3xl md:text-4xl text-gold">18</p><p class="text-xs md:text-sm text-gray-300 tracking-wider">AÑOS</p></div>
+      <div><p class="font-serif text-3xl md:text-4xl text-gold">+5K</p><p class="text-xs md:text-sm text-gray-300 tracking-wider">CLIENTES</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE NOSOTROS -->
+<section class="py-24 bg-white">
+  <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+    <div>
+      <img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=800&q=80" alt="Vinería" class="rounded-lg shadow-2xl w-full">
+    </div>
+    <div>
+      <p class="text-gold tracking-[0.3em] text-sm mb-3 font-semibold">NUESTRA HISTORIA</p>
+      <h2 class="font-serif text-4xl md:text-5xl font-bold text-charcoal mb-6">Pasión por el <span class="text-wine">vino</span>, vocación por el servicio</h2>
+      <p class="text-gray-600 mb-4 leading-relaxed">Somos una vinería integral que combina la venta de las mejores etiquetas del país con experiencias que van más allá de una simple compra. Keko y su equipo acompañan cada elección con conocimiento, pasión y una atención personalizada.</p>
+      <p class="text-gray-600 mb-8 leading-relaxed">Desde catas privadas hasta eventos corporativos, cada visita es una invitación a descubrir un nuevo mundo de aromas y sabores.</p>
+      <div class="grid grid-cols-2 gap-6">
+        <div class="border-l-4 border-gold pl-4">
+          <h4 class="font-serif text-xl font-bold mb-1">Selección Premium</h4>
+          <p class="text-sm text-gray-500">Bodegas artesanales y boutique</p>
+        </div>
+        <div class="border-l-4 border-wine pl-4">
+          <h4 class="font-serif text-xl font-bold mb-1">Asesoramiento</h4>
+          <p class="text-sm text-gray-500">Sommeliers certificados</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VINOS -->
+<section id="vinos" class="py-24 bg-graylight">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="text-gold tracking-[0.3em] text-sm mb-3 font-semibold">NUESTRA CARTA</p>
+      <h2 class="font-serif text-4xl md:text-5xl font-bold gold-line">Vinos Destacados</h2>
+      <p class="text-gray-600 max-w-xl mx-auto mt-4">Una selección curada de las etiquetas más exquisitas para cada ocasión.</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Card -->
+      <div class="wine-card bg-white rounded-lg shadow-lg overflow-hidden group">
+        <div class="h-72 bg-gradient-to-br from-wine to-winedark flex items-center justify-center overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=400&q=80" class="h-full object-cover group-hover:scale-110 transition duration-500" alt="Malbec">
+        </div>
+        <div class="p-6">
+          <span class="text-xs tracking-widest text-gold font-semibold">TINTO · MALBEC</span>
+          <h3 class="font-serif text-2xl font-bold mt-2 mb-2">Reserva Andina</h3>
+          <p class="text-gray-500 text-sm mb-4">Notas de frutos rojos, especias y roble francés.</p>
+          <div class="flex justify-between items-center">
+            <span class="font-serif text-2xl text-wine font-bold">$12.500</span>
+            <button class="btn-gold text-white text-sm px-4 py-2 rounded-full">Comprar</button>
+          </div>
+        </div>
+      </div>
+      <div class="wine-card bg-white rounded-lg shadow-lg overflow-hidden group">
+        <div class="h-72 bg-gradient-to-br from-gold to-golddark flex items-center justify-center overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1566995541428-f0ee9dd4adf8?auto=format&fit=crop&w=400&q=80" class="h-full object-cover group-hover:scale-110 transition duration-500" alt="Chardonnay">
+        </div>
+        <div class="p-6">
+          <span class="text-xs tracking-widest text-gold font-semibold">BLANCO · CHARDONNAY</span>
+          <h3 class="font-serif text-2xl font-bold mt-2 mb-2">Dorado Valle</h3>
+          <p class="text-gray-500 text-sm mb-4">Frescura cítrica con final mantecoso y elegante.</p>
+          <div class="flex justify-between items-center">
+            <span class="font-serif text-2xl text-wine font-bold">$9.800</span>
+            <button class="btn-gold text-white text-sm px-4 py-2 rounded-full">Comprar</button>
+          </div>
+        </div>
+      </div>
+      <div class="wine-card bg-white rounded-lg shadow-lg overflow-hidden group">
+        <div class="h-72 bg-gradient-to-br from-winedark to-charcoal flex items-center justify-center overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1474722883778-792e7990302f?auto=format&fit=crop&w=400&q=80" class="h-full object-cover group-hover:scale-110 transition duration-500" alt="Cabernet">
+        </div>
+        <div class="p-6">
+          <span class="text-xs tracking-widest text-gold font-semibold">TINTO · CABERNET</span>
+          <h3 class="font-serif text-2xl font-bold mt-2 mb-2">Gran Cosecha</h3>
+          <p class="text-gray-500 text-sm mb-4">Intenso, estructurado, con taninos firmes.</p>
+          <div class="flex justify-between items-center">
+            <span class="font-serif text-2xl text-wine font-bold">$15.200</span>
+            <button class="btn-gold text-white text-sm px-4 py-2 rounded-full">Comprar</button>
+          </div>
+        </div>
+      </div>
+      <div class="wine-card bg-white rounded-lg shadow-lg overflow-hidden group">
+        <div class="h-72 bg-gradient-to-br from-pink-400 to-wine flex items-center justify-center overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1569919659476-f0852f6834b7?auto=format&fit=crop&w=400&q=80" class="h-full object-cover group-hover:scale-110 transition duration-500" alt="Espumante">
+        </div>
+        <div class="p-6">
+          <span class="text-xs tracking-widest text-gold font-semibold">ESPUMANTE · BRUT</span>
+          <h3 class="font-serif text-2xl font-bold mt-2 mb-2">Celebración</h3>
+          <p class="text-gray-500 text-sm mb-4">Burbujas finas, aromas florales y frescura.</p>
+          <div class="flex justify-between items-center">
+            <span class="font-serif text-2xl text-wine font-bold">$11.000</span>
+            <button class="btn-gold text-white text-sm px-4 py-2 rounded-full">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-12">
+      <a href="#" class="text-wine font-semibold hover:text-gold border-b-2 border-wine hover:border-gold pb-1 transition">Ver catálogo completo →</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="py-24 bg-charcoal text-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="text-gold tracking-[0.3em] text-sm mb-3 font-semibold">EXPERIENCIAS</p>
+      <h2 class="font-serif text-4xl md:text-5xl font-bold">Nuestros <span class="text-gold">Servicios</span></h2>
+      <div class="w-16 h-0.5 bg-gold mx-auto mt-4"></div>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-gradient-to-br from-winedark to-charcoal p-8 rounded-lg border border-gold/30 hover:border-gold transition">
+        <div class="w-14 h-14 bg-gold/20 rounded-full flex items-center justify-center mb-6">
+          <svg class="w-7 h-7 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/></svg>
+        </div>
+        <h3 class="font-serif text-2xl font-bold mb-3">Catas Guiadas</h3>
+        <p class="text-gray-400 mb-6">Descubrí el maridaje perfecto con nuestros sommeliers en sesiones temáticas y privadas.</p>
+        <a href="#turnos" class="text-gold text-sm font-semibold hover:underline">Reservar cata →</a>
+      </div>
+      <div class="bg-gradient-to-br from-wine to-charcoal p-8 rounded-lg border border-gold/30 hover:border-gold transition">
+        <div class="w-14 h-14 bg-gold/20 rounded-full flex items-center justify-center mb-6">
+          <svg class="w-7 h-7 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+        </div>
+        <h3 class="font-serif text-2xl font-bold mb-3">Venta Minorista</h3>
+        <p class="text-gray-400 mb-6">Acceso a más de 200 etiquetas premium con delivery a todo el país.</p>
+        <a href="#vinos" class="text-gold text-sm font-semibold hover:underline">Ver tienda →</a>
+      </div>
+      <div class="bg-gradient-to-br from-winedark to-charcoal p-8 rounded-lg border border-gold/30 hover:border-gold transition">
+        <div class="w-14 h-14 bg-gold/20 rounded-full flex items-center justify-center mb-6">
+          <svg class="w-7 h-7 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+        </div>
+        <h3 class="font-serif text-2xl font-bold mb-3">Eventos & Empresas</h3>
+        <p class="text-gray-400 mb-6">Organizamos degustaciones corporativas, cumpleaños y regalos empresariales.</p>
+        <a href="#contacto" class="text-gold text-sm font-semibold hover:underline">Consultar →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TURNOS -->
+<section id="turnos" class="py-24 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="text-gold tracking-[0.3em] text-sm mb-3 font-semibold">RESERVÁ TU LUGAR</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-bold text-charcoal mb-6">Agendá tu <span class="text-wine">experiencia</span></h2>
+        <p class="text-gray-600 mb-8">Elegí el día, horario y tipo de experiencia que más se adapte a vos. Te esperamos para brindar juntos.</p>
+        <ul class="space-y-4">
+          <li class="flex items-start"><svg class="w-6 h-6 text-gold mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span class="text-gray-700"><strong>Catas grupales:</strong> jueves y viernes 19:00 hs</span></li>
+          <li class="flex items-start"><svg class="w-6 h-6 text-gold mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span class="text-gray-700"><strong>Privadas:</strong> cualquier día, consultá disponibilidad</span></li>
+          <li class="flex items-start"><svg class="w-6 h-6 text-gold mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span class="text-gray-700"><strong>Asesoramiento personalizado</strong> sin cargo</span></li>
+        </ul>
+      </div>
+      <div class="bg-graylight p-8 rounded-lg shadow-xl border-t-4 border-wine">
+        <h3 class="font-serif text-2xl font-bold mb-6 text-charcoal">Reservá tu turno</h3>
+        <form class="space-y-4">
+          <div>
+            <label class="block text-sm font-semibold text-charcoal mb-1">Nombre completo</label>
+            <input type="text" class="w-full px-4 py-3 rounded border border-gray-300 focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold" placeholder="Tu nombre">
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-semibold text-charcoal mb-1">Fecha</label>
+              <input type="date" class="w-full px-4 py-3 rounded border border-gray-300 focus:border-gold focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-charcoal mb-1">Hora</label>
+              <input type="time" class="w-full px-4 py-3 rounded border border-gray-300 focus:border-gold focus:outline-none">
+            </div>
+          </div>
+          <div>
+            <label class="
