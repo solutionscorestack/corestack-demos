@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barber John | Barbería Premium</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          gold: '#D4AF37',
+          goldlight: '#F0D784',
+          darkbg: '#0A0A0A',
+        },
+        fontFamily: {
+          serif: ['Playfair Display', 'serif'],
+          sans: ['Inter', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  body { font-family: 'Inter', sans-serif; background-color: #0A0A0A; color: #f5f5f5; }
+  h1,h2,h3,h4 { font-family: 'Playfair Display', serif; }
+  .hero-bg {
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+  }
+  .gold-gradient {
+    background: linear-gradient(135deg, #D4AF37 0%, #F0D784 50%, #D4AF37 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .btn-gold {
+    background: linear-gradient(135deg, #D4AF37, #B8941F);
+    transition: all 0.3s ease;
+  }
+  .btn-gold:hover {
+    background: linear-gradient(135deg, #F0D784, #D4AF37);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+  }
+  .card-hover {
+    transition: all 0.4s ease;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+  }
+  .card-hover:hover {
+    transform: translateY(-8px);
+    border-color: #D4AF37;
+    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
+  }
+  .section-divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+  }
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: #0A0A0A; }
+  ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 4px; }
+</style>
+</head>
+<body class="bg-darkbg text-white">
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-gold/20">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="#" class="text-2xl md:text-3xl font-serif font-bold">
+      <span class="text-white">Barber</span> <span class="gold-gradient">John</span>
+    </a>
+    <ul class="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
+      <li><a href="#inicio" class="hover:text-gold transition">Inicio</a></li>
+      <li><a href="#servicios" class="hover:text-gold transition">Servicios</a></li>
+      <li><a href="#turnos" class="hover:text-gold transition">Turnos</a></li>
+      <li><a href="#tienda" class="hover:text-gold transition">Tienda</a></li>
+      <li><a href="#contacto" class="hover:text-gold transition">Contacto</a></li>
+    </ul>
+    <a href="#turnos" class="hidden md:inline-block btn-gold text-black font-semibold px-6 py-2 rounded-full text-sm">Reservar</a>
+    <button id="menuBtn" class="md:hidden text-gold text-2xl">☰</button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden bg-black border-t border-gold/20">
+    <ul class="flex flex-col space-y-4 p-6 text-sm uppercase tracking-widest">
+      <li><a href="#inicio" class="hover:text-gold">Inicio</a></li>
+      <li><a href="#servicios" class="hover:text-gold">Servicios</a></li>
+      <li><a href="#turnos" class="hover:text-gold">Turnos</a></li>
+      <li><a href="#tienda" class="hover:text-gold">Tienda</a></li>
+      <li><a href="#contacto" class="hover:text-gold">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="inicio" class="hero-bg min-h-screen flex items-center justify-center pt-20">
+  <div class="container mx-auto px-6 text-center">
+    <p class="text-gold tracking-[0.3em] uppercase text-sm mb-4">Desde 2010 · Estilo & Tradición</p>
+    <h1 class="text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight">
+      El Arte del <br><span class="gold-gradient">Caballero Moderno</span>
+    </h1>
+    <p class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-10">
+      En Barber John combinamos técnicas clásicas con tendencias actuales. Tu estilo, nuestra pasión.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#turnos" class="btn-gold text-black font-semibold px-8 py-4 rounded-full uppercase tracking-wider text-sm">Reservar Turno</a>
+      <a href="#servicios" class="border border-gold text-gold hover:bg-gold hover:text-black transition px-8 py-4 rounded-full uppercase tracking-wider text-sm font-semibold">Ver Servicios</a>
+    </div>
+    <div class="grid grid-cols-3 gap-6 max-w-3xl mx-auto mt-20">
+      <div><p class="text-3xl md:text-4xl font-serif text-gold font-bold">15+</p><p class="text-xs uppercase tracking-wider text-gray-400 mt-2">Años</p></div>
+      <div><p class="text-3xl md:text-4xl font-serif text-gold font-bold">8K+</p><p class="text-xs uppercase tracking-wider text-gray-400 mt-2">Clientes</p></div>
+      <div><p class="text-3xl md:text-4xl font-serif text-gold font-bold">5★</p><p class="text-xs uppercase tracking-wider text-gray-400 mt-2">Calificación</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE NOSOTROS -->
+<section class="py-24 bg-gradient-to-b from-darkbg to-zinc-900">
+  <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+    <div>
+      <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Barbero" class="rounded-lg shadow-2xl border-2 border-gold/30">
+    </div>
+    <div>
+      <p class="text-gold uppercase tracking-[0.3em] text-sm mb-4">Nuestra Historia</p>
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">Precisión, estilo y <span class="gold-gradient">elegancia</span></h2>
+      <p class="text-gray-400 mb-6 leading-relaxed">
+        Barber John nació con el propósito de redefinir la experiencia de una visita a la barbería. Un espacio donde cada detalle importa: desde el aroma al entrar, hasta el último corte de tijera.
+      </p>
+      <p class="text-gray-400 mb-8 leading-relaxed">
+        Nuestro equipo está formado por maestros barberos con más de una década de experiencia, apasionados por hacerte lucir tu mejor versión.
+      </p>
+      <ul class="space-y-3">
+        <li class="flex items-center"><span class="text-gold mr-3">✓</span> Productos premium importados</li>
+        <li class="flex items-center"><span class="text-gold mr-3">✓</span> Ambiente exclusivo y relajado</li>
+        <li class="flex items-center"><span class="text-gold mr-3">✓</span> Barberos certificados internacionalmente</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="py-24 bg-darkbg">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="text-gold uppercase tracking-[0.3em] text-sm mb-4">Nuestros Servicios</p>
+      <h2 class="text-4xl md:text-5xl font-bold">Experiencia <span class="gold-gradient">Premium</span></h2>
+      <div class="section-divider w-32 mx-auto mt-6"></div>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="card-hover bg-zinc-900/60 rounded-lg p-8">
+        <div class="text-gold text-5xl mb-4">✂️</div>
+        <h3 class="text-2xl font-bold mb-3">Corte Clásico</h3>
+        <p class="text-gray-400 mb-6">Corte a tijera y máquina, con lavado, masaje capilar y peinado final.</p>
+        <div class="flex justify-between items-center border-t border-gold/20 pt-4">
+          <span class="text-gold text-2xl font-serif font-bold">$25</span>
+          <span class="text-xs text-gray-500 uppercase">45 min</span>
+        </div>
+      </div>
+      <div class="card-hover bg-zinc-900/60 rounded-lg p-8">
+        <div class="text-gold text-5xl mb-4">🪒</div>
+        <h3 class="text-2xl font-bold mb-3">Afeitado Tradicional</h3>
+        <p class="text-gray-400 mb-6">Afeitado con navaja, toalla caliente, aceites esenciales y bálsamo.</p>
+        <div class="flex justify-between items-center border-t border-gold/20 pt-4">
+          <span class="text-gold text-2xl font-serif font-bold">$20</span>
+          <span class="text-xs text-gray-500 uppercase">30 min</span>
+        </div>
+      </div>
+      <div class="card-hover bg-zinc-900/60 rounded-lg p-8">
+        <div class="text-gold text-5xl mb-4">👑</div>
+        <h3 class="text-2xl font-bold mb-3">Combo Premium</h3>
+        <p class="text-gray-400 mb-6">Corte + afeitado + diseño de barba + ritual facial. La experiencia completa.</p>
+        <div class="flex justify-between items-center border-t border-gold/20 pt-4">
+          <span class="text-gold text-2xl font-serif font-bold">$45</span>
+          <span class="text-xs text-gray-500 uppercase">90 min</span>
+        </div>
+      </div>
+      <div class="card-hover bg-zinc-900/60 rounded-lg p-8">
+        <div class="text-gold text-5xl mb-4">🧔</div>
+        <h3 class="text-2xl font-bold mb-3">Diseño de Barba</h3>
+        <p class="text-gray-400 mb-6">Perfilado, recorte y tratamiento con aceites nutritivos para tu barba.</p>
+        <div class="flex justify-between items-center border-t border-gold/20 pt-4">
+          <span class="text-gold text-2xl font-serif font-bold">$18</span>
+          <span class="text-xs text-gray-500 uppercase">30 min</span>
+        </div>
+      </div>
+      <div class="card-hover bg-zinc-900/60 rounded-lg p-8">
+        <div class="text-gold text-5xl mb-4">💈</div>
+        <h3 class="text-2xl font-bold mb-3">Coloración</h3>
+        <p class="text-gray-400 mb-6">Tintes y camuflaje de canas con productos de alta gama.</p>
+        <div class="flex justify-between items-center border-t border-gold/20 pt-4">
+          <span class="text-gold text-2xl font-serif font-bold">$35</span>
+          <span class="text-xs text-gray-500 uppercase">60 min</span>
+        </div>
+      </div>
+      <div class="card-hover bg-zinc-900/60 rounded-lg p-8">
+        <div class="text-gold text-5xl mb-4">👶</div>
+        <h3 class="text-2xl font-bold mb-3">Corte Infantil</h3>
+        <p class="text-gray-400 mb-6">Corte especial para los más pequeños en un ambiente divertido.</p>
+        <div class="flex justify-between items-center border-t border-gold/20 pt-4">
+          <span class="text-gold text-2xl font-serif font-bold">$15</span>
+          <span class="text-xs text-gray-500 uppercase">30 min</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TURNOS -->
+<section id="turnos" class="py-24 bg-gradient-to-b from-zinc-900 to-darkbg">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="text-gold uppercase tracking-[0.3em] text-sm mb-4">Reserva tu lugar</p>
+      <h2 class="text-4xl md:text-5xl font-bold">Agenda tu <span class="gold-gradient">Turno</span></h2>
+      <div class="section-divider w-32 mx-auto mt-6"></div>
+    </div>
+    <div class="max-w-4xl mx-auto bg-zinc-900/60 border border-gold/30 rounded-xl p-8 md:p-12 shadow-2xl">
+      <form class="grid md:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-gold uppercase text-xs tracking-widest mb-2">Nombre Completo</label>
+          <input type="text" placeholder="Juan Pérez" class="w-full bg-black/60 border border-gold/30 rounded-lg px-4 py-3 text-white focus:border-gold focus:outline-none transition">
+        </div>
+        <div>
+          <label class="block text-gold uppercase text-xs tracking-widest mb-2">Teléfono</label>
+          <input type="tel" placeholder="+54 11 1234-5678" class="w-full bg-black/60 border border-gold/30 rounded-lg px-4 py-3 text-white focus:border-gold focus:outline-none transition">
+        </div>
+        <div>
+          <label class="block text-gold uppercase text-xs tracking-widest mb-2">Servicio</label>
+          <select class="w-full bg-black/60 border border-gold/30 rounded-lg px-4 py-3 text-white focus:border-gold focus:outline-none transition">
+            <option>Corte Clásico</option>
+            <option>Afeitado Tradicional</option>
+            <option>Combo Premium</option>
+            <option>Diseño de Barba</option>
+            <option>Coloración</option>
+            <option>Corte Infantil</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-gold uppercase text-xs tracking-widest mb-2">Barbero</label>
+          <select class="w-full bg-black/60 border border-gold/30 rounded-lg px-4 py-3 text-white focus:border-gold focus:outline-none transition">
+            <option>Sin preferencia</option>
+            <option>John (Master)</option>
+            <option>Carlos</option>
+            <option>Martín</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-gold uppercase text-xs tracking-widest mb-2">Fecha</label>
+          <input type="date" class="w-full bg-black/60 border border-gold/30 rounded-lg px-4 py-3 text-white focus:border-gold focus:outline-none transition">
+        </div>
+        <div>
+          <label class="block text-gold uppercase text-xs tracking-widest mb-2">Hora</label>
+          <input type="time" class="w-full bg-black/60 border border-gold/30 rounded-lg px-4 py-3 text-white focus:border-gold focus:outline-none transition">
+        </div>
+        <div class="md:col-span-2">
+          <label class="block text-gold uppercase text-xs tracking-widest mb-2">Comentarios (Opcional)</label>
+          <textarea rows="3" placeholder="Alguna preferencia especial..." class="w-full bg-black/60 border border-gold/30 rounded-lg px-4 py-3 text-white focus:border-gold focus:outline-none transition"></textarea>
+        </div>
+        <div class="md:col-span-2 text-center mt-4">
+          <button type="submit" class="btn-gold text-black font-bold px-12 py-4 rounded-full uppercase tracking-widest">Confirmar Reserva</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- TIENDA -->
+<section id="tienda" class="py-24 bg-darkbg">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="text-gold uppercase tracking-[0.3em] text-sm mb-4">Shop Oficial</p>
+      <h2 class="text-4xl md:text-5xl font-bold">Productos <span class="gold-gradient">Exclusivos</span></h2>
+      <div class="section-divider w-32 mx-auto mt-6"></div>
+      <p class="text-gray-400 mt-6 max-w-2xl mx-auto">Lleva la calidad de Barber John a tu casa con nuestra línea de productos premium.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="card-hover bg-zinc-900/60 rounded-lg overflow-hidden">
+        <div class="h-64 bg-gradient-to-br from-zinc-800 to-black flex items-center justify-center">
+          <img src="https://images.unsplash.com/photo-1597854710119-a88b7b8b5ab9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Aceite barba" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <p class="text-xs text-gold uppercase tracking-widest mb-2">Cuidado de Barba</p>
+          <h3 class="text-xl font-bold mb-2">Aceite Premium</h3>
+          <p class="text-gray-400 text-sm mb-4">30ml · Aroma sándalo</p>
+          <div class="flex justify-between items-center">
+            <span class="text-gold text-xl font-serif font-bold">$22</span>
+            <button class="btn-gold text-black text-xs font-semibold px-4 py-2 rounded-full uppercase">Comprar</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-hover bg-zinc-900/60 rounded-lg overflow-hidden">
+        <div class="h-64 bg-gradient-to-br from-zinc-800 to-black flex items-center justify-center">
+          <img src="https://images.unsplash.com/photo-1626808642875-0aa545482dfb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Pomada" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <p class="text-xs text-gold uppercase tracking-widest mb-2">Fijación</p>
+          <h3 class="text-xl font-bold mb-2">Pomada Clásica</h3>
+          <p class="text-gray-400 text-sm mb-4">100ml · Fijación fuerte</p>
+          <div class="flex justify-between items-center">
+            <span class="text-gold text-xl font-serif font-bold">$18</span>
+            <button class="btn-gold text-black text-xs font-semibold px-4 py-2 rounded-full uppercase">Comprar</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-hover bg-zinc-900/60 rounded-lg overflow-hidden">
+        <div class="h-64 bg-gradient-to-br from-zinc-800 to-black flex items-center justify-center">
+          <img src="https://images.unsplash.com/photo-1621607512214-68297480165e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Shampoo" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <p class="text-xs text-gold uppercase tracking-widest mb-2">Cuidado Capilar</p>
+          <h3 class="text-xl font-bold mb-2">Shampoo Gold</h3>
+          <p class="text-gray-400 text-sm mb-4">250ml · Fortificante</p>
+          <div class="flex justify-between items-center">
+            <span class="text-gold text-xl font-serif font-bold">$15</span>
+            <button class="btn-gold text-black text-xs font-semibold px-4 py-2 rounded-full uppercase">Comprar</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-hover bg-zinc-900/60 rounded-lg overflow-hidden">
+        <div class="h-64 bg-gradient-to-br from-zinc-800 to-black flex items-center justify-center">
+          <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Kit" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <p class="text-xs text-gold uppercase tracking-widest mb-2">Pack</p>
+          <h3 class="text-xl font-bold mb-2">Kit Gentleman</h3>
+          <p class="text-gray-400 text-sm mb-4">5 productos esenciales</p>
+          <div class="flex justify-between items-center">
+            <span class="text-gold text-xl font-serif font-bold">$65</span>
+            <button class="btn-gold text-black text-xs font-semibold px-4 py-2 rounded-full uppercase">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-12">
+      <a href="#" class="border border-gold text-gold hover:bg-gold hover:text-black transition px-8 py-3 rounded-full uppercase tracking-wider text-sm font-semibold inline-block">Ver tienda completa</a>
+    </div>
+  </div>
+</section>
+
+<!
