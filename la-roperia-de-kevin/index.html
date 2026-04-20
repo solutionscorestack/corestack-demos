@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Ropería de Kevin | Moda, Servicios y Turnos</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: {
+            50: '#FFF7ED',
+            100: '#FFEDD5',
+            500: '#F97316',
+            600: '#EA580C',
+            700: '#C2410C',
+          }
+        },
+        fontFamily: {
+          sans: ['Inter', 'system-ui', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  .hero-gradient {
+    background: linear-gradient(135deg, #FFF7ED 0%, #FFFFFF 50%, #FFEDD5 100%);
+  }
+  .card-hover {
+    transition: all 0.3s ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(249, 115, 22, 0.15);
+  }
+</style>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+
+<!-- NAVBAR -->
+<header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2">
+      <div class="w-10 h-10 bg-brand-500 rounded-full flex items-center justify-center">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+      </div>
+      <span class="font-extrabold text-xl text-gray-900">La Ropería <span class="text-brand-500">de Kevin</span></span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+      <a href="#servicios" class="hover:text-brand-500 transition">Servicios</a>
+      <a href="#tienda" class="hover:text-brand-500 transition">Tienda</a>
+      <a href="#turnos" class="hover:text-brand-500 transition">Turnos</a>
+      <a href="#contacto" class="hover:text-brand-500 transition">Contacto</a>
+    </nav>
+    <a href="#turnos" class="bg-brand-500 hover:bg-brand-600 text-white px-5 py-2.5 rounded-full font-semibold text-sm transition shadow-md hover:shadow-lg">Reservar Turno</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero-gradient pt-32 pb-20 px-6">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <span class="inline-block bg-brand-100 text-brand-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-6">✨ Moda que te representa</span>
+      <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
+        Tu estilo, <span class="text-brand-500">nuestra pasión</span>.
+      </h1>
+      <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+        En La Ropería de Kevin ofrecemos una experiencia integral: prendas únicas, asesoría personalizada y servicios de arreglos a medida. Descubrí la mejor versión de tu armario.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#tienda" class="bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-full font-semibold transition shadow-lg hover:shadow-xl">Ver Colección</a>
+        <a href="#turnos" class="bg-white border-2 border-brand-500 text-brand-500 hover:bg-brand-50 px-8 py-4 rounded-full font-semibold transition">Agendar Turno</a>
+      </div>
+      <div class="flex items-center gap-8 mt-12">
+        <div>
+          <p class="text-3xl font-extrabold text-brand-500">+500</p>
+          <p class="text-sm text-gray-600">Clientes felices</p>
+        </div>
+        <div>
+          <p class="text-3xl font-extrabold text-brand-500">10+</p>
+          <p class="text-sm text-gray-600">Años de trayectoria</p>
+        </div>
+        <div>
+          <p class="text-3xl font-extrabold text-brand-500">4.9★</p>
+          <p class="text-sm text-gray-600">Valoración</p>
+        </div>
+      </div>
+    </div>
+    <div class="relative">
+      <div class="absolute -inset-4 bg-brand-500/20 rounded-3xl blur-2xl"></div>
+      <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=800" alt="Tienda de moda" class="relative rounded-3xl shadow-2xl w-full h-[500px] object-cover">
+      <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-3">
+        <div class="w-12 h-12 bg-brand-500 rounded-full flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <div>
+          <p class="font-bold text-gray-900">Calidad Premium</p>
+          <p class="text-xs text-gray-500">Garantía asegurada</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="py-20 px-6 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <span class="text-brand-500 font-semibold uppercase tracking-wide text-sm">Nuestros Servicios</span>
+      <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mt-2">Todo lo que necesitás en un solo lugar</h2>
+      <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Combinamos moda, servicio y experiencia para ofrecerte soluciones integrales.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="card-hover bg-gradient-to-br from-brand-50 to-white p-8 rounded-2xl border border-brand-100">
+        <div class="w-14 h-14 bg-brand-500 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-3">Asesoría de Imagen</h3>
+        <p class="text-gray-600 mb-4">Kevin te ayuda a encontrar el estilo perfecto según tu tipo de cuerpo, personalidad y ocasión.</p>
+        <a href="#turnos" class="text-brand-500 font-semibold hover:text-brand-600 inline-flex items-center gap-1">Reservar →</a>
+      </div>
+      <div class="card-hover bg-gradient-to-br from-brand-50 to-white p-8 rounded-2xl border border-brand-100">
+        <div class="w-14 h-14 bg-brand-500 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18M5 3v18m14-18v18M9 7h6m-6 4h6m-6 4h6"/></svg>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-3">Arreglos a Medida</h3>
+        <p class="text-gray-600 mb-4">Servicio de costura profesional: ajustes, dobladillos, reparaciones y modificaciones a tu gusto.</p>
+        <a href="#turnos" class="text-brand-500 font-semibold hover:text-brand-600 inline-flex items-center gap-1">Reservar →</a>
+      </div>
+      <div class="card-hover bg-gradient-to-br from-brand-50 to-white p-8 rounded-2xl border border-brand-100">
+        <div class="w-14 h-14 bg-brand-500 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-3">Venta de Prendas</h3>
+        <p class="text-gray-600 mb-4">Colecciones exclusivas de hombre y mujer con prendas seleccionadas de las mejores marcas.</p>
+        <a href="#tienda" class="text-brand-500 font-semibold hover:text-brand-600 inline-flex items-center gap-1">Ver tienda →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIENDA -->
+<section id="tienda" class="py-20 px-6 bg-brand-50">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex flex-wrap items-end justify-between mb-12">
+      <div>
+        <span class="text-brand-500 font-semibold uppercase tracking-wide text-sm">Tienda</span>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mt-2">Novedades destacadas</h2>
+      </div>
+      <a href="#" class="text-brand-500 font-semibold hover:text-brand-600">Ver catálogo completo →</a>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-md">
+        <div class="relative">
+          <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400" class="w-full h-64 object-cover" alt="Producto">
+          <span class="absolute top-3 left-3 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-full">NUEVO</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-bold text-gray-900">Camiseta Clásica</h3>
+          <p class="text-sm text-gray-500 mb-2">Algodón 100%</p>
+          <div class="flex items-center justify-between">
+            <span class="text-xl font-extrabold text-brand-500">$12.500</span>
+            <button class="bg-brand-500 hover:bg-brand-600 text-white w-9 h-9 rounded-full flex items-center justify-center">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-md">
+        <div class="relative">
+          <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=400" class="w-full h-64 object-cover" alt="Producto">
+        </div>
+        <div class="p-5">
+          <h3 class="font-bold text-gray-900">Jean Premium</h3>
+          <p class="text-sm text-gray-500 mb-2">Denim slim fit</p>
+          <div class="flex items-center justify-between">
+            <span class="text-xl font-extrabold text-brand-500">$28.900</span>
+            <button class="bg-brand-500 hover:bg-brand-600 text-white w-9 h-9 rounded-full flex items-center justify-center">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-md">
+        <div class="relative">
+          <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400" class="w-full h-64 object-cover" alt="Producto">
+          <span class="absolute top-3 left-3 bg-gray-900 text-white text-xs font-bold px-3 py-1 rounded-full">OFERTA</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-bold text-gray-900">Campera Urbana</h3>
+          <p class="text-sm text-gray-500 mb-2">Estilo casual</p>
+          <div class="flex items-center justify-between">
+            <span class="text-xl font-extrabold text-brand-500">$45.000</span>
+            <button class="bg-brand-500 hover:bg-brand-600 text-white w-9 h-9 rounded-full flex items-center justify-center">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-md">
+        <div class="relative">
+          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400" class="w-full h-64 object-cover" alt="Producto">
+        </div>
+        <div class="p-5">
+          <h3 class="font-bold text-gray-900">Accesorio Premium</h3>
+          <p class="text-sm text-gray-500 mb-2">Colección exclusiva</p>
+          <div class="flex items-center justify-between">
+            <span class="text-xl font-extrabold text-brand-500">$9.800</span>
+            <button class="bg-brand-500 hover:bg-brand-600 text-white w-9 h-9 rounded-full flex items-center justify-center">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TURNOS -->
+<section id="turnos" class="py-20 px-6 bg-white">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-12">
+      <span class="text-brand-500 font-semibold uppercase tracking-wide text-sm">Reservas</span>
+      <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mt-2">Reservá tu turno</h2>
+      <p class="text-gray-600 mt-4">Elegí el día y horario que más te convenga. Te confirmamos al instante.</p>
+    </div>
+    <div class="bg-gradient-to-br from-brand-500 to-brand-600 rounded-3xl p-1 shadow-2xl">
+      <div class="bg-white rounded-[22px] p-8 md:p-12">
+        <form class="grid md:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-2">Nombre completo</label>
+            <input type="text" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition" placeholder="Tu nombre">
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-2">Teléfono</label>
+            <input type="tel" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition" placeholder="+54 9 ...">
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-2">Servicio</label>
+            <select class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition">
+              <option>Asesoría de imagen</option>
+              <option>Arreglos a medida</option>
+              <option>Prueba de prendas</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-2">Fecha preferida</label>
+            <input type="date" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition">
+          </div>
+          <div class="md:col-span-2">
+            <label class="block text-sm font-semibold text-gray-700 mb-2">Mensaje (opcional)</label>
+            <textarea rows="3" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition" placeholder="Contanos más detalles..."></textarea>
+          </div>
+          <div class="md:col-span-2 text-center">
+            <button type="submit" class="bg-brand-500 hover:bg-brand-600 text-white px-12 py-4 rounded-full font-bold transition shadow-lg hover:shadow-xl">Confirmar Reserva</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="py-20 px-6 bg-brand-50">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+      <span class="text-brand-500 font-semibold uppercase tracking-wide text-sm">Testimonios</span>
+      <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mt-2">Lo que dicen nuestros clientes</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-2xl shadow-md">
+        <div class="flex text-brand-500 mb-4">★★★★★</div>
+        <p class="text-gray-700 italic mb-6">"Kevin me ayudó a renovar todo mi armario. Su asesoría cambió mi forma de vestir y me siento mucho más seguro."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-brand-100 rounded-full flex items-center justify-center font-bold text-brand-500">MG</div>
+          <div>
+            <p class="font-bold text-gray-900">Martín G.</p>
+            <p class="text-sm text-gray-500">Cliente desde 2022</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-md">
+        <div class="flex text-brand-500 mb-4">★★★★★</div>
+        <p class="text-gray-700 italic mb-6">"Excelente trabajo de costura. Me ajustaron un traje a la perfección y el trato fue de primera. Súper recomendable."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-brand-100 rounded-full flex items-center justify-center font-bold text-brand-500">LR</div>
+          <div>
+            <p class="font-bold text-gray-900">Laura R.</p>
+            <p class="text-sm text-gray-500">Cliente frecuente</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-md">
+        <div class="flex text-brand-500 mb-4">★★★★★</div>
+        <p class="text-gray-700 italic mb-6">"Las prendas son de altísima calidad y los precios muy justos. Además, el sistema de turnos online es muy cómodo."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-brand-100 rounded-full flex items-center justify-center font-bold text-brand-500">JP</div>
+          <div>
+            <p class="font-bold text-gray-900">Juan P.</p>
+            <p class="text-sm text-gray-500">Nuevo cliente</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-20 px-6 bg-gradient-to-r from-brand-500 to-brand-600">
+  <div class="max-w-4xl mx-auto text-center text-white">
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-4">¿Listo para renovar tu estilo?</h2>
+    <p class="text-brand-100 mb-8 text-lg">Visítanos o reservá tu turno online. Estamos para asesorarte.</p>
+    <div class="flex flex-wrap gap-4 justify-center">
+      <a href="#turnos" class="bg-white text-brand-500 hover:bg-brand-50 px-8 py-4 rounded-full font-bold transition shadow-lg">Reservar Turno</a>
+      <a href="#contacto" class="border-2 border-white text-white hover:bg-white hover:text-brand-500 px-8 py-4 rounded-full font-bold transition">Contactar</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contacto" class="bg-gray-900 text-gray-300 py-16 px-6">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-10">
+    <div>
+      <div class="flex items
