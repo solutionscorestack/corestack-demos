@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Ropería de María | Moda Exclusiva</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          gold: {
+            light: '#F5E6C8',
+            DEFAULT: '#C9A96E',
+            dark: '#A67C3B'
+          }
+        },
+        fontFamily: {
+          serif: ['Playfair Display', 'serif'],
+          sans: ['Montserrat', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+<style>
+  body { font-family: 'Montserrat', sans-serif; }
+  h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
+  .gold-gradient { background: linear-gradient(135deg, #C9A96E 0%, #A67C3B 100%); }
+  .gold-text { background: linear-gradient(135deg, #C9A96E 0%, #A67C3B 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .hero-bg { background-image: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1600'); background-size: cover; background-position: center; }
+  .card-hover { transition: all 0.4s ease; }
+  .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(201, 169, 110, 0.25); }
+  .btn-gold { background: linear-gradient(135deg, #C9A96E 0%, #A67C3B 100%); transition: all 0.3s ease; }
+  .btn-gold:hover { box-shadow: 0 10px 25px rgba(201, 169, 110, 0.4); transform: translateY(-2px); }
+  .fade-in { animation: fadeIn 1s ease-in; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  .divider { width: 80px; height: 3px; background: linear-gradient(135deg, #C9A96E, #A67C3B); margin: 1rem auto; }
+</style>
+</head>
+<body class="bg-white text-gray-800">
+
+<!-- Navbar -->
+<nav class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center space-x-2">
+      <span class="text-2xl font-serif font-bold gold-text">La Ropería</span>
+      <span class="text-sm text-gray-500 italic">de María</span>
+    </div>
+    <ul class="hidden md:flex space-x-8 text-sm font-medium">
+      <li><a href="#inicio" class="hover:text-gold transition">Inicio</a></li>
+      <li><a href="#servicios" class="hover:text-gold transition">Servicios</a></li>
+      <li><a href="#tienda" class="hover:text-gold transition">Tienda</a></li>
+      <li><a href="#turnos" class="hover:text-gold transition">Turnos</a></li>
+      <li><a href="#contacto" class="hover:text-gold transition">Contacto</a></li>
+    </ul>
+    <a href="#turnos" class="hidden md:inline-block btn-gold text-white px-6 py-2 rounded-full text-sm font-medium">Reservar</a>
+    <button id="menuBtn" class="md:hidden text-gold text-2xl">☰</button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gold-light">
+    <a href="#inicio" class="block px-6 py-3 hover:bg-gold-light/30">Inicio</a>
+    <a href="#servicios" class="block px-6 py-3 hover:bg-gold-light/30">Servicios</a>
+    <a href="#tienda" class="block px-6 py-3 hover:bg-gold-light/30">Tienda</a>
+    <a href="#turnos" class="block px-6 py-3 hover:bg-gold-light/30">Turnos</a>
+    <a href="#contacto" class="block px-6 py-3 hover:bg-gold-light/30">Contacto</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section id="inicio" class="hero-bg min-h-screen flex items-center justify-center pt-20">
+  <div class="max-w-4xl mx-auto text-center px-6 fade-in">
+    <p class="text-gold font-medium tracking-widest uppercase text-sm mb-4">Elegancia & Estilo</p>
+    <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+      La Ropería <span class="gold-text italic">de María</span>
+    </h1>
+    <div class="divider"></div>
+    <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+      Moda exclusiva, asesoría personalizada y servicios integrales para resaltar tu mejor versión. Descubre tu estilo único.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#tienda" class="btn-gold text-white px-8 py-4 rounded-full font-medium tracking-wide">Ver Colección</a>
+      <a href="#turnos" class="border-2 border-gold text-gold hover:bg-gold hover:text-white transition px-8 py-4 rounded-full font-medium tracking-wide">Reservar Turno</a>
+    </div>
+  </div>
+</section>
+
+<!-- Servicios -->
+<section id="servicios" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="text-gold font-medium tracking-widest uppercase text-sm mb-2">Nuestros Servicios</p>
+      <h2 class="text-4xl md:text-5xl font-bold">Experiencia <span class="gold-text">Integral</span></h2>
+      <div class="divider"></div>
+      <p class="text-gray-600 max-w-2xl mx-auto">Ofrecemos servicios pensados para acompañarte en cada detalle de tu estilo personal.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="card-hover bg-white border border-gold-light rounded-2xl p-8 text-center">
+        <div class="w-16 h-16 gold-gradient rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl">✨</div>
+        <h3 class="text-2xl font-bold mb-3">Asesoría de Imagen</h3>
+        <p class="text-gray-600">Análisis de colorimetría, estilo y silueta para potenciar tu personalidad con la ropa perfecta.</p>
+      </div>
+      <div class="card-hover bg-white border border-gold-light rounded-2xl p-8 text-center">
+        <div class="w-16 h-16 gold-gradient rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl">🧵</div>
+        <h3 class="text-2xl font-bold mb-3">Arreglos & Costura</h3>
+        <p class="text-gray-600">Ajustes a medida y confección personalizada. Renovamos tus prendas con técnica y delicadeza.</p>
+      </div>
+      <div class="card-hover bg-white border border-gold-light rounded-2xl p-8 text-center">
+        <div class="w-16 h-16 gold-gradient rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl">👗</div>
+        <h3 class="text-2xl font-bold mb-3">Personal Shopper</h3>
+        <p class="text-gray-600">Te acompañamos en la selección de prendas para eventos, trabajo o tu día a día.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tienda -->
+<section id="tienda" class="py-24 bg-gold-light/20">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="text-gold font-medium tracking-widest uppercase text-sm mb-2">Colección</p>
+      <h2 class="text-4xl md:text-5xl font-bold">Nuestra <span class="gold-text">Tienda</span></h2>
+      <div class="divider"></div>
+      <p class="text-gray-600 max-w-2xl mx-auto">Descubre prendas cuidadosamente seleccionadas para cada ocasión.</p>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-sm">
+        <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=500" alt="Vestido" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <h4 class="font-serif text-lg font-bold">Vestido Sofía</h4>
+          <p class="text-gold font-semibold mt-1">$89.900</p>
+        </div>
+      </div>
+      <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-sm">
+        <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?w=500" alt="Blusa" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <h4 class="font-serif text-lg font-bold">Blusa Elegance</h4>
+          <p class="text-gold font-semibold mt-1">$45.900</p>
+        </div>
+      </div>
+      <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-sm">
+        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=500" alt="Conjunto" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <h4 class="font-serif text-lg font-bold">Conjunto Luna</h4>
+          <p class="text-gold font-semibold mt-1">$129.900</p>
+        </div>
+      </div>
+      <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-sm">
+        <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=500" alt="Abrigo" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <h4 class="font-serif text-lg font-bold">Abrigo Dorado</h4>
+          <p class="text-gold font-semibold mt-1">$159.900</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-12">
+      <a href="#contacto" class="btn-gold text-white px-8 py-4 rounded-full font-medium inline-block">Ver Catálogo Completo</a>
+    </div>
+  </div>
+</section>
+
+<!-- Turnos -->
+<section id="turnos" class="py-24 bg-white">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <p class="text-gold font-medium tracking-widest uppercase text-sm mb-2">Agenda</p>
+      <h2 class="text-4xl md:text-5xl font-bold">Reserva tu <span class="gold-text">Turno</span></h2>
+      <div class="divider"></div>
+      <p class="text-gray-600 max-w-2xl mx-auto">Te atendemos con dedicación exclusiva. Elige el día y hora que mejor se adapte a ti.</p>
+    </div>
+    <div class="bg-gradient-to-br from-gold-light/30 to-white rounded-3xl p-8 md:p-12 shadow-lg border border-gold-light">
+      <form class="grid md:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-sm font-medium mb-2 text-gray-700">Nombre completo</label>
+          <input type="text" class="w-full px-4 py-3 rounded-lg border border-gold-light focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20" placeholder="Tu nombre">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-2 text-gray-700">Teléfono</label>
+          <input type="tel" class="w-full px-4 py-3 rounded-lg border border-gold-light focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20" placeholder="+54 11 0000-0000">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-2 text-gray-700">Servicio</label>
+          <select class="w-full px-4 py-3 rounded-lg border border-gold-light focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20">
+            <option>Asesoría de Imagen</option>
+            <option>Arreglos & Costura</option>
+            <option>Personal Shopper</option>
+            <option>Atención Personalizada</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-2 text-gray-700">Fecha preferida</label>
+          <input type="date" class="w-full px-4 py-3 rounded-lg border border-gold-light focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20">
+        </div>
+        <div class="md:col-span-2">
+          <label class="block text-sm font-medium mb-2 text-gray-700">Mensaje (opcional)</label>
+          <textarea rows="4" class="w-full px-4 py-3 rounded-lg border border-gold-light focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20" placeholder="Cuéntanos qué necesitas..."></textarea>
+        </div>
+        <div class="md:col-span-2 text-center">
+          <button type="submit" class="btn-gold text-white px-12 py-4 rounded-full font-medium tracking-wide">Confirmar Reserva</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonios -->
+<section class="py-24 bg-gold-light/20">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="text-gold font-medium tracking-widest uppercase text-sm mb-2">Testimonios</p>
+      <h2 class="text-4xl md:text-5xl font-bold">Lo que dicen <span class="gold-text">nuestras clientas</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-2xl shadow-sm">
+        <div class="text-gold text-2xl mb-3">★★★★★</div>
+        <p class="text-gray-600 italic mb-4">"María tiene un ojo increíble para la moda. Me ayudó a renovar totalmente mi estilo."</p>
+        <p class="font-semibold">— Carolina R.</p>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-sm">
+        <div class="text-gold text-2xl mb-3">★★★★★</div>
+        <p class="text-gray-600 italic mb-4">"La atención es hermosa, sentí que cuidaron cada detalle. ¡Volveré siempre!"</p>
+        <p class="font-semibold">— Lucía M.</p>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-sm">
+        <div class="text-gold text-2xl mb-3">★★★★★</div>
+        <p class="text-gray-600 italic mb-4">"Los arreglos quedaron perfectos y la ropa que compré es de excelente calidad."</p>
+        <p class="font-semibold">— Valentina S.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contacto -->
+<section id="contacto" class="py-24 bg-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="text-gold font-medium tracking-widest uppercase text-sm mb-2">Contáctanos</p>
+      <h2 class="text-4xl md:text-5xl font-bold">Visítanos <span class="gold-text">o Escríbenos</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8 text-center">
+      <div class="p-8 border border-gold-light rounded-2xl card-hover">
+        <div class="text-4xl mb-3">📍</div>
+        <h4 class="font-bold text-lg mb-2">Ubicación</h4>
+        <p class="text-gray-600">Av. Principal 1234<br>Ciudad, Argentina</p>
+      </div>
+      <div class="p-8 border border-gold-light rounded-2xl card-hover">
+        <div class="text-4xl mb-3">📞</div>
+        <h4 class="font-bold text-lg mb-2">Teléfono</h4>
+        <p class="text-gray-600">+54 11 1234-5678<br>Lun a Sáb: 10 a 19hs</p>
+      </div>
+      <div class="p-8 border border-gold-light rounded-2xl card-hover">
+        <div class="text-4xl mb-3">✉️</div>
+        <h4 class="font-bold text-lg mb-2">Email</h4>
+        <p class="text-gray-600">hola@laroperiademaria.com<br>info@laroperiademaria.com</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid md:grid-cols-4 gap-8 mb-8">
+      <div>
+        <h3 class="text-2xl font-serif font-bold gold-text mb-3">La Ropería de María</h3>
+        <p class="text-gray-400 text-sm">Moda con alma, estilo con historia.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-3 text-gold">Servicios</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li>Asesoría de Imagen</li>
+          <li>Arreglos & Costura</li>
+          <li>Personal Shopper</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-3 text-gold">Enlaces</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="#inicio" class="hover:text-gold">Inicio</a></li>
+          <li><a href="#tienda" class="hover:text-gold">Tienda</a></li>
+          <li><a href="#turnos" class="hover:text-gold">Turnos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-3 text-gold">Síguenos</h4>
+        <div class="flex space-x-3">
+          <a href="#" class="w-10 h-10 border border-gold rounded-full flex items-center justify-center hover:bg-gold transition">f</a>
+          <a href="#" class="w-10 h-10 border border-gold rounded-full flex items-center justify-center hover:bg-gold transition">ig</a>
+          <a href="#" class="w-10 h-10 border border-gold rounded-full flex items-center justify-center hover:bg-gold transition">w</a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-gray-800 pt-6 text-center text-sm text-gray-500">
+      © 2024 La Ropería de María. Todos los derechos reservados.
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('menuBtn').addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.toggle('hidden');
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
+      document.getElementById('mobileMenu').classList.add('hidden');
+    });
+  });
+</script>
+</body>
+</html>
