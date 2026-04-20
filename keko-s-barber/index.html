@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Keko's Barber - Estilo, Corte y Actitud</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+  body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; }
+  .font-display { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.05em; }
+  .hero-bg {
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+  }
+  .stripe-pattern {
+    background: repeating-linear-gradient(
+      45deg,
+      #f97316,
+      #f97316 10px,
+      #000 10px,
+      #000 20px
+    );
+  }
+  .card-hover { transition: all 0.4s ease; }
+  .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(249, 115, 22, 0.3); }
+  .glow-orange { box-shadow: 0 0 30px rgba(249, 115, 22, 0.5); }
+  .animate-fade-in { animation: fadeIn 1s ease-in; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+</head>
+<body class="bg-black text-white">
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-orange-500/30">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-2">
+      <i data-lucide="scissors" class="text-orange-500 w-7 h-7"></i>
+      <span class="font-display text-2xl tracking-wider">KEKO'S <span class="text-orange-500">BARBER</span></span>
+    </div>
+    <ul class="hidden md:flex gap-8 text-sm font-medium">
+      <li><a href="#inicio" class="hover:text-orange-500 transition">Inicio</a></li>
+      <li><a href="#servicios" class="hover:text-orange-500 transition">Servicios</a></li>
+      <li><a href="#turnos" class="hover:text-orange-500 transition">Turnos</a></li>
+      <li><a href="#tienda" class="hover:text-orange-500 transition">Tienda</a></li>
+      <li><a href="#contacto" class="hover:text-orange-500 transition">Contacto</a></li>
+    </ul>
+    <a href="#turnos" class="hidden md:inline-block bg-orange-500 hover:bg-orange-600 text-black font-bold px-5 py-2 rounded-full transition">Reservar</a>
+    <button class="md:hidden" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+      <i data-lucide="menu" class="text-orange-500"></i>
+    </button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden bg-black border-t border-orange-500/30 px-6 py-4">
+    <ul class="flex flex-col gap-4 text-sm">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#turnos">Turnos</a></li>
+      <li><a href="#tienda">Tienda</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="inicio" class="hero-bg min-h-screen flex items-center pt-20">
+  <div class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
+    <div class="animate-fade-in">
+      <div class="inline-block bg-orange-500/20 border border-orange-500 text-orange-400 px-4 py-1 rounded-full text-xs font-semibold mb-6 uppercase tracking-widest">Desde 2015 · Barbería de Autor</div>
+      <h1 class="font-display text-6xl md:text-8xl leading-none mb-6">
+        TU ESTILO,<br>
+        <span class="text-orange-500">NUESTRA</span><br>
+        NAVAJA.
+      </h1>
+      <p class="text-gray-300 text-lg mb-8 max-w-md">En Keko's Barber transformamos cada corte en una experiencia. Cortes clásicos, fades modernos y el mejor afeitado tradicional.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#turnos" class="bg-orange-500 hover:bg-orange-600 text-black font-bold px-8 py-4 rounded-full transition glow-orange flex items-center gap-2">
+          <i data-lucide="calendar-check" class="w-5 h-5"></i> Reservar Turno
+        </a>
+        <a href="#servicios" class="border-2 border-white hover:bg-white hover:text-black font-bold px-8 py-4 rounded-full transition">Ver Servicios</a>
+      </div>
+      <div class="flex gap-8 mt-12 pt-8 border-t border-gray-800">
+        <div><div class="font-display text-4xl text-orange-500">+10</div><div class="text-xs text-gray-400 uppercase">Años</div></div>
+        <div><div class="font-display text-4xl text-orange-500">+5K</div><div class="text-xs text-gray-400 uppercase">Clientes</div></div>
+        <div><div class="font-display text-4xl text-orange-500">5★</div><div class="text-xs text-gray-400 uppercase">Calidad</div></div>
+      </div>
+    </div>
+    <div class="hidden md:flex justify-center">
+      <div class="relative">
+        <div class="absolute inset-0 bg-orange-500 rounded-full blur-3xl opacity-30"></div>
+        <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=600&q=80" alt="Barbero" class="relative rounded-2xl border-4 border-orange-500 w-96 h-[500px] object-cover">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRIPE -->
+<div class="stripe-pattern h-4"></div>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="py-24 bg-zinc-950">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <span class="text-orange-500 font-semibold uppercase tracking-widest text-sm">Lo que hacemos</span>
+      <h2 class="font-display text-5xl md:text-7xl mt-2">NUESTROS <span class="text-orange-500">SERVICIOS</span></h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="card-hover bg-black border border-orange-500/30 p-8 rounded-xl">
+        <div class="bg-orange-500 w-14 h-14 rounded-lg flex items-center justify-center mb-6">
+          <i data-lucide="scissors" class="text-black"></i>
+        </div>
+        <h3 class="font-display text-3xl mb-3">CORTE CLÁSICO</h3>
+        <p class="text-gray-400 mb-4">Corte de pelo a medida, lavado y peinado profesional. El clásico que nunca falla.</p>
+        <div class="font-display text-4xl text-orange-500">$8.000</div>
+      </div>
+      <div class="card-hover bg-gradient-to-br from-orange-500 to-orange-700 p-8 rounded-xl relative overflow-hidden">
+        <div class="absolute top-4 right-4 bg-black text-orange-500 text-xs font-bold px-3 py-1 rounded-full">POPULAR</div>
+        <div class="bg-black w-14 h-14 rounded-lg flex items-center justify-center mb-6">
+          <i data-lucide="sparkles" class="text-orange-500"></i>
+        </div>
+        <h3 class="font-display text-3xl mb-3">COMBO COMPLETO</h3>
+        <p class="text-black/80 mb-4">Corte + Barba + Diseño + Tratamiento capilar. La experiencia total.</p>
+        <div class="font-display text-4xl text-black">$15.000</div>
+      </div>
+      <div class="card-hover bg-black border border-orange-500/30 p-8 rounded-xl">
+        <div class="bg-orange-500 w-14 h-14 rounded-lg flex items-center justify-center mb-6">
+          <i data-lucide="user" class="text-black"></i>
+        </div>
+        <h3 class="font-display text-3xl mb-3">BARBA & AFEITADO</h3>
+        <p class="text-gray-400 mb-4">Perfilado de barba con navaja, toallas calientes y aceites premium.</p>
+        <div class="font-display text-4xl text-orange-500">$6.500</div>
+      </div>
+      <div class="card-hover bg-black border border-orange-500/30 p-8 rounded-xl">
+        <div class="bg-orange-500 w-14 h-14 rounded-lg flex items-center justify-center mb-6">
+          <i data-lucide="baby" class="text-black"></i>
+        </div>
+        <h3 class="font-display text-3xl mb-3">CORTE NIÑOS</h3>
+        <p class="text-gray-400 mb-4">Corte especial para los más chicos en un ambiente divertido y tranquilo.</p>
+        <div class="font-display text-4xl text-orange-500">$6.000</div>
+      </div>
+      <div class="card-hover bg-black border border-orange-500/30 p-8 rounded-xl">
+        <div class="bg-orange-500 w-14 h-14 rounded-lg flex items-center justify-center mb-6">
+          <i data-lucide="palette" class="text-black"></i>
+        </div>
+        <h3 class="font-display text-3xl mb-3">COLORACIÓN</h3>
+        <p class="text-gray-400 mb-4">Tintes, decoloración y mechas. Renovate con los mejores productos del mercado.</p>
+        <div class="font-display text-4xl text-orange-500">$12.000</div>
+      </div>
+      <div class="card-hover bg-black border border-orange-500/30 p-8 rounded-xl">
+        <div class="bg-orange-500 w-14 h-14 rounded-lg flex items-center justify-center mb-6">
+          <i data-lucide="flame" class="text-black"></i>
+        </div>
+        <h3 class="font-display text-3xl mb-3">DISEÑOS</h3>
+        <p class="text-gray-400 mb-4">Diseños personalizados, líneas, logos y cualquier detalle que imagines.</p>
+        <div class="font-display text-4xl text-orange-500">$4.500</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TURNOS -->
+<section id="turnos" class="py-24 bg-black relative overflow-hidden">
+  <div class="absolute -right-40 top-20 w-96 h-96 bg-orange-500 rounded-full blur-[150px] opacity-20"></div>
+  <div class="max-w-7xl mx-auto px-6 relative">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <span class="text-orange-500 font-semibold uppercase tracking-widest text-sm">Agenda online</span>
+        <h2 class="font-display text-5xl md:text-6xl mt-2 mb-6">RESERVÁ TU <span class="text-orange-500">TURNO</span></h2>
+        <p class="text-gray-400 mb-8">Elegí el día, el horario y el servicio. Rápido, fácil y sin esperas. Confirmamos tu turno al instante.</p>
+        <div class="space-y-4">
+          <div class="flex items-center gap-4">
+            <div class="bg-orange-500/20 p-3 rounded-lg"><i data-lucide="clock" class="text-orange-500"></i></div>
+            <div><div class="font-bold">Horarios flexibles</div><div class="text-gray-400 text-sm">Lun a Sáb · 9:00 a 20:00</div></div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="bg-orange-500/20 p-3 rounded-lg"><i data-lucide="bell" class="text-orange-500"></i></div>
+            <div><div class="font-bold">Recordatorios</div><div class="text-gray-400 text-sm">Te avisamos por WhatsApp</div></div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="bg-orange-500/20 p-3 rounded-lg"><i data-lucide="shield-check" class="text-orange-500"></i></div>
+            <div><div class="font-bold">Sin cargo extra</div><div class="text-gray-400 text-sm">Pagás en el local</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-gradient-to-br from-zinc-900 to-black border border-orange-500/30 rounded-2xl p-8 glow-orange">
+        <h3 class="font-display text-3xl mb-6">Agendá aquí</h3>
+        <form class="space-y-4">
+          <div>
+            <label class="text-xs text-gray-400 uppercase tracking-wider">Nombre</label>
+            <input type="text" class="w-full bg-black border border-gray-700 focus:border-orange-500 rounded-lg px-4 py-3 mt-1 outline-none" placeholder="Tu nombre">
+          </div>
+          <div>
+            <label class="text-xs text-gray-400 uppercase tracking-wider">Teléfono</label>
+            <input type="tel" class="w-full bg-black border border-gray-700 focus:border-orange-500 rounded-lg px-4 py-3 mt-1 outline-none" placeholder="+54 9 ...">
+          </div>
+          <div>
+            <label class="text-xs text-gray-400 uppercase tracking-wider">Servicio</label>
+            <select class="w-full bg-black border border-gray-700 focus:border-orange-500 rounded-lg px-4 py-3 mt-1 outline-none">
+              <option>Corte Clásico</option>
+              <option>Combo Completo</option>
+              <option>Barba & Afeitado</option>
+              <option>Corte Niños</option>
+              <option>Coloración</option>
+            </select>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="text-xs text-gray-400 uppercase tracking-wider">Fecha</label>
+              <input type="date" class="w-full bg-black border border-gray-700 focus:border-orange-500 rounded-lg px-4 py-3 mt-1 outline-none">
+            </div>
+            <div>
+              <label class="text-xs text-gray-400 uppercase tracking-wider">Hora</label>
+              <input type="time" class="w-full bg-black border border-gray-700 focus:border-orange-500 rounded-lg px-4 py-3 mt-1 outline-none">
+            </div>
+          </div>
+          <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-black font-bold py-4 rounded-lg transition flex items-center justify-center gap-2">
+            <i data-lucide="calendar-check" class="w-5 h-5"></i> CONFIRMAR TURNO
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRIPE -->
+<div class="stripe-pattern h-4"></div>
+
+<!-- TIENDA -->
+<section id="tienda" class="py-24 bg-zinc-950">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <span class="text-orange-500 font-semibold uppercase tracking-widest text-sm">Shop</span>
+      <h2 class="font-display text-5xl md:text-7xl mt-2">PRODUCTOS <span class="text-orange-500">PREMIUM</span></h2>
+      <p class="text-gray-400 mt-4 max-w-xl mx-auto">Los mismos productos que usamos en el salón, ahora en tu casa.</p>
+    </div>
+    <div class="grid md:grid-cols-4 gap-6">
+      <div class="card-hover bg-black rounded-xl overflow-hidden border border-gray-800 hover:border-orange-500">
+        <div class="bg-gradient-to-br from-orange-500/20 to-black h-56 flex items-center justify-center">
+          <img src="https://images.unsplash.com/photo-1621607512214-68297480165e?auto=format&fit=crop&w=400&q=80" class="h-full w-full object-cover" alt="Pomada">
+        </div>
+        <div class="p-5">
+          <div class="text-orange-500 text-xs font-bold uppercase">Styling</div>
+          <h3 class="font-bold text-lg mt-1">Pomada Fijación Fuerte</h3>
+          <div class="flex justify-between items-center mt-4">
+            <span class="font-display text-2xl text-orange-500">$7.500</span>
+            <button class="bg-orange-500 hover:bg-orange-600 text-black p-2 rounded-full"><i data-lucide="shopping-cart" class="w-4 h-4"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="card-hover bg-black rounded-xl overflow-hidden border border-gray-800 hover:border-orange-500">
+        <div class="bg-gradient-to-br from-orange-500/20 to-black h-56 flex items-center justify-center">
+          <img src="https://images.unsplash.com/photo-1526045478516-99145907023c?auto=format&fit=crop&w=400&q=80" class="h-full w-full object-cover" alt="Aceite">
+        </div>
+        <div class="p-5">
+          <div class="text-orange-500 text-xs font-bold uppercase">Barba</div>
+          <h3 class="font-bold text-lg mt-1">Aceite para Barba</h3>
+          <div class="flex justify-between items-center mt-4">
+            <span class="font-display text-2xl text-orange-500">$5.900</span>
+            <button class="bg-orange-500 hover:bg-orange-600 text-black p-2 rounded-full"><i data-lucide="shopping-cart" class="w-4 h-4"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="card-hover bg-black rounded-xl overflow-hidden border border-gray-800 hover:border-orange-500">
+        <div class="bg-gradient-to-br from-orange-500/20 to-black h-56 flex items-center justify-center">
+          <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=400&q=80" class="h-full w-full object-cover" alt="Shampoo">
+        </div>
+        <div class="p-5">
+          <div class="text-orange-500 text-xs font-bold uppercase">Cuidado</div>
+          <h3 class="font-bold text-lg mt-1">Shampoo Premium</h3>
+          <div class="flex justify-between items-center mt-4">
+            <span class="font-display text-2xl text-orange-500">$6.200</span>
+            <button class="bg-orange-500 hover:bg-orange-600 text-black p-2 rounded-full"><i data-lucide="shopping-cart" class="w-4 h-4"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="card-hover bg-black rounded-xl overflow-hidden border border-gray-800 hover:border-orange-500">
+        <div class="bg-gradient-to-br from-orange-500/20 to-black h-56 flex items-center justify-center">
+          <img src="https://images.unsplash.com/photo-1512690317441-4f206cc35dee?auto=format&fit=crop&w=400&q=80" class="h-full w-full object-cover" alt="Kit">
+        </div>
+        <div class="p-5">
+          <div class="text-orange-500 text-xs font-bold uppercase">Kit Completo</div>
+          <h3 class="font-bold text-lg mt-1">Kit Keko's Essentials</h3>
+          <div class="flex justify-between items-center mt-4">
+            <span class="font-display text-2xl text-orange-500">$18.000</span>
+            <button class="bg-orange-500 hover:bg-orange-600 text-black p-2 rounded-full"><i data-lucide="shopping-cart" class="w-4 h-4"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-12">
+      <a href="#" class="inline-flex items-center gap-2 border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-black font-bold px-8 py-3 rounded-full transition">
+        Ver toda la tienda <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="py-24 bg-black">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <span class="text-orange-500 font-semibold uppercase tracking-widest text-sm">Testimonios</span>
+      <h2 class="font-display text-5xl md:text-6xl mt-2">LO QUE DICEN <span class="text-orange-500">DE NOSOTROS</span></h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-zinc-900 p-8 rounded-xl border-l-4 border-orange-500">
+        <div class="flex gap-1 text-orange-500 mb-4">
+          <i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i>
+        </div>
+        <p class="text-gray-300 italic mb-6">"El mejor corte de mi vida. Keko sabe lo que hace, atención de 10 y ambiente increíble."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center font-bold text-black">MR</div>
+          <div><div class="font-bold">Martín R.</div><div class="text-xs text-gray-400">Cliente hace 3 
