@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pope's Bar | Cocteleria de Autor</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'pope-red': '#B8132B',
+          'pope-dark-red': '#7A0A1A',
+          'pope-black': '#0A0A0A',
+          'pope-gray': '#1a1a1a',
+        },
+        fontFamily: {
+          'serif': ['Playfair Display', 'serif'],
+          'sans': ['Inter', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background-color: #0A0A0A; color: #f5f5f5; font-family: 'Inter', sans-serif; }
+  .hero-bg {
+    background-image: linear-gradient(rgba(10,10,10,0.75), rgba(10,10,10,0.9)), url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  .card-hover { transition: all 0.4s ease; }
+  .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(184,19,43,0.3); }
+  .btn-red {
+    background: linear-gradient(135deg, #B8132B, #7A0A1A);
+    transition: all 0.3s ease;
+  }
+  .btn-red:hover {
+    background: linear-gradient(135deg, #7A0A1A, #B8132B);
+    box-shadow: 0 10px 25px rgba(184,19,43,0.5);
+  }
+  .glow-text { text-shadow: 0 0 20px rgba(184,19,43,0.6); }
+  .border-glow { box-shadow: 0 0 15px rgba(184,19,43,0.3); }
+</style>
+</head>
+<body class="bg-pope-black">
+
+<!-- NAVBAR -->
+<nav class="fixed w-full z-50 bg-pope-black/90 backdrop-blur-md border-b border-pope-red/30">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#" class="text-2xl font-serif font-bold text-white">
+      <span class="text-pope-red">Pope's</span> Bar
+    </a>
+    <ul class="hidden md:flex space-x-8 text-sm uppercase tracking-wider">
+      <li><a href="#servicios" class="hover:text-pope-red transition">Servicios</a></li>
+      <li><a href="#carta" class="hover:text-pope-red transition">Carta</a></li>
+      <li><a href="#turnos" class="hover:text-pope-red transition">Reservas</a></li>
+      <li><a href="#tienda" class="hover:text-pope-red transition">Tienda</a></li>
+      <li><a href="#contacto" class="hover:text-pope-red transition">Contacto</a></li>
+    </ul>
+    <a href="#turnos" class="btn-red px-5 py-2 rounded-full text-sm font-semibold text-white">Reservar</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-bg min-h-screen flex items-center justify-center relative">
+  <div class="text-center px-6 max-w-4xl">
+    <p class="text-pope-red uppercase tracking-[0.4em] text-sm mb-4">Desde 2015</p>
+    <h1 class="font-serif text-6xl md:text-8xl font-black text-white mb-6 glow-text leading-none">
+      Pope's <span class="text-pope-red">Bar</span>
+    </h1>
+    <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto font-light">
+      Cocteleria de autor, noches inolvidables. Un espacio donde cada trago cuenta una historia y el fuego encuentra su sabor.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#turnos" class="btn-red px-8 py-4 rounded-full font-semibold text-white uppercase tracking-wide">Reservar Mesa</a>
+      <a href="#carta" class="border-2 border-pope-red text-white px-8 py-4 rounded-full font-semibold hover:bg-pope-red transition uppercase tracking-wide">Ver Carta</a>
+    </div>
+  </div>
+  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+    <svg class="w-6 h-6 text-pope-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="py-24 bg-pope-black">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="text-pope-red uppercase tracking-[0.4em] text-sm mb-3">Qué ofrecemos</p>
+      <h2 class="font-serif text-5xl md:text-6xl font-bold text-white">Nuestros <span class="text-pope-red">Servicios</span></h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="card-hover bg-pope-gray p-8 rounded-2xl border border-pope-red/20">
+        <div class="w-14 h-14 rounded-full bg-pope-red/20 flex items-center justify-center mb-6">
+          <svg class="w-7 h-7 text-pope-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+        </div>
+        <h3 class="font-serif text-2xl font-bold text-white mb-3">Cocteleria de Autor</h3>
+        <p class="text-gray-400 leading-relaxed">Creaciones exclusivas de nuestros bartenders premiados. Sabores únicos elaborados con ingredientes premium.</p>
+      </div>
+      <div class="card-hover bg-pope-gray p-8 rounded-2xl border border-pope-red/20">
+        <div class="w-14 h-14 rounded-full bg-pope-red/20 flex items-center justify-center mb-6">
+          <svg class="w-7 h-7 text-pope-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+        </div>
+        <h3 class="font-serif text-2xl font-bold text-white mb-3">Eventos Privados</h3>
+        <p class="text-gray-400 leading-relaxed">Celebrá tu cumpleaños, despedida o evento corporativo en un ambiente exclusivo con servicio personalizado.</p>
+      </div>
+      <div class="card-hover bg-pope-gray p-8 rounded-2xl border border-pope-red/20">
+        <div class="w-14 h-14 rounded-full bg-pope-red/20 flex items-center justify-center mb-6">
+          <svg class="w-7 h-7 text-pope-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
+        </div>
+        <h3 class="font-serif text-2xl font-bold text-white mb-3">Música en Vivo</h3>
+        <p class="text-gray-400 leading-relaxed">DJs y bandas los fines de semana. Ambiente único que combina jazz, funk y los mejores hits nocturnos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CARTA / TIENDA -->
+<section id="carta" class="py-24 bg-gradient-to-b from-pope-black to-pope-gray">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="text-pope-red uppercase tracking-[0.4em] text-sm mb-3">Nuestra carta</p>
+      <h2 class="font-serif text-5xl md:text-6xl font-bold text-white">Tragos <span class="text-pope-red">Destacados</span></h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-pope-black rounded-2xl overflow-hidden card-hover border border-pope-red/20">
+        <div class="h-56 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&w=600&q=80')"></div>
+        <div class="p-6">
+          <h3 class="font-serif text-xl font-bold text-white">Old Pope</h3>
+          <p class="text-gray-500 text-sm mb-4">Whiskey, bitters, naranja</p>
+          <div class="flex justify-between items-center">
+            <span class="text-pope-red font-bold text-lg">$4.500</span>
+            <button class="btn-red text-white px-4 py-2 rounded-full text-sm">Pedir</button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-pope-black rounded-2xl overflow-hidden card-hover border border-pope-red/20">
+        <div class="h-56 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1587223962930-cb7f31384c19?auto=format&fit=crop&w=600&q=80')"></div>
+        <div class="p-6">
+          <h3 class="font-serif text-xl font-bold text-white">Red Sin</h3>
+          <p class="text-gray-500 text-sm mb-4">Gin, frutos rojos, rosa</p>
+          <div class="flex justify-between items-center">
+            <span class="text-pope-red font-bold text-lg">$4.200</span>
+            <button class="btn-red text-white px-4 py-2 rounded-full text-sm">Pedir</button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-pope-black rounded-2xl overflow-hidden card-hover border border-pope-red/20">
+        <div class="h-56 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&w=600&q=80')"></div>
+        <div class="p-6">
+          <h3 class="font-serif text-xl font-bold text-white">Negroni Noir</h3>
+          <p class="text-gray-500 text-sm mb-4">Gin, campari, vermut</p>
+          <div class="flex justify-between items-center">
+            <span class="text-pope-red font-bold text-lg">$4.800</span>
+            <button class="btn-red text-white px-4 py-2 rounded-full text-sm">Pedir</button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-pope-black rounded-2xl overflow-hidden card-hover border border-pope-red/20">
+        <div class="h-56 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=600&q=80')"></div>
+        <div class="p-6">
+          <h3 class="font-serif text-xl font-bold text-white">Smoke Devil</h3>
+          <p class="text-gray-500 text-sm mb-4">Mezcal, chile, lima</p>
+          <div class="flex justify-between items-center">
+            <span class="text-pope-red font-bold text-lg">$5.200</span>
+            <button class="btn-red text-white px-4 py-2 rounded-full text-sm">Pedir</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-12">
+      <a href="#tienda" class="inline-block border-2 border-pope-red text-white px-8 py-3 rounded-full font-semibold hover:bg-pope-red transition uppercase tracking-wide">Ver Carta Completa</a>
+    </div>
+  </div>
+</section>
+
+<!-- RESERVA DE TURNOS -->
+<section id="turnos" class="py-24 bg-pope-black relative overflow-hidden">
+  <div class="absolute inset-0 opacity-10" style="background-image: url('https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center;"></div>
+  <div class="max-w-5xl mx-auto px-6 relative z-10">
+    <div class="text-center mb-12">
+      <p class="text-pope-red uppercase tracking-[0.4em] text-sm mb-3">Asegurá tu lugar</p>
+      <h2 class="font-serif text-5xl md:text-6xl font-bold text-white">Reservá tu <span class="text-pope-red">Mesa</span></h2>
+      <p class="text-gray-400 mt-4 max-w-xl mx-auto">Las mejores noches se planean con anticipación. Elegí fecha, hora y disfrutá.</p>
+    </div>
+    <form class="bg-pope-gray/80 backdrop-blur-md rounded-3xl p-10 border border-pope-red/30 border-glow">
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-sm text-gray-400 mb-2 uppercase tracking-wider">Nombre</label>
+          <input type="text" class="w-full bg-pope-black border border-pope-red/30 rounded-lg px-4 py-3 text-white focus:border-pope-red focus:outline-none" placeholder="Tu nombre completo">
+        </div>
+        <div>
+          <label class="block text-sm text-gray-400 mb-2 uppercase tracking-wider">Teléfono</label>
+          <input type="tel" class="w-full bg-pope-black border border-pope-red/30 rounded-lg px-4 py-3 text-white focus:border-pope-red focus:outline-none" placeholder="+54 9 11 ...">
+        </div>
+        <div>
+          <label class="block text-sm text-gray-400 mb-2 uppercase tracking-wider">Fecha</label>
+          <input type="date" class="w-full bg-pope-black border border-pope-red/30 rounded-lg px-4 py-3 text-white focus:border-pope-red focus:outline-none">
+        </div>
+        <div>
+          <label class="block text-sm text-gray-400 mb-2 uppercase tracking-wider">Hora</label>
+          <select class="w-full bg-pope-black border border-pope-red/30 rounded-lg px-4 py-3 text-white focus:border-pope-red focus:outline-none">
+            <option>20:00</option><option>21:00</option><option>22:00</option><option>23:00</option><option>00:00</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm text-gray-400 mb-2 uppercase tracking-wider">Personas</label>
+          <select class="w-full bg-pope-black border border-pope-red/30 rounded-lg px-4 py-3 text-white focus:border-pope-red focus:outline-none">
+            <option>2 personas</option><option>4 personas</option><option>6 personas</option><option>8+ personas</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm text-gray-400 mb-2 uppercase tracking-wider">Email</label>
+          <input type="email" class="w-full bg-pope-black border border-pope-red/30 rounded-lg px-4 py-3 text-white focus:border-pope-red focus:outline-none" placeholder="tu@email.com">
+        </div>
+      </div>
+      <div class="mt-6">
+        <label class="block text-sm text-gray-400 mb-2 uppercase tracking-wider">Comentarios</label>
+        <textarea rows="3" class="w-full bg-pope-black border border-pope-red/30 rounded-lg px-4 py-3 text-white focus:border-pope-red focus:outline-none" placeholder="Ocasión especial, alergias, etc."></textarea>
+      </div>
+      <button type="submit" class="btn-red w-full mt-8 py-4 rounded-full text-white font-bold uppercase tracking-wider">Confirmar Reserva</button>
+    </form>
+  </div>
+</section>
+
+<!-- TIENDA -->
+<section id="tienda" class="py-24 bg-pope-gray">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="text-pope-red uppercase tracking-[0.4em] text-sm mb-3">Llevalo a casa</p>
+      <h2 class="font-serif text-5xl md:text-6xl font-bold text-white">Pope's <span class="text-pope-red">Shop</span></h2>
+      <p class="text-gray-400 mt-4">Kits de cocteleria, merchandising y productos exclusivos</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-pope-black rounded-2xl overflow-hidden card-hover">
+        <div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1582819509237-d6f2d8d9fa86?auto=format&fit=crop&w=600&q=80')"></div>
+        <div class="p-6">
+          <span class="text-pope-red text-xs uppercase tracking-wider">Kit Signature</span>
+          <h3 class="font-serif text-2xl font-bold text-white mt-2 mb-3">Kit Cocteleria Pope</h3>
+          <p class="text-gray-400 text-sm mb-4">Incluye shaker, jigger, cuchara y nuestra receta secreta.</p>
+          <div class="flex justify-between items-center">
+            <span class="text-2xl font-bold text-white">$28.500</span>
+            <button class="btn-red text-white px-5 py-2 rounded-full text-sm font-semibold">Comprar</button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-pope-black rounded-2xl overflow-hidden card-hover">
+        <div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1569529465841-dfecdab7503b?auto=format&fit=crop&w=600&q=80')"></div>
+        <div class="p-6">
+          <span class="text-pope-red text-xs uppercase tracking-wider">Edición Limitada</span>
+          <h3 class="font-serif text-2xl font-bold text-white mt-2 mb-3">Gin Pope's Label</h3>
+          <p class="text-gray-400 text-sm mb-4">Nuestra propia edición de gin, destilado artesanalmente.</p>
+          <div class="flex justify-between items-center">
+            <span class="text-2xl font-bold text-white">$35.000</span>
+            <button class="btn-red text-white px-5 py-2 rounded-full text-sm font-semibold">Comprar</button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-pope-black rounded-2xl overflow-hidden card-hover">
+        <div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80')"></div>
+        <div class="p-6">
+          <span class="text-pope-red text-xs uppercase tracking-wider">Merch</span>
+          <h3 class="font-serif text-2xl font-bold text-white mt-2 mb-3">Remera Pope's Bar</h3>
+          <p class="text-gray-400 text-sm mb-4">Algodón premium con logo bordado. Negro y rojo.</p>
+          <div class="flex justify-between items-center">
+            <span class="text-2xl font-bold text-white">$12.000</span>
+            <button class="btn-red text-white px-5 py-2 rounded-full text-sm font-semibold">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="py-24 bg-pope-black">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="text-pope-red uppercase tracking-[0.4em] text-sm mb-3">Testimonios</p>
+      <h2 class="font-serif text-5xl font-bold text-white">Lo que dicen <span class="text-pope-red">nuestros clientes</span></h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-pope-gray p-8 rounded-2xl border-l-4 border-pope-red">
+        <div class="flex text-pope-red mb-4">★★★★★</div>
+        <p class="text-gray-300 italic mb-6">"El mejor bar de la ciudad. Los tragos son obras de arte y el ambiente es perfecto."</p>
+        <p class="text-white font-semibold">Lucía M.</p>
+      </div>
+      <div class="bg-pope-gray p-8 rounded-2xl border-l-4 border-pope-red">
+        <div class="flex text-pope-red mb-4">★★★★★</div>
+        <p class="text-gray-300 italic mb-6">"Reservé para un cumpleaños y el servicio fue impecable. Volve
