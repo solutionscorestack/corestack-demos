@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maquillajes Mailen | Belleza Integral</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          'serif': ['Playfair Display', 'serif'],
+          'sans': ['Poppins', 'sans-serif'],
+        },
+        colors: {
+          'rose-nude': '#E8C4C4',
+          'nude': '#F5E6E0',
+          'deep-rose': '#B76E79',
+          'gold': '#D4AF7A',
+          'dark': '#2C1810',
+        }
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  .gradient-bg { background: linear-gradient(135deg, #F5E6E0 0%, #E8C4C4 50%, #F5E6E0 100%); }
+  .text-gradient { background: linear-gradient(135deg, #B76E79, #D4AF7A); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .card-hover { transition: all 0.4s ease; }
+  .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(183, 110, 121, 0.2); }
+</style>
+</head>
+<body class="font-sans bg-nude text-dark">
+
+<!-- Navbar -->
+<nav class="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center space-x-2">
+      <span class="text-2xl">💄</span>
+      <h1 class="font-serif text-2xl font-bold text-gradient">Maquillajes Mailen</h1>
+    </div>
+    <ul class="hidden md:flex space-x-8 text-sm font-medium">
+      <li><a href="#inicio" class="hover:text-deep-rose transition">Inicio</a></li>
+      <li><a href="#servicios" class="hover:text-deep-rose transition">Servicios</a></li>
+      <li><a href="#turnos" class="hover:text-deep-rose transition">Turnos</a></li>
+      <li><a href="#tienda" class="hover:text-deep-rose transition">Tienda</a></li>
+      <li><a href="#contacto" class="hover:text-deep-rose transition">Contacto</a></li>
+    </ul>
+    <a href="#turnos" class="hidden md:inline-block bg-deep-rose text-white px-5 py-2 rounded-full text-sm hover:bg-dark transition">Reservar</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section id="inicio" class="gradient-bg pt-32 pb-20 px-6">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <span class="inline-block bg-white/60 text-deep-rose px-4 py-1 rounded-full text-sm font-medium mb-4">✨ Estudio de Belleza Profesional</span>
+      <h2 class="font-serif text-5xl md:text-6xl font-bold leading-tight mb-6">Realza tu <span class="text-gradient italic">belleza</span> natural</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">Maquillaje profesional para novias, eventos sociales y sesiones fotográficas. Reservá tu turno online y descubrí nuestra línea de productos exclusivos.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#turnos" class="bg-deep-rose text-white px-8 py-3 rounded-full font-medium hover:bg-dark transition shadow-lg">Reservar Turno</a>
+        <a href="#tienda" class="bg-white text-dark px-8 py-3 rounded-full font-medium hover:bg-gold hover:text-white transition shadow-lg">Ver Productos</a>
+      </div>
+      <div class="flex gap-8 mt-12">
+        <div><p class="font-serif text-3xl font-bold text-deep-rose">+500</p><p class="text-sm text-gray-600">Clientas felices</p></div>
+        <div><p class="font-serif text-3xl font-bold text-deep-rose">+8</p><p class="text-sm text-gray-600">Años de experiencia</p></div>
+        <div><p class="font-serif text-3xl font-bold text-deep-rose">100%</p><p class="text-sm text-gray-600">Calidad pro</p></div>
+      </div>
+    </div>
+    <div class="relative">
+      <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800" alt="Maquillaje" class="rounded-3xl shadow-2xl w-full">
+      <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl hidden md:block">
+        <p class="text-sm font-medium">⭐⭐⭐⭐⭐</p>
+        <p class="text-xs text-gray-600">"La mejor experiencia"</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Servicios -->
+<section id="servicios" class="py-20 px-6 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <span class="text-deep-rose font-medium tracking-wider text-sm">NUESTROS SERVICIOS</span>
+      <h3 class="font-serif text-4xl md:text-5xl font-bold mt-2">Servicios que te enamorarán</h3>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="card-hover bg-nude p-8 rounded-3xl">
+        <div class="text-5xl mb-4">👰</div>
+        <h4 class="font-serif text-2xl font-bold mb-3">Maquillaje de Novia</h4>
+        <p class="text-gray-600 mb-4">Un look inolvidable para tu día más especial. Incluye prueba previa.</p>
+        <p class="text-deep-rose font-bold text-xl">Desde $45.000</p>
+      </div>
+      <div class="card-hover bg-nude p-8 rounded-3xl">
+        <div class="text-5xl mb-4">💃</div>
+        <h4 class="font-serif text-2xl font-bold mb-3">Eventos Sociales</h4>
+        <p class="text-gray-600 mb-4">Fiestas, 15, casamientos. Luce espectacular en cualquier ocasión.</p>
+        <p class="text-deep-rose font-bold text-xl">Desde $25.000</p>
+      </div>
+      <div class="card-hover bg-nude p-8 rounded-3xl">
+        <div class="text-5xl mb-4">📸</div>
+        <h4 class="font-serif text-2xl font-bold mb-3">Sesiones de Foto</h4>
+        <p class="text-gray-600 mb-4">Maquillaje profesional optimizado para cámara y producciones.</p>
+        <p class="text-deep-rose font-bold text-xl">Desde $20.000</p>
+      </div>
+      <div class="card-hover bg-nude p-8 rounded-3xl">
+        <div class="text-5xl mb-4">🎓</div>
+        <h4 class="font-serif text-2xl font-bold mb-3">Cursos y Talleres</h4>
+        <p class="text-gray-600 mb-4">Aprendé técnicas profesionales de automaquillaje paso a paso.</p>
+        <p class="text-deep-rose font-bold text-xl">Desde $30.000</p>
+      </div>
+      <div class="card-hover bg-nude p-8 rounded-3xl">
+        <div class="text-5xl mb-4">✨</div>
+        <h4 class="font-serif text-2xl font-bold mb-3">Asesoría de Imagen</h4>
+        <p class="text-gray-600 mb-4">Descubrí los colores y estilos que mejor te favorecen.</p>
+        <p class="text-deep-rose font-bold text-xl">Desde $18.000</p>
+      </div>
+      <div class="card-hover bg-nude p-8 rounded-3xl">
+        <div class="text-5xl mb-4">💅</div>
+        <h4 class="font-serif text-2xl font-bold mb-3">Pack Integral</h4>
+        <p class="text-gray-600 mb-4">Maquillaje + peinado + skincare. La experiencia completa.</p>
+        <p class="text-deep-rose font-bold text-xl">Desde $55.000</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Turnos -->
+<section id="turnos" class="py-20 px-6 gradient-bg">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-12">
+      <span class="text-deep-rose font-medium tracking-wider text-sm">RESERVÁ ONLINE</span>
+      <h3 class="font-serif text-4xl md:text-5xl font-bold mt-2">Agendá tu turno</h3>
+      <p class="text-gray-700 mt-4 max-w-2xl mx-auto">Elegí el servicio, fecha y horario que mejor se adapte a vos. Te confirmamos por WhatsApp.</p>
+    </div>
+    <div class="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
+      <form class="grid md:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-sm font-medium mb-2">Nombre completo</label>
+          <input type="text" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-deep-rose" placeholder="Tu nombre">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-2">Teléfono / WhatsApp</label>
+          <input type="tel" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-deep-rose" placeholder="+54 9 ...">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-2">Servicio</label>
+          <select class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-deep-rose">
+            <option>Maquillaje de Novia</option>
+            <option>Evento Social</option>
+            <option>Sesión de Fotos</option>
+            <option>Curso / Taller</option>
+            <option>Asesoría de Imagen</option>
+            <option>Pack Integral</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-2">Fecha preferida</label>
+          <input type="date" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-deep-rose">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-2">Horario</label>
+          <select class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-deep-rose">
+            <option>Mañana (9hs - 12hs)</option>
+            <option>Mediodía (12hs - 15hs)</option>
+            <option>Tarde (15hs - 19hs)</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-2">Email</label>
+          <input type="email" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-deep-rose" placeholder="tu@email.com">
+        </div>
+        <div class="md:col-span-2">
+          <label class="block text-sm font-medium mb-2">Mensaje (opcional)</label>
+          <textarea rows="3" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-deep-rose" placeholder="Contanos detalles..."></textarea>
+        </div>
+        <button type="submit" class="md:col-span-2 bg-deep-rose text-white py-4 rounded-full font-medium hover:bg-dark transition shadow-lg">Confirmar Reserva</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Tienda -->
+<section id="tienda" class="py-20 px-6 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <span class="text-deep-rose font-medium tracking-wider text-sm">NUESTRA TIENDA</span>
+      <h3 class="font-serif text-4xl md:text-5xl font-bold mt-2">Productos seleccionados</h3>
+      <p class="text-gray-600 mt-4">Los mismos que usamos en el estudio, ahora en tu casa.</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="card-hover bg-nude rounded-3xl overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=500" alt="Labial" class="w-full h-64 object-cover">
+        <div class="p-6">
+          <h4 class="font-serif text-xl font-bold">Labial Mate Premium</h4>
+          <p class="text-gray-600 text-sm mt-1">Larga duración 12h</p>
+          <div class="flex justify-between items-center mt-4">
+            <span class="text-deep-rose font-bold text-xl">$8.500</span>
+            <button class="bg-dark text-white px-4 py-2 rounded-full text-sm hover:bg-deep-rose transition">Comprar</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-hover bg-nude rounded-3xl overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=500" alt="Paleta" class="w-full h-64 object-cover">
+        <div class="p-6">
+          <h4 class="font-serif text-xl font-bold">Paleta de Sombras Gold</h4>
+          <p class="text-gray-600 text-sm mt-1">12 tonos mate y glitter</p>
+          <div class="flex justify-between items-center mt-4">
+            <span class="text-deep-rose font-bold text-xl">$15.900</span>
+            <button class="bg-dark text-white px-4 py-2 rounded-full text-sm hover:bg-deep-rose transition">Comprar</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-hover bg-nude rounded-3xl overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1631214524020-7e18db9a8f92?w=500" alt="Base" class="w-full h-64 object-cover">
+        <div class="p-6">
+          <h4 class="font-serif text-xl font-bold">Base HD Profesional</h4>
+          <p class="text-gray-600 text-sm mt-1">Cobertura media-alta</p>
+          <div class="flex justify-between items-center mt-4">
+            <span class="text-deep-rose font-bold text-xl">$12.700</span>
+            <button class="bg-dark text-white px-4 py-2 rounded-full text-sm hover:bg-deep-rose transition">Comprar</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-hover bg-nude rounded-3xl overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=500" alt="Brochas" class="w-full h-64 object-cover">
+        <div class="p-6">
+          <h4 class="font-serif text-xl font-bold">Set de Brochas x10</h4>
+          <p class="text-gray-600 text-sm mt-1">Cerdas sintéticas premium</p>
+          <div class="flex justify-between items-center mt-4">
+            <span class="text-deep-rose font-bold text-xl">$22.000</span>
+            <button class="bg-dark text-white px-4 py-2 rounded-full text-sm hover:bg-deep-rose transition">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-12">
+      <a href="#" class="inline-block border-2 border-deep-rose text-deep-rose px-8 py-3 rounded-full font-medium hover:bg-deep-rose hover:text-white transition">Ver tienda completa</a>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonios -->
+<section class="py-20 px-6 gradient-bg">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <span class="text-deep-rose font-medium tracking-wider text-sm">TESTIMONIOS</span>
+      <h3 class="font-serif text-4xl md:text-5xl font-bold mt-2">Lo que dicen de nosotros</h3>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-3xl shadow-lg">
+        <p class="text-yellow-500 mb-4">⭐⭐⭐⭐⭐</p>
+        <p class="text-gray-700 italic mb-6">"Mailen es una genia! Me maquilló para mi casamiento y fue un sueño. Súper profesional y cálida."</p>
+        <p class="font-bold">Carolina M.</p>
+        <p class="text-sm text-gray-500">Novia</p>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow-lg">
+        <p class="text-yellow-500 mb-4">⭐⭐⭐⭐⭐</p>
+        <p class="text-gray-700 italic mb-6">"Los productos son de excelente calidad. El labial mate dura todo el día sin retoques."</p>
+        <p class="font-bold">Julieta R.</p>
+        <p class="text-sm text-gray-500">Cliente tienda</p>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow-lg">
+        <p class="text-yellow-500 mb-4">⭐⭐⭐⭐⭐</p>
+        <p class="text-gray-700 italic mb-6">"Hice el curso de automaquillaje y aprendí muchísimo. 100% recomendable!"</p>
+        <p class="font-bold">Sofía L.</p>
+        <p class="text-sm text-gray-500">Alumna</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contacto -->
+<section id="contacto" class="py-20 px-6 bg-dark text-white">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <span class="text-gold font-medium tracking-wider text-sm">CONTACTO</span>
+      <h3 class="font-serif text-4xl md:text-5xl font-bold mt-2 mb-6">¿Hablamos?</h3>
+      <p class="text-gray-300 mb-8">Escribinos por WhatsApp o visitá nuestro estudio. Estamos para ayudarte a sentirte espectacular.</p>
+      <div class="space-y-4">
+        <div class="flex items-center space-x-4"><span class="text-2xl">📍</span><p>Av. Siempre Viva 1234, Buenos Aires</p></div>
+        <div class="flex items-center space-x-4"><span class="text-2xl">📱</span><p>+54 9 11 5555-5555</p></div>
+        <div class="flex items-center space-x-4"><span class="text-2xl">✉️</span><p>hola@maquillajesmailen.com</p></div>
+        <div class="flex items-center space-x-4"><span class="text-2xl">🕐</span><p>Lun a Sáb · 9hs a 19hs</p></div>
+      </div>
+      <div class="flex space-x-4 mt-8">
+        <a href="#" class="bg-deep-rose w-12 h-12 rounded-full flex items-center justify-center hover:bg-gold transition">IG</a>
+        <a href="#" class="bg-deep-rose w-12 h-12 rounded-full flex items-center justify-center hover:bg-gold transition">FB</a>
+        <a href="#" class="bg-deep-rose w-12 h-12 rounded-full flex items-center justify-center hover:bg-gold transition">TK</a>
+      </div>
+    </div>
+    <div class="bg-white/10 backdrop-blur p-8 rounded-3xl">
+      <h4 class="font-serif text-2xl font-bold mb-6">Envianos un mensaje</h4>
+      <form class="space-y-4">
+        <input type="text" placeholder="Nombre" class="w-full px-4 py-3 rounded-xl bg-white/20 border border-white/30 placeholder-gray-400 focus:outline-none focus:border-gold">
+        <input type="email" placeholder="Email" class="w-full px-4 py-3 rounded-xl bg-white/20 border border-white/30 placeholder-gray-400 focus:outline-none focus:border-gold">
+        <textarea rows="4" placeholder="Mensaje" class="w-full px-4 py-3 rounded-xl bg-white/20 border border-white/30 placeholder-gray-400 focus:outline-none focus:border-gold"></textarea>
+        <button class="w-full bg-gold text-dark font-medium py-3 rounded-full hover:bg-white transition">Enviar mensaje</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-black text-gray-400 py-8 px-6 text-center">
+  <p class="font-serif text-xl text-white mb-2">Maquillajes Mailen 💄</p>
+  <p class="text-sm">© 2024 Todos los derechos reservados · Hecho con amor</p>
+</footer>
+
+<!-- WhatsApp floating -->
+<a href="https://wa.me/5491155555555" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-2xl hover:scale-110 transition z-50">💬</a>
+
+</body>
+</html>
