@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peluquería Pets - Cuidado integral para tu mascota</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  body { font-family: 'Poppins', sans-serif; }
+  .hero-bg {
+    background-image: linear-gradient(rgba(139, 92, 246, 0.6), rgba(236, 72, 153, 0.5)), url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+  }
+  .paw-pattern {
+    background-image: radial-gradient(circle at 10% 20%, rgba(139,92,246,0.05) 0%, transparent 40%), radial-gradient(circle at 90% 80%, rgba(236,72,153,0.05) 0%, transparent 40%);
+  }
+  .card-hover { transition: all 0.3s ease; }
+  .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(139,92,246,0.2); }
+</style>
+</head>
+<body class="bg-white text-gray-800">
+
+<!-- Navbar -->
+<header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+  <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#" class="flex items-center space-x-2">
+      <span class="text-3xl">🐾</span>
+      <span class="text-xl font-extrabold text-purple-700">Peluquería Pets</span>
+    </a>
+    <ul class="hidden md:flex space-x-8 font-medium text-gray-700">
+      <li><a href="#inicio" class="hover:text-purple-600">Inicio</a></li>
+      <li><a href="#servicios" class="hover:text-purple-600">Servicios</a></li>
+      <li><a href="#turnos" class="hover:text-purple-600">Turnos</a></li>
+      <li><a href="#tienda" class="hover:text-purple-600">Tienda</a></li>
+      <li><a href="#contacto" class="hover:text-purple-600">Contacto</a></li>
+    </ul>
+    <a href="#turnos" class="hidden md:inline-block bg-gradient-to-r from-purple-600 to-pink-500 text-white px-5 py-2 rounded-full font-semibold hover:shadow-lg transition">Reservar</a>
+    <button id="menuBtn" class="md:hidden text-2xl text-purple-700">☰</button>
+  </nav>
+  <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+    <ul class="flex flex-col px-6 py-4 space-y-3 font-medium">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#turnos">Turnos</a></li>
+      <li><a href="#tienda">Tienda</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- Hero -->
+<section id="inicio" class="hero-bg min-h-screen flex items-center pt-20">
+  <div class="container mx-auto px-6 text-center text-white">
+    <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">Tu mascota merece<br><span class="text-yellow-300">lo mejor 🐶</span></h1>
+    <p class="text-xl md:text-2xl max-w-2xl mx-auto mb-10 font-light">Peluquería, spa, turnos online y productos premium. Todo en un solo lugar.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#turnos" class="bg-white text-purple-700 px-8 py-4 rounded-full font-bold hover:bg-yellow-300 transition shadow-xl">Reservar Turno</a>
+      <a href="#servicios" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-purple-700 transition">Ver Servicios</a>
+    </div>
+    <div class="mt-16 grid grid-cols-3 gap-6 max-w-2xl mx-auto">
+      <div><div class="text-4xl font-extrabold">+5K</div><div class="text-sm opacity-90">Mascotas felices</div></div>
+      <div><div class="text-4xl font-extrabold">10+</div><div class="text-sm opacity-90">Años de experiencia</div></div>
+      <div><div class="text-4xl font-extrabold">4.9★</div><div class="text-sm opacity-90">Calificación</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Servicios -->
+<section id="servicios" class="py-20 paw-pattern">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <span class="text-purple-600 font-semibold uppercase tracking-widest">Servicios</span>
+      <h2 class="text-4xl md:text-5xl font-extrabold mt-2 mb-4">Cuidado integral 💜</h2>
+      <p class="text-gray-600 max-w-xl mx-auto">Ofrecemos servicios profesionales para que tu mascota luzca y se sienta increíble.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-3xl p-8 card-hover border border-purple-100">
+        <div class="text-5xl mb-4">✂️</div>
+        <h3 class="text-2xl font-bold mb-3">Corte y Peinado</h3>
+        <p class="text-gray-600 mb-4">Corte personalizado según raza y preferencia. Tijera y máquina profesional.</p>
+        <div class="text-2xl font-bold text-purple-600">Desde $8.000</div>
+      </div>
+      <div class="bg-gradient-to-br from-purple-600 to-pink-500 text-white rounded-3xl p-8 card-hover transform md:scale-105">
+        <div class="text-5xl mb-4">🛁</div>
+        <h3 class="text-2xl font-bold mb-3">Baño Spa Completo</h3>
+        <p class="mb-4 opacity-95">Baño con shampoo premium, acondicionador, secado y perfumado.</p>
+        <div class="text-2xl font-bold">Desde $6.500</div>
+        <span class="inline-block mt-3 bg-yellow-300 text-purple-800 px-3 py-1 rounded-full text-xs font-bold">MÁS POPULAR</span>
+      </div>
+      <div class="bg-white rounded-3xl p-8 card-hover border border-purple-100">
+        <div class="text-5xl mb-4">💅</div>
+        <h3 class="text-2xl font-bold mb-3">Estética & Uñas</h3>
+        <p class="text-gray-600 mb-4">Corte de uñas, limpieza de oídos, expresión de glándulas y más.</p>
+        <div class="text-2xl font-bold text-purple-600">Desde $4.000</div>
+      </div>
+      <div class="bg-white rounded-3xl p-8 card-hover border border-purple-100">
+        <div class="text-5xl mb-4">🦷</div>
+        <h3 class="text-2xl font-bold mb-3">Higiene Dental</h3>
+        <p class="text-gray-600 mb-4">Cepillado profesional con productos especiales para mascotas.</p>
+        <div class="text-2xl font-bold text-purple-600">Desde $3.500</div>
+      </div>
+      <div class="bg-white rounded-3xl p-8 card-hover border border-purple-100">
+        <div class="text-5xl mb-4">🐩</div>
+        <h3 class="text-2xl font-bold mb-3">Deslanado Profesional</h3>
+        <p class="text-gray-600 mb-4">Eliminación del pelo muerto, ideal para razas de doble capa.</p>
+        <div class="text-2xl font-bold text-purple-600">Desde $7.500</div>
+      </div>
+      <div class="bg-white rounded-3xl p-8 card-hover border border-purple-100">
+        <div class="text-5xl mb-4">🚐</div>
+        <h3 class="text-2xl font-bold mb-3">Servicio a Domicilio</h3>
+        <p class="text-gray-600 mb-4">Retiro y entrega de tu mascota. Comodidad para vos y seguridad para ella.</p>
+        <div class="text-2xl font-bold text-purple-600">Consultar</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Turnos -->
+<section id="turnos" class="py-20 bg-gradient-to-br from-purple-50 to-pink-50">
+  <div class="container mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="text-pink-600 font-semibold uppercase tracking-widest">Reservá online</span>
+        <h2 class="text-4xl md:text-5xl font-extrabold mt-2 mb-6">Agendá tu turno<br>en 2 minutos ⏰</h2>
+        <p class="text-gray-600 mb-8 text-lg">Elegí día y horario que te convenga. Te confirmamos por WhatsApp al instante.</p>
+        <ul class="space-y-3 text-gray-700">
+          <li class="flex items-center"><span class="text-purple-600 text-2xl mr-3">✓</span>Confirmación inmediata</li>
+          <li class="flex items-center"><span class="text-purple-600 text-2xl mr-3">✓</span>Recordatorio 24hs antes</li>
+          <li class="flex items-center"><span class="text-purple-600 text-2xl mr-3">✓</span>Reprogramación gratuita</li>
+        </ul>
+      </div>
+      <div class="bg-white rounded-3xl shadow-2xl p-8">
+        <h3 class="text-2xl font-bold mb-6 text-center">Reservar Turno</h3>
+        <form class="space-y-4">
+          <div>
+            <label class="block text-sm font-semibold mb-1">Tu nombre</label>
+            <input type="text" class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-purple-500 focus:outline-none" placeholder="Juan Pérez">
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1">Nombre de la mascota</label>
+            <input type="text" class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-purple-500 focus:outline-none" placeholder="Firulais">
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-semibold mb-1">Fecha</label>
+              <input type="date" class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-purple-500 focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-1">Hora</label>
+              <select class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-purple-500 focus:outline-none">
+                <option>09:00</option><option>10:30</option><option>12:00</option><option>14:00</option><option>15:30</option><option>17:00</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1">Servicio</label>
+            <select class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-purple-500 focus:outline-none">
+              <option>Corte y Peinado</option>
+              <option>Baño Spa Completo</option>
+              <option>Estética & Uñas</option>
+              <option>Higiene Dental</option>
+              <option>Deslanado</option>
+            </select>
+          </div>
+          <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-pink-500 text-white py-4 rounded-xl font-bold text-lg hover:shadow-lg transition">Confirmar Turno 🐾</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tienda -->
+<section id="tienda" class="py-20">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <span class="text-pink-600 font-semibold uppercase tracking-widest">Tienda</span>
+      <h2 class="text-4xl md:text-5xl font-extrabold mt-2 mb-4">Productos para tu mejor amigo 🛍️</h2>
+      <p class="text-gray-600 max-w-xl mx-auto">Accesorios, alimentos y cosmética premium seleccionados por expertos.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-white rounded-2xl overflow-hidden shadow-md card-hover">
+        <img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?auto=format&fit=crop&w=400&q=80" class="w-full h-56 object-cover" alt="Shampoo">
+        <div class="p-5">
+          <span class="text-xs text-pink-600 font-semibold">COSMÉTICA</span>
+          <h3 class="font-bold text-lg mt-1">Shampoo Premium Aloe</h3>
+          <div class="flex justify-between items-center mt-3">
+            <span class="text-2xl font-extrabold text-purple-700">$4.500</span>
+            <button class="bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-purple-700">Comprar</button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl overflow-hidden shadow-md card-hover">
+        <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=400&q=80" class="w-full h-56 object-cover" alt="Collar">
+        <div class="p-5">
+          <span class="text-xs text-pink-600 font-semibold">ACCESORIOS</span>
+          <h3 class="font-bold text-lg mt-1">Collar de Cuero Rosa</h3>
+          <div class="flex justify-between items-center mt-3">
+            <span class="text-2xl font-extrabold text-purple-700">$3.200</span>
+            <button class="bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-purple-700">Comprar</button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl overflow-hidden shadow-md card-hover">
+        <img src="https://images.unsplash.com/photo-1582450871972-ab5ca641643d?auto=format&fit=crop&w=400&q=80" class="w-full h-56 object-cover" alt="Juguete">
+        <div class="p-5">
+          <span class="text-xs text-pink-600 font-semibold">JUGUETES</span>
+          <h3 class="font-bold text-lg mt-1">Pelota Interactiva</h3>
+          <div class="flex justify-between items-center mt-3">
+            <span class="text-2xl font-extrabold text-purple-700">$2.800</span>
+            <button class="bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-purple-700">Comprar</button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl overflow-hidden shadow-md card-hover">
+        <img src="https://images.unsplash.com/photo-1568572933382-74d440642117?auto=format&fit=crop&w=400&q=80" class="w-full h-56 object-cover" alt="Alimento">
+        <div class="p-5">
+          <span class="text-xs text-pink-600 font-semibold">ALIMENTO</span>
+          <h3 class="font-bold text-lg mt-1">Snacks Naturales 500g</h3>
+          <div class="flex justify-between items-center mt-3">
+            <span class="text-2xl font-extrabold text-purple-700">$5.900</span>
+            <button class="bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-purple-700">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-12">
+      <a href="#" class="inline-block border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-full font-bold hover:bg-purple-600 hover:text-white transition">Ver toda la tienda →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonios -->
+<section class="py-20 bg-gradient-to-r from-purple-600 to-pink-500 text-white">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-16">Lo que dicen nuestros clientes ❤️</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/20">
+        <div class="text-yellow-300 text-xl mb-3">★★★★★</div>
+        <p class="mb-4 italic">"Mi caniche Luna siempre vuelve feliz y hermosa. Son muy profesionales y cariñosos."</p>
+        <div class="font-bold">— Martina G.</div>
+      </div>
+      <div class="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/20">
+        <div class="text-yellow-300 text-xl mb-3">★★★★★</div>
+        <p class="mb-4 italic">"Excelente atención. Reservé turno online y fue súper rápido. Mi Toby quedó espectacular."</p>
+        <div class="font-bold">— Lucas R.</div>
+      </div>
+      <div class="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/20">
+        <div class="text-yellow-300 text-xl mb-3">★★★★★</div>
+        <p class="mb-4 italic">"El servicio a domicilio es lo mejor. Los productos de la tienda son de gran calidad."</p>
+        <div class="font-bold">— Sofía M.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contacto -->
+<section id="contacto" class="py-20">
+  <div class="container mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="text-purple-600 font-semibold uppercase tracking-widest">Contacto</span>
+        <h2 class="text-4xl md:text-5xl font-extrabold mt-2 mb-6">Visitanos 📍</h2>
+        <div class="space-y-4 text-gray-700 text-lg">
+          <p class="flex items-start"><span class="text-2xl mr-3">📍</span> Av. Siempreviva 742, Buenos Aires</p>
+          <p class="flex items-start"><span class="text-2xl mr-3">📱</span> +54 11 5555-1234</p>
+          <p class="flex items-start"><span class="text-2xl mr-3">✉️</span> hola@peluqueriapets.com</p>
+          <p class="flex items-start"><span class="text-2xl mr-3">🕐</span> Lun a Sáb: 9:00 - 19:00</p>
+        </div>
+        <div class="flex space-x-4 mt-8">
+          <a href="#" class="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center hover:bg-purple-700 text-xl">📘</a>
+          <a href="#" class="w-12 h-12 bg-pink-500 text-white rounded-full flex items-center justify-center hover:bg-pink-600 text-xl">📷</a>
+          <a href="#" class="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center hover:bg-green-600 text-xl">💬</a>
+        </div>
+      </div>
+      <div class="rounded-3xl overflow-hidden shadow-2xl">
+        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=800&q=80" alt="Peluquería" class="w-full h-96 object-cover">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+  <div class="container mx-auto px-6 grid md:grid-cols-4 gap-8">
+    <div>
+      <div class="flex items-center space-x-2 mb-4">
+        <span class="text-3xl">🐾</span>
+        <span class="text-xl font-extrabold">Peluquería Pets</span>
+      </div>
+      <p class="text-gray-400 text-sm">El cuidado integral que tu mascota merece.</p>
+    </div>
+    <div>
+      <h4 class="font-bold mb-4">Enlaces</h4>
+      <ul class="space-y-2 text-gray-400 text-sm">
+        <li><a href="#servicios" class="hover:text-white">Servicios</a></li>
+        <li><a href="#turnos" class="hover:text-white">Turnos</a></li>
+        <li><a href="#tienda" class="hover:text-white">Tienda</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-bold mb-4">Servicios</h4>
+      <ul class="space-y-2 text-gray-400 text-sm">
+        <li>Peluquería</li>
+        <li>Baño Spa</li>
+        <li>Estética</li>
+        <li>A domicilio</li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-bold mb-4">Newsletter</h4>
+      <p class="text-gray-400 text-sm mb-3">Suscribite y recibí promos exclusivas</p>
+      <form class="flex">
+        <input type="email" placeholder="Tu email" class="flex-1 px-3 py-2 rounded-l-lg text-gray-800 text-sm focus:outline-none">
+        <button class="bg-purple-600 px-4 rounded-r-lg hover:bg-purple-700">→</button>
+      </form>
+    </div>
+  </div>
+  <div class="border-t border-gray-800 mt-10 pt-6 text-center text-gray-500 text-sm">
+    © 2024 Peluquería Pets. Todos los derechos reservados.
+  </div>
+</footer>
+
+<script>
+  document.getElementById('menuBtn').addEventListener('click', ()
