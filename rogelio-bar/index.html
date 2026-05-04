@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rogelio Bar | Coctelería de Autor</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #f5f5f4; }
+  .font-serif { font-family: 'Playfair Display', serif; }
+  .hero-bg {
+    background-image: linear-gradient(rgba(10,10,10,0.7), rgba(10,10,10,0.95)), url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+  }
+  .gold { color: #c9a96e; }
+  .bg-gold { background-color: #c9a96e; }
+  .border-gold { border-color: #c9a96e; }
+  .hover-gold:hover { color: #c9a96e; }
+  .card-bg { background-color: #141414; }
+  .smoke-line { background: linear-gradient(90deg, transparent, #c9a96e, transparent); height: 1px; }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-gray-800">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="#" class="font-serif text-2xl font-bold tracking-wider">Rogelio<span class="gold">.</span>Bar</a>
+    <ul class="hidden md:flex space-x-8 text-sm uppercase tracking-wider">
+      <li><a href="#servicios" class="hover-gold transition">Servicios</a></li>
+      <li><a href="#carta" class="hover-gold transition">Carta</a></li>
+      <li><a href="#turnos" class="hover-gold transition">Reservas</a></li>
+      <li><a href="#tienda" class="hover-gold transition">Tienda</a></li>
+      <li><a href="#contacto" class="hover-gold transition">Contacto</a></li>
+    </ul>
+    <a href="#turnos" class="hidden md:inline-block bg-gold text-black px-5 py-2 text-sm font-semibold uppercase tracking-wider hover:bg-white transition">Reservar</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-bg min-h-screen flex items-center justify-center text-center px-6">
+  <div class="max-w-4xl">
+    <p class="gold uppercase tracking-[0.4em] text-sm mb-6">Coctelería de Autor</p>
+    <h1 class="font-serif text-6xl md:text-8xl font-bold leading-tight mb-6">Rogelio Bar</h1>
+    <div class="smoke-line w-32 mx-auto mb-6"></div>
+    <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">Una experiencia sensorial donde cada trago cuenta una historia. Reservá tu mesa, descubrí nuestra carta y llevate la magia a casa.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#turnos" class="bg-gold text-black px-8 py-4 uppercase tracking-wider font-semibold hover:bg-white transition">Reservar Mesa</a>
+      <a href="#carta" class="border border-gold gold px-8 py-4 uppercase tracking-wider font-semibold hover:bg-gold hover:text-black transition">Ver Carta</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="py-24 px-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <p class="gold uppercase tracking-[0.4em] text-sm mb-4">Lo que ofrecemos</p>
+      <h2 class="font-serif text-5xl md:text-6xl font-bold">Nuestros Servicios</h2>
+      <div class="smoke-line w-32 mx-auto mt-6"></div>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="card-bg p-10 border border-gray-800 hover:border-gold transition group">
+        <div class="text-5xl mb-6 gold">🍸</div>
+        <h3 class="font-serif text-2xl font-bold mb-4">Coctelería en el Bar</h3>
+        <p class="text-gray-400 leading-relaxed">Más de 60 cócteles de autor preparados por nuestros mixólogos. Música en vivo los viernes y sábados.</p>
+      </div>
+      <div class="card-bg p-10 border border-gray-800 hover:border-gold transition group">
+        <div class="text-5xl mb-6 gold">🎉</div>
+        <h3 class="font-serif text-2xl font-bold mb-4">Eventos Privados</h3>
+        <p class="text-gray-400 leading-relaxed">Cumpleaños, despedidas y eventos corporativos. Espacios exclusivos con barra dedicada y bartender personal.</p>
+      </div>
+      <div class="card-bg p-10 border border-gray-800 hover:border-gold transition group">
+        <div class="text-5xl mb-6 gold">🥂</div>
+        <h3 class="font-serif text-2xl font-bold mb-4">Catering & Barra Móvil</h3>
+        <p class="text-gray-400 leading-relaxed">Llevamos la experiencia Rogelio donde lo necesites. Bodas, fiestas y eventos especiales.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CARTA -->
+<section id="carta" class="py-24 px-6 bg-gradient-to-b from-black to-gray-900">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <p class="gold uppercase tracking-[0.4em] text-sm mb-4">Selección destacada</p>
+      <h2 class="font-serif text-5xl md:text-6xl font-bold">Nuestra Carta</h2>
+      <div class="smoke-line w-32 mx-auto mt-6"></div>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="card-bg overflow-hidden group">
+        <div class="h-64 bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600')"></div>
+        <div class="p-6">
+          <h3 class="font-serif text-xl font-bold mb-2">Negroni Ahumado</h3>
+          <p class="text-gray-400 text-sm mb-3">Gin, Campari, vermut rosso ahumado en madera de roble.</p>
+          <p class="gold font-bold text-lg">$4.800</p>
+        </div>
+      </div>
+      <div class="card-bg overflow-hidden group">
+        <div class="h-64 bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1536935338788-846bb9981813?w=600')"></div>
+        <div class="p-6">
+          <h3 class="font-serif text-xl font-bold mb-2">Old Fashioned Premium</h3>
+          <p class="text-gray-400 text-sm mb-3">Whisky bourbon añejado, azúcar moreno y bitter casero.</p>
+          <p class="gold font-bold text-lg">$5.200</p>
+        </div>
+      </div>
+      <div class="card-bg overflow-hidden group">
+        <div class="h-64 bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1587223962930-cb7f31384c19?w=600')"></div>
+        <div class="p-6">
+          <h3 class="font-serif text-xl font-bold mb-2">Margarita de Hibiscus</h3>
+          <p class="text-gray-400 text-sm mb-3">Tequila reposado, licor de naranja y reducción floral.</p>
+          <p class="gold font-bold text-lg">$4.500</p>
+        </div>
+      </div>
+      <div class="card-bg overflow-hidden group">
+        <div class="h-64 bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=600')"></div>
+        <div class="p-6">
+          <h3 class="font-serif text-xl font-bold mb-2">Rogelio Signature</h3>
+          <p class="text-gray-400 text-sm mb-3">Nuestra creación exclusiva con mezcal, lima y especias.</p>
+          <p class="gold font-bold text-lg">$5.500</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-12">
+      <a href="#" class="border border-gold gold px-8 py-4 uppercase tracking-wider font-semibold hover:bg-gold hover:text-black transition inline-block">Ver Carta Completa</a>
+    </div>
+  </div>
+</section>
+
+<!-- RESERVAS / TURNOS -->
+<section id="turnos" class="py-24 px-6">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-16">
+      <p class="gold uppercase tracking-[0.4em] text-sm mb-4">Asegurá tu lugar</p>
+      <h2 class="font-serif text-5xl md:text-6xl font-bold">Reservar Turno</h2>
+      <div class="smoke-line w-32 mx-auto mt-6"></div>
+    </div>
+    <form class="card-bg p-8 md:p-12 border border-gray-800 grid md:grid-cols-2 gap-6">
+      <div>
+        <label class="block text-sm uppercase tracking-wider gold mb-2">Nombre Completo</label>
+        <input type="text" class="w-full bg-black border border-gray-700 px-4 py-3 focus:border-gold outline-none transition" placeholder="Juan Pérez">
+      </div>
+      <div>
+        <label class="block text-sm uppercase tracking-wider gold mb-2">Teléfono</label>
+        <input type="tel" class="w-full bg-black border border-gray-700 px-4 py-3 focus:border-gold outline-none transition" placeholder="+54 9 11...">
+      </div>
+      <div>
+        <label class="block text-sm uppercase tracking-wider gold mb-2">Fecha</label>
+        <input type="date" class="w-full bg-black border border-gray-700 px-4 py-3 focus:border-gold outline-none transition">
+      </div>
+      <div>
+        <label class="block text-sm uppercase tracking-wider gold mb-2">Hora</label>
+        <select class="w-full bg-black border border-gray-700 px-4 py-3 focus:border-gold outline-none transition">
+          <option>20:00</option><option>21:00</option><option>22:00</option><option>23:00</option><option>00:00</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-sm uppercase tracking-wider gold mb-2">Cantidad de Personas</label>
+        <input type="number" min="1" max="20" class="w-full bg-black border border-gray-700 px-4 py-3 focus:border-gold outline-none transition" placeholder="2">
+      </div>
+      <div>
+        <label class="block text-sm uppercase tracking-wider gold mb-2">Tipo de Mesa</label>
+        <select class="w-full bg-black border border-gray-700 px-4 py-3 focus:border-gold outline-none transition">
+          <option>Barra</option><option>Mesa estándar</option><option>Mesa VIP</option><option>Salón privado</option>
+        </select>
+      </div>
+      <div class="md:col-span-2">
+        <label class="block text-sm uppercase tracking-wider gold mb-2">Notas adicionales</label>
+        <textarea rows="3" class="w-full bg-black border border-gray-700 px-4 py-3 focus:border-gold outline-none transition" placeholder="Ocasión especial, alergias, etc."></textarea>
+      </div>
+      <div class="md:col-span-2 text-center">
+        <button type="submit" class="bg-gold text-black px-12 py-4 uppercase tracking-wider font-semibold hover:bg-white transition">Confirmar Reserva</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- TIENDA -->
+<section id="tienda" class="py-24 px-6 bg-gradient-to-b from-gray-900 to-black">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <p class="gold uppercase tracking-[0.4em] text-sm mb-4">Llevate Rogelio a casa</p>
+      <h2 class="font-serif text-5xl md:text-6xl font-bold">Tienda Online</h2>
+      <div class="smoke-line w-32 mx-auto mt-6"></div>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="card-bg overflow-hidden border border-gray-800 hover:border-gold transition">
+        <div class="h-72 bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=800')"></div>
+        <div class="p-6">
+          <h3 class="font-serif text-2xl font-bold mb-2">Kit Coctelería Hogar</h3>
+          <p class="text-gray-400 mb-4">Coctelera, jigger, cuchara y 3 botellas premium.</p>
+          <div class="flex justify-between items-center">
+            <span class="gold text-2xl font-bold">$45.000</span>
+            <button class="bg-gold text-black px-5 py-2 uppercase text-sm font-semibold hover:bg-white transition">Comprar</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-bg overflow-hidden border border-gray-800 hover:border-gold transition">
+        <div class="h-72 bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1582106245687-cbb466a9f07f?w=800')"></div>
+        <div class="p-6">
+          <h3 class="font-serif text-2xl font-bold mb-2">Bitter de Autor</h3>
+          <p class="text-gray-400 mb-4">Set de 4 bitters artesanales elaborados en casa.</p>
+          <div class="flex justify-between items-center">
+            <span class="gold text-2xl font-bold">$18.500</span>
+            <button class="bg-gold text-black px-5 py-2 uppercase text-sm font-semibold hover:bg-white transition">Comprar</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-bg overflow-hidden border border-gray-800 hover:border-gold transition">
+        <div class="h-72 bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=800')"></div>
+        <div class="p-6">
+          <h3 class="font-serif text-2xl font-bold mb-2">Gift Card Rogelio</h3>
+          <p class="text-gray-400 mb-4">El regalo perfecto. Canjeable por cualquier experiencia.</p>
+          <div class="flex justify-between items-center">
+            <span class="gold text-2xl font-bold">desde $15.000</span>
+            <button class="bg-gold text-black px-5 py-2 uppercase text-sm font-semibold hover:bg-white transition">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="py-24 px-6">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+    <div>
+      <p class="gold uppercase tracking-[0.4em] text-sm mb-4">Visitanos</p>
+      <h2 class="font-serif text-5xl font-bold mb-8">Contacto</h2>
+      <div class="space-y-6 text-gray-300">
+        <div>
+          <p class="gold uppercase text-sm tracking-wider mb-1">Dirección</p>
+          <p>Av. Coronel Díaz 2200, Palermo, CABA</p>
+        </div>
+        <div>
+          <p class="gold uppercase text-sm tracking-wider mb-1">Horarios</p>
+          <p>Mar a Dom: 19:00 — 03:00</p>
+        </div>
+        <div>
+          <p class="gold uppercase text-sm tracking-wider mb-1">Teléfono</p>
+          <p>+54 11 5555-3030</p>
+        </div>
+        <div>
+          <p class="gold uppercase text-sm tracking-wider mb-1">Email</p>
+          <p>hola@rogeliobar.com</p>
+        </div>
+        <div class="flex gap-4 pt-4">
+          <a href="#" class="w-12 h-12 border border-gold gold flex items-center justify-center hover:bg-gold hover:text-black transition">IG</a>
+          <a href="#" class="w-12 h-12 border border-gold gold flex items-center justify-center hover:bg-gold hover:text-black transition">FB</a>
+          <a href="#" class="w-12 h-12 border border-gold gold flex items-center justify-center hover:bg-gold hover:text-black transition">TT</a>
+        </div>
+      </div>
+    </div>
+    <div class="card-bg border border-gray-800 h-full min-h-[400px] bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=1000')"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-gray-800 py-10 px-6 text-center text-gray-500 text-sm">
+  <p class="font-serif text-xl text-white mb-2">Rogelio<span class="gold">.</span>Bar</p>
+  <p>© 2025 Rogelio Bar. Bebé con moderación. Prohibida su venta a menores de 18 años.</p>
+</footer>
+
+</body>
+</html>
