@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Probando MongoDB | Administración Integral de Bases de Datos</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#13AA52',
+          dark: '#001E2B',
+          accent: '#00ED64',
+          soft: '#E3FCF7'
+        },
+        fontFamily: {
+          sans: ['Inter', 'system-ui', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  .gradient-bg {
+    background: radial-gradient(circle at 20% 20%, rgba(0,237,100,0.15), transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(19,170,82,0.2), transparent 50%),
+                #001E2B;
+  }
+  .glass {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .hover-lift { transition: all 0.3s ease; }
+  .hover-lift:hover { transform: translateY(-6px); }
+</style>
+</head>
+<body class="font-sans bg-white text-dark antialiased">
+
+<!-- NAVBAR -->
+<header class="fixed w-full top-0 z-50 bg-dark/95 backdrop-blur-md border-b border-white/10">
+  <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="#" class="flex items-center gap-2 text-white font-bold text-xl">
+      <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2C8 8 6 12 6 16a6 6 0 0012 0c0-4-2-8-6-14z"/>
+      </svg>
+      Probando<span class="text-accent">MongoDB</span>
+    </a>
+    <ul class="hidden md:flex items-center gap-8 text-white/80 text-sm">
+      <li><a href="#servicios" class="hover:text-accent transition">Servicios</a></li>
+      <li><a href="#turnos" class="hover:text-accent transition">Turnos</a></li>
+      <li><a href="#ventas" class="hover:text-accent transition">Ventas</a></li>
+      <li><a href="#planes" class="hover:text-accent transition">Planes</a></li>
+      <li><a href="#contacto" class="hover:text-accent transition">Contacto</a></li>
+    </ul>
+    <a href="#contacto" class="bg-accent text-dark font-semibold px-5 py-2 rounded-lg hover:bg-white transition text-sm">Empezar</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="gradient-bg pt-32 pb-24 px-6">
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+    <div class="text-white">
+      <span class="inline-block bg-accent/20 text-accent px-4 py-1 rounded-full text-xs font-semibold mb-6 border border-accent/30">⚡ ADMINISTRACIÓN INTEGRAL DE BASES DE DATOS</span>
+      <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+        Tu base de datos, <span class="text-accent">en las mejores manos</span>
+      </h1>
+      <p class="text-lg text-white/70 mb-8 max-w-xl">
+        Solución integral para tu negocio: gestionamos tus servicios, agendamos turnos y potenciamos tus ventas con MongoDB. Todo en un solo lugar.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#planes" class="bg-accent text-dark font-bold px-7 py-3.5 rounded-lg hover:bg-white transition">Ver Planes</a>
+        <a href="#servicios" class="glass text-white font-semibold px-7 py-3.5 rounded-lg hover:bg-white/10 transition">Conocer más</a>
+      </div>
+      <div class="flex gap-8 mt-10 pt-8 border-t border-white/10">
+        <div><div class="text-3xl font-bold text-accent">+500</div><div class="text-sm text-white/60">DB administradas</div></div>
+        <div><div class="text-3xl font-bold text-accent">99.9%</div><div class="text-sm text-white/60">Uptime garantizado</div></div>
+        <div><div class="text-3xl font-bold text-accent">24/7</div><div class="text-sm text-white/60">Soporte técnico</div></div>
+      </div>
+    </div>
+    <div class="relative">
+      <div class="glass rounded-2xl p-8 shadow-2xl">
+        <div class="flex gap-2 mb-4">
+          <span class="w-3 h-3 rounded-full bg-red-400"></span>
+          <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
+          <span class="w-3 h-3 rounded-full bg-green-400"></span>
+        </div>
+        <pre class="text-sm text-accent/90 font-mono overflow-x-auto"><code>db.servicios.aggregate([
+  { $match: { estado: "activo" }},
+  { $lookup: {
+      from: "turnos",
+      localField: "_id",
+      foreignField: "servicioId",
+      as: "agenda"
+  }},
+  { $group: {
+      _id: "$categoria",
+      ventas: { $sum: "$total" }
+  }}
+])
+<span class="text-white/60">// → Reporte integral generado ✓</span></code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="py-24 px-6 bg-soft">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Solución <span class="text-primary">Integral</span></h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">Tres pilares que combinamos en una única plataforma robusta sobre MongoDB.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift border-t-4 border-primary">
+        <div class="w-14 h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-5 text-2xl">🛠️</div>
+        <h3 class="text-2xl font-bold mb-3">Servicios</h3>
+        <p class="text-gray-600 mb-4">Catálogo dinámico de servicios con precios, duraciones y disponibilidad en tiempo real.</p>
+        <ul class="text-sm text-gray-700 space-y-2">
+          <li>✓ Gestión de categorías</li>
+          <li>✓ Control de stock y recursos</li>
+          <li>✓ Reportes personalizados</li>
+        </ul>
+      </div>
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift border-t-4 border-primary">
+        <div class="w-14 h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-5 text-2xl">📅</div>
+        <h3 class="text-2xl font-bold mb-3">Turnos</h3>
+        <p class="text-gray-600 mb-4">Sistema de agenda inteligente con notificaciones automáticas y sincronización.</p>
+        <ul class="text-sm text-gray-700 space-y-2">
+          <li>✓ Calendario en tiempo real</li>
+          <li>✓ Recordatorios por email/SMS</li>
+          <li>✓ Reprogramación automática</li>
+        </ul>
+      </div>
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift border-t-4 border-primary">
+        <div class="w-14 h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-5 text-2xl">💰</div>
+        <h3 class="text-2xl font-bold mb-3">Ventas</h3>
+        <p class="text-gray-600 mb-4">Punto de venta integrado con facturación, pagos y métricas analíticas en vivo.</p>
+        <ul class="text-sm text-gray-700 space-y-2">
+          <li>✓ Múltiples formas de pago</li>
+          <li>✓ Tickets y facturación</li>
+          <li>✓ Dashboard en tiempo real</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TURNOS -->
+<section id="turnos" class="py-24 px-6 bg-white">
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <span class="text-primary font-semibold text-sm uppercase tracking-wider">Módulo de Turnos</span>
+      <h2 class="text-4xl font-extrabold mt-2 mb-6">Agenda profesional sin fricciones</h2>
+      <p class="text-gray-600 mb-8">Cada turno es un documento MongoDB optimizado, indexado y replicado. Olvidate de los choques de horarios y las llamadas perdidas.</p>
+      <div class="space-y-4">
+        <div class="flex gap-4">
+          <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">1</div>
+          <div><h4 class="font-bold">Reserva online 24/7</h4><p class="text-sm text-gray-600">Tus clientes reservan cuando quieren.</p></div>
+        </div>
+        <div class="flex gap-4">
+          <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">2</div>
+          <div><h4 class="font-bold">Confirmación automática</h4><p class="text-sm text-gray-600">Notificaciones al instante por múltiples canales.</p></div>
+        </div>
+        <div class="flex gap-4">
+          <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">3</div>
+          <div><h4 class="font-bold">Sincronización con ventas</h4><p class="text-sm text-gray-600">Cada turno se vincula con su servicio y cobro.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-soft rounded-2xl p-8 shadow-xl">
+      <div class="flex justify-between items-center mb-6">
+        <h4 class="font-bold text-lg">Agenda - Hoy</h4>
+        <span class="text-xs bg-primary text-white px-3 py-1 rounded-full">8 turnos</span>
+      </div>
+      <div class="space-y-3">
+        <div class="bg-white p-4 rounded-lg flex justify-between items-center border-l-4 border-primary">
+          <div><div class="font-semibold">09:00 - María López</div><div class="text-xs text-gray-500">Consulta general</div></div>
+          <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">Confirmado</span>
+        </div>
+        <div class="bg-white p-4 rounded-lg flex justify-between items-center border-l-4 border-yellow-400">
+          <div><div class="font-semibold">10:30 - Juan Pérez</div><div class="text-xs text-gray-500">Servicio premium</div></div>
+          <span class="text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded">Pendiente</span>
+        </div>
+        <div class="bg-white p-4 rounded-lg flex justify-between items-center border-l-4 border-primary">
+          <div><div class="font-semibold">12:00 - Ana Gómez</div><div class="text-xs text-gray-500">Seguimiento</div></div>
+          <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">Confirmado</span>
+        </div>
+        <div class="bg-white p-4 rounded-lg flex justify-between items-center border-l-4 border-primary">
+          <div><div class="font-semibold">15:00 - Carlos Ruiz</div><div class="text-xs text-gray-500">Asesoría técnica</div></div>
+          <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">Confirmado</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VENTAS -->
+<section id="ventas" class="py-24 px-6 bg-dark text-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <span class="text-accent font-semibold text-sm uppercase tracking-wider">Módulo de Ventas</span>
+      <h2 class="text-4xl md:text-5xl font-extrabold mt-2">Tomá decisiones con datos reales</h2>
+    </div>
+    <div class="grid md:grid-cols-4 gap-6">
+      <div class="glass rounded-xl p-6">
+        <div class="text-accent text-sm">Ingresos del mes</div>
+        <div class="text-3xl font-bold mt-2">$1.245.890</div>
+        <div class="text-xs text-green-400 mt-1">↑ 18% vs mes anterior</div>
+      </div>
+      <div class="glass rounded-xl p-6">
+        <div class="text-accent text-sm">Ventas hoy</div>
+        <div class="text-3xl font-bold mt-2">47</div>
+        <div class="text-xs text-green-400 mt-1">↑ 12% vs ayer</div>
+      </div>
+      <div class="glass rounded-xl p-6">
+        <div class="text-accent text-sm">Ticket promedio</div>
+        <div class="text-3xl font-bold mt-2">$8.450</div>
+        <div class="text-xs text-green-400 mt-1">↑ 5%</div>
+      </div>
+      <div class="glass rounded-xl p-6">
+        <div class="text-accent text-sm">Clientes activos</div>
+        <div class="text-3xl font-bold mt-2">1.832</div>
+        <div class="text-xs text-green-400 mt-1">↑ 24 nuevos</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANES -->
+<section id="planes" class="py-24 px-6 bg-soft">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Planes que se adaptan</h2>
+      <p class="text-gray-600">Elegí el que mejor se ajuste a tu negocio. Cambialo cuando quieras.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift">
+        <h3 class="text-xl font-bold mb-2">Starter</h3>
+        <div class="text-4xl font-extrabold my-4">$29<span class="text-base text-gray-500 font-normal">/mes</span></div>
+        <ul class="space-y-3 text-sm text-gray-700 mb-8">
+          <li>✓ Hasta 500 registros</li>
+          <li>✓ 1 usuario administrador</li>
+          <li>✓ Módulo de turnos básico</li>
+          <li>✓ Soporte por email</li>
+        </ul>
+        <a href="#contacto" class="block text-center border-2 border-primary text-primary font-semibold py-3 rounded-lg hover:bg-primary hover:text-white transition">Empezar</a>
+      </div>
+      <div class="bg-dark text-white rounded-2xl p-8 shadow-2xl hover-lift relative scale-105">
+        <span class="absolute top-4 right-4 bg-accent text-dark text-xs font-bold px-3 py-1 rounded-full">POPULAR</span>
+        <h3 class="text-xl font-bold mb-2 text-accent">Pro</h3>
+        <div class="text-4xl font-extrabold my-4">$79<span class="text-base text-white/60 font-normal">/mes</span></div>
+        <ul class="space-y-3 text-sm mb-8">
+          <li>✓ Registros ilimitados</li>
+          <li>✓ 10 usuarios</li>
+          <li>✓ Servicios + Turnos + Ventas</li>
+          <li>✓ Reportes avanzados</li>
+          <li>✓ Soporte prioritario 24/7</li>
+        </ul>
+        <a href="#contacto" class="block text-center bg-accent text-dark font-bold py-3 rounded-lg hover:bg-white transition">Empezar</a>
+      </div>
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift">
+        <h3 class="text-xl font-bold mb-2">Enterprise</h3>
+        <div class="text-4xl font-extrabold my-4">$199<span class="text-base text-gray-500 font-normal">/mes</span></div>
+        <ul class="space-y-3 text-sm text-gray-700 mb-8">
+          <li>✓ Todo lo del plan Pro</li>
+          <li>✓ Usuarios ilimitados</li>
+          <li>✓ Réplicas y backups dedicados</li>
+          <li>✓ API personalizada</li>
+          <li>✓ Account Manager</li>
+        </ul>
+        <a href="#contacto" class="block text-center border-2 border-primary text-primary font-semibold py-3 rounded-lg hover:bg-primary hover:text-white transition">Contactar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="py-24 px-6 bg-white">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-4">¿Listo para empezar?</h2>
+      <p class="text-gray-600">Contanos sobre tu negocio y te armamos una demo personalizada.</p>
+    </div>
+    <form class="grid md:grid-cols-2 gap-5 bg-soft p-8 rounded-2xl">
+      <input type="text" placeholder="Nombre completo" class="px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:outline-none">
+      <input type="email" placeholder="Email" class="px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:outline-none">
+      <input type="text" placeholder="Empresa" class="px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:outline-none md:col-span-2">
+      <textarea rows="4" placeholder="Contanos qué necesitás..." class="px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:outline-none md:col-span-2"></textarea>
+      <button type="submit" class="bg-primary text-white font-bold py-3.5 rounded-lg hover:bg-dark transition md:col-span-2">Solicitar demo gratuita</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white/70 py-12 px-6">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-8">
+    <div>
+      <div class="text-white font-bold text-xl mb-3">Probando<span class="text-accent">MongoDB</span></div>
+      <p class="text-sm">Administración integral de bases de datos para negocios modernos.</p>
+    </div>
+    <div>
+      <h4 class="text-white font-semibold mb-3">Producto</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#servicios" class="hover:text-accent">Servicios</a></li>
+        <li><a href="#turnos" class="hover:text-accent">Turnos</a></li>
+        <li><a href="#ventas" class="hover:text-accent">Ventas</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-white font-semibold mb-3">Empresa</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#" class="hover:text-accent">Sobre nosotros</a></li>
+        <li><a href="#" class="hover:text-accent">Blog</a></li>
+        <li><a href="#contacto" class="hover:text-accent">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-white font-semibold mb-3">Contacto</h4>
+      <ul class="space-y-2 text-sm">
+        <li>📧 hola@probandomongo.com</li>
+        <li>📞 +54 11 5555-1234</li>
+        <li>📍 Buenos Aires, Argentina</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto mt-10 pt-6 border-t border-white/10 text-center text-sm">
+    © 2025 Probando MongoDB. Todos los derechos reservados.
+  </div>
+</footer>
+
+</body>
+</html>
