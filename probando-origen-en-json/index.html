@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Probando Origen en JSON | Agencia de Publicidad en Redes</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  body { font-family: 'Inter', sans-serif; }
+  .gradient-bg { background: linear-gradient(135deg, #6366f1 0%, #ec4899 50%, #f59e0b 100%); }
+  .glass { backdrop-filter: blur(12px); background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); }
+  .hover-lift { transition: all 0.3s ease; }
+  .hover-lift:hover { transform: translateY(-8px); }
+</style>
+</head>
+<body class="bg-gray-950 text-white">
+
+<!-- Navbar -->
+<nav class="fixed w-full z-50 glass">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center space-x-2">
+      <div class="w-9 h-9 rounded-lg gradient-bg flex items-center justify-center font-bold">P</div>
+      <span class="font-bold text-lg">Probando Origen <span class="text-pink-400">{ }</span></span>
+    </div>
+    <div class="hidden md:flex space-x-8 text-sm">
+      <a href="#servicios" class="hover:text-pink-400 transition">Servicios</a>
+      <a href="#turnos" class="hover:text-pink-400 transition">Turnos</a>
+      <a href="#tienda" class="hover:text-pink-400 transition">Tienda</a>
+      <a href="#contacto" class="hover:text-pink-400 transition">Contacto</a>
+    </div>
+    <a href="#turnos" class="gradient-bg px-5 py-2 rounded-full text-sm font-semibold hover:opacity-90 transition">Reservar</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="pt-32 pb-20 px-6 relative overflow-hidden">
+  <div class="absolute inset-0 gradient-bg opacity-20 blur-3xl"></div>
+  <div class="max-w-7xl mx-auto relative grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <span class="inline-block px-4 py-1 rounded-full glass text-sm mb-6">🚀 Agencia 360° en Redes Sociales</span>
+      <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+        Hacemos que tu marca <span class="bg-clip-text text-transparent gradient-bg">explote</span> en redes.
+      </h1>
+      <p class="text-lg text-gray-300 mb-8">Servicios integrales, turnos online y venta de paquetes publicitarios. Todo en un solo lugar para escalar tu negocio digital.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#servicios" class="gradient-bg px-7 py-3 rounded-full font-semibold hover:opacity-90 transition">Ver Servicios</a>
+        <a href="#turnos" class="glass px-7 py-3 rounded-full font-semibold hover:bg-white/20 transition">Agendar Reunión</a>
+      </div>
+      <div class="flex gap-8 mt-12">
+        <div><div class="text-3xl font-bold">+250</div><div class="text-sm text-gray-400">Clientes activos</div></div>
+        <div><div class="text-3xl font-bold">+15M</div><div class="text-sm text-gray-400">Impresiones</div></div>
+        <div><div class="text-3xl font-bold">98%</div><div class="text-sm text-gray-400">Satisfacción</div></div>
+      </div>
+    </div>
+    <div class="relative">
+      <div class="glass rounded-3xl p-8 hover-lift">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-3 h-3 bg-red-400 rounded-full"></div>
+          <div class="w-3 h-3 bg-yellow-400 rounded-full"></div>
+          <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+        </div>
+        <pre class="text-sm text-pink-300"><code>{
+  "agencia": "Probando Origen",
+  "servicios": ["ADS", "SEO", "Branding"],
+  "resultado": "+300% ROI",
+  "estado": "✅ activo"
+}</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Servicios -->
+<section id="servicios" class="py-20 px-6 bg-gray-900">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Nuestros Servicios</h2>
+      <p class="text-gray-400 max-w-2xl mx-auto">Soluciones integrales diseñadas para llevar tu marca al siguiente nivel digital.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="glass p-8 rounded-2xl hover-lift">
+        <div class="w-14 h-14 rounded-xl gradient-bg flex items-center justify-center text-2xl mb-4">📱</div>
+        <h3 class="text-xl font-bold mb-2">Gestión de Redes</h3>
+        <p class="text-gray-400">Manejo profesional de Instagram, TikTok, Facebook y LinkedIn con contenido estratégico.</p>
+      </div>
+      <div class="glass p-8 rounded-2xl hover-lift">
+        <div class="w-14 h-14 rounded-xl gradient-bg flex items-center justify-center text-2xl mb-4">🎯</div>
+        <h3 class="text-xl font-bold mb-2">Campañas Publicitarias</h3>
+        <p class="text-gray-400">Meta Ads, Google Ads y TikTok Ads con segmentación quirúrgica y optimización constante.</p>
+      </div>
+      <div class="glass p-8 rounded-2xl hover-lift">
+        <div class="w-14 h-14 rounded-xl gradient-bg flex items-center justify-center text-2xl mb-4">🎨</div>
+        <h3 class="text-xl font-bold mb-2">Diseño & Branding</h3>
+        <p class="text-gray-400">Identidad visual, piezas gráficas y video edición que conectan con tu audiencia.</p>
+      </div>
+      <div class="glass p-8 rounded-2xl hover-lift">
+        <div class="w-14 h-14 rounded-xl gradient-bg flex items-center justify-center text-2xl mb-4">📊</div>
+        <h3 class="text-xl font-bold mb-2">Analítica & Reporting</h3>
+        <p class="text-gray-400">Dashboards claros con KPIs reales para tomar decisiones basadas en datos.</p>
+      </div>
+      <div class="glass p-8 rounded-2xl hover-lift">
+        <div class="w-14 h-14 rounded-xl gradient-bg flex items-center justify-center text-2xl mb-4">✍️</div>
+        <h3 class="text-xl font-bold mb-2">Copywriting</h3>
+        <p class="text-gray-400">Textos persuasivos que convierten visitas en clientes fieles.</p>
+      </div>
+      <div class="glass p-8 rounded-2xl hover-lift">
+        <div class="w-14 h-14 rounded-xl gradient-bg flex items-center justify-center text-2xl mb-4">🤝</div>
+        <h3 class="text-xl font-bold mb-2">Influencer Marketing</h3>
+        <p class="text-gray-400">Conectamos tu marca con creadores alineados a tus valores y objetivos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Turnos -->
+<section id="turnos" class="py-20 px-6">
+  <div class="max-w-5xl mx-auto glass rounded-3xl p-10 md:p-14">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-4xl font-extrabold mb-4">Reservá tu turno gratuito</h2>
+        <p class="text-gray-300 mb-6">Asesoría inicial de 30 minutos sin costo. Analizamos tu marca y te damos un plan de acción.</p>
+        <ul class="space-y-3 text-gray-300">
+          <li class="flex items-center gap-2">✅ Diagnóstico personalizado</li>
+          <li class="flex items-center gap-2">✅ Estrategia preliminar gratis</li>
+          <li class="flex items-center gap-2">✅ Sin compromiso</li>
+        </ul>
+      </div>
+      <form class="space-y-4">
+        <input type="text" placeholder="Nombre completo" class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-pink-500 outline-none">
+        <input type="email" placeholder="Email" class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-pink-500 outline-none">
+        <input type="date" class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-pink-500 outline-none">
+        <select class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-pink-500 outline-none">
+          <option>09:00</option><option>11:00</option><option>14:00</option><option>16:00</option>
+        </select>
+        <button type="button" class="w-full gradient-bg py-3 rounded-lg font-semibold hover:opacity-90 transition">Confirmar Turno</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Tienda / Venta -->
+<section id="tienda" class="py-20 px-6 bg-gray-900">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Planes y Paquetes</h2>
+      <p class="text-gray-400">Elegí el plan que se adapta a tu negocio. Comprá online y empezamos hoy.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="glass p-8 rounded-2xl hover-lift">
+        <h3 class="text-xl font-bold mb-2">Starter</h3>
+        <div class="text-4xl font-extrabold mb-1">$199<span class="text-base text-gray-400">/mes</span></div>
+        <p class="text-gray-400 mb-6">Ideal para emprendedores</p>
+        <ul class="space-y-2 text-sm text-gray-300 mb-8">
+          <li>✔ 8 publicaciones/mes</li>
+          <li>✔ 1 red social</li>
+          <li>✔ Reporte mensual</li>
+        </ul>
+        <button class="w-full glass py-3 rounded-lg font-semibold hover:bg-white/20 transition">Comprar</button>
+      </div>
+      <div class="gradient-bg p-8 rounded-2xl hover-lift relative">
+        <span class="absolute -top-3 right-6 bg-yellow-300 text-gray-900 text-xs font-bold px-3 py-1 rounded-full">POPULAR</span>
+        <h3 class="text-xl font-bold mb-2">Pro</h3>
+        <div class="text-4xl font-extrabold mb-1">$499<span class="text-base opacity-80">/mes</span></div>
+        <p class="opacity-90 mb-6">Para marcas en crecimiento</p>
+        <ul class="space-y-2 text-sm mb-8">
+          <li>✔ 20 publicaciones/mes</li>
+          <li>✔ 3 redes sociales</li>
+          <li>✔ Campañas Meta Ads</li>
+          <li>✔ Reportes quincenales</li>
+        </ul>
+        <button class="w-full bg-white text-gray-900 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">Comprar</button>
+      </div>
+      <div class="glass p-8 rounded-2xl hover-lift">
+        <h3 class="text-xl font-bold mb-2">Enterprise</h3>
+        <div class="text-4xl font-extrabold mb-1">$999<span class="text-base text-gray-400">/mes</span></div>
+        <p class="text-gray-400 mb-6">Solución integral 360°</p>
+        <ul class="space-y-2 text-sm text-gray-300 mb-8">
+          <li>✔ Contenido ilimitado</li>
+          <li>✔ Todas las redes</li>
+          <li>✔ Ads multiplataforma</li>
+          <li>✔ Community Manager dedicado</li>
+        </ul>
+        <button class="w-full glass py-3 rounded-lg font-semibold hover:bg-white/20 transition">Comprar</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Contacto -->
+<section id="contacto" class="py-20 px-6">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-4">¿Listo para crecer?</h2>
+    <p class="text-gray-300 mb-8">Hablemos de tu proyecto. Respuesta en menos de 24hs.</p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="mailto:hola@probandoorigen.com" class="gradient-bg px-8 py-3 rounded-full font-semibold hover:opacity-90 transition">📧 hola@probandoorigen.com</a>
+      <a href="#" class="glass px-8 py-3 rounded-full font-semibold hover:bg-white/20 transition">💬 WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="border-t border-white/10 py-10 px-6 text-center text-gray-400 text-sm">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex justify-center items-center gap-2 mb-3">
+      <div class="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center font-bold text-white">P</div>
+      <span class="font-bold text-white">Probando Origen en JSON</span>
+    </div>
+    <p>© 2024 Probando Origen. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+</body>
+</html>
