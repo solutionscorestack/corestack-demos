@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test 2 Origen WSP | Bots de WhatsApp Inteligentes</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'wsp': '#25D366',
+          'wsp-dark': '#128C7E',
+          'wsp-deep': '#075E54',
+        },
+        animation: {
+          'float': 'float 3s ease-in-out infinite',
+          'pulse-slow': 'pulse 3s ease-in-out infinite',
+        },
+        keyframes: {
+          float: {
+            '0%, 100%': { transform: 'translateY(0px)' },
+            '50%': { transform: 'translateY(-15px)' },
+          }
+        }
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  .gradient-bg {
+    background: linear-gradient(135deg, #075E54 0%, #128C7E 50%, #25D366 100%);
+  }
+  .chat-bubble {
+    animation: slideIn 0.5s ease-out forwards;
+    opacity: 0;
+  }
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .delay-1 { animation-delay: 0.3s; }
+  .delay-2 { animation-delay: 0.8s; }
+  .delay-3 { animation-delay: 1.3s; }
+  .delay-4 { animation-delay: 1.8s; }
+</style>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-white">
+
+<!-- NAV -->
+<nav class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center space-x-2">
+      <div class="w-10 h-10 bg-wsp rounded-xl flex items-center justify-center">
+        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      </div>
+      <span class="font-bold text-lg text-wsp-deep">Test 2 Origen WSP</span>
+    </div>
+    <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+      <a href="#servicios" class="hover:text-wsp transition">Servicios</a>
+      <a href="#beneficios" class="hover:text-wsp transition">Beneficios</a>
+      <a href="#planes" class="hover:text-wsp transition">Planes</a>
+      <a href="#contacto" class="hover:text-wsp transition">Contacto</a>
+    </div>
+    <a href="#contacto" class="bg-wsp hover:bg-wsp-dark text-white px-5 py-2.5 rounded-full font-semibold text-sm transition shadow-md">Empezar ahora</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="gradient-bg pt-32 pb-20 px-6 relative overflow-hidden">
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+    <div class="absolute bottom-10 right-10 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+  </div>
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative">
+    <div class="text-white">
+      <span class="inline-block bg-white/20 backdrop-blur-sm px-4 py-1.5 rounded-full text-sm font-medium mb-6">🚀 Solución Integral en WhatsApp</span>
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+        Automatiza tu negocio con <span class="text-yellow-300">Bots de WhatsApp</span>
+      </h1>
+      <p class="text-lg md:text-xl mb-8 text-white/90">
+        Servicios, turnos y ventas en un solo lugar. Atendé clientes 24/7, gestioná reservas y vendé sin esfuerzo.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="#contacto" class="bg-white text-wsp-deep hover:bg-yellow-300 px-8 py-4 rounded-full font-bold text-center transition shadow-xl">Probar gratis</a>
+        <a href="#servicios" class="border-2 border-white text-white hover:bg-white hover:text-wsp-deep px-8 py-4 rounded-full font-bold text-center transition">Ver servicios</a>
+      </div>
+      <div class="flex items-center space-x-6 mt-10 text-sm">
+        <div><span class="block text-2xl font-bold text-yellow-300">500+</span>Clientes activos</div>
+        <div><span class="block text-2xl font-bold text-yellow-300">98%</span>Satisfacción</div>
+        <div><span class="block text-2xl font-bold text-yellow-300">24/7</span>Atención</div>
+      </div>
+    </div>
+
+    <!-- Mockup Chat -->
+    <div class="relative animate-float">
+      <div class="bg-white rounded-3xl shadow-2xl p-4 max-w-sm mx-auto">
+        <div class="bg-wsp-deep rounded-t-2xl p-4 flex items-center space-x-3 -m-4 mb-4">
+          <div class="w-10 h-10 bg-wsp rounded-full flex items-center justify-center text-white font-bold">TO</div>
+          <div class="text-white">
+            <p class="font-semibold">Test 2 Origen WSP</p>
+            <p class="text-xs text-green-300">● en línea</p>
+          </div>
+        </div>
+        <div class="space-y-3 p-2 bg-[#ECE5DD] rounded-lg min-h-[350px]">
+          <div class="chat-bubble delay-1 bg-white rounded-2xl rounded-tl-none p-3 max-w-[85%] shadow text-sm">
+            ¡Hola! 👋 Bienvenido. ¿En qué puedo ayudarte?
+            <p class="text-xs mt-1 space-x-2"><span>1️⃣ Servicios</span> <span>2️⃣ Turnos</span> <span>3️⃣ Comprar</span></p>
+          </div>
+          <div class="chat-bubble delay-2 bg-[#DCF8C6] rounded-2xl rounded-tr-none p-3 max-w-[60%] shadow text-sm ml-auto">
+            Quiero un turno 📅
+          </div>
+          <div class="chat-bubble delay-3 bg-white rounded-2xl rounded-tl-none p-3 max-w-[85%] shadow text-sm">
+            ¡Perfecto! Tenés disponible: <br>📌 Mar 15hs <br>📌 Mié 10hs <br>📌 Jue 17hs
+          </div>
+          <div class="chat-bubble delay-4 bg-[#DCF8C6] rounded-2xl rounded-tr-none p-3 max-w-[60%] shadow text-sm ml-auto">
+            Mié 10hs ✅
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="py-24 px-6 bg-gray-50">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <span class="text-wsp font-semibold uppercase tracking-wide">Solución Integral</span>
+      <h2 class="text-4xl md:text-5xl font-bold mt-3 mb-4">Todo lo que tu negocio necesita</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto text-lg">Tres soluciones potentes en un solo bot. Adaptable a cualquier rubro.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition border-t-4 border-wsp">
+        <div class="w-14 h-14 bg-wsp/10 rounded-2xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-wsp" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <h3 class="text-2xl font-bold mb-3">Servicios</h3>
+        <p class="text-gray-600 mb-4">Información automática de tus servicios, precios y consultas frecuentes. Tu cliente recibe respuesta al instante.</p>
+        <ul class="text-sm text-gray-500 space-y-2">
+          <li>✓ Catálogo automatizado</li>
+          <li>✓ FAQs instantáneas</li>
+          <li>✓ Derivación inteligente</li>
+        </ul>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition border-t-4 border-wsp-dark">
+        <div class="w-14 h-14 bg-wsp-dark/10 rounded-2xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-wsp-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        </div>
+        <h3 class="text-2xl font-bold mb-3">Turnos</h3>
+        <p class="text-gray-600 mb-4">Sistema de reservas y agenda 100% automatizado. Tus clientes reservan solos, vos te ocupás del negocio.</p>
+        <ul class="text-sm text-gray-500 space-y-2">
+          <li>✓ Calendario integrado</li>
+          <li>✓ Recordatorios automáticos</li>
+          <li>✓ Cancelaciones y reprogramaciones</li>
+        </ul>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition border-t-4 border-wsp-deep">
+        <div class="w-14 h-14 bg-wsp-deep/10 rounded-2xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-wsp-deep" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+        </div>
+        <h3 class="text-2xl font-bold mb-3">Ventas</h3>
+        <p class="text-gray-600 mb-4">Catálogo, carrito y pagos por WhatsApp. Convertí conversaciones en ventas reales sin fricción.</p>
+        <ul class="text-sm text-gray-500 space-y-2">
+          <li>✓ Catálogo digital</li>
+          <li>✓ Pagos integrados</li>
+          <li>✓ Seguimiento de pedidos</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFICIOS -->
+<section id="beneficios" class="py-24 px-6 bg-white">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+    <div>
+      <span class="text-wsp font-semibold uppercase tracking-wide">Beneficios</span>
+      <h2 class="text-4xl md:text-5xl font-bold mt-3 mb-6">¿Por qué automatizar con WhatsApp?</h2>
+      <p class="text-gray-600 text-lg mb-8">Tus clientes ya están en WhatsApp. Estar ahí, automatizado y disponible siempre, es la mejor inversión para tu negocio.</p>
+      <div class="space-y-5">
+        <div class="flex items-start space-x-4">
+          <div class="w-10 h-10 bg-wsp rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold">⚡</div>
+          <div>
+            <h4 class="font-bold text-lg">Respuesta inmediata 24/7</h4>
+            <p class="text-gray-600">Nunca pierdas un cliente por no contestar a tiempo.</p>
+          </div>
+        </div>
+        <div class="flex items-start space-x-4">
+          <div class="w-10 h-10 bg-wsp rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold">📈</div>
+          <div>
+            <h4 class="font-bold text-lg">Aumentá tus ventas</h4>
+            <p class="text-gray-600">Negocios automatizados venden hasta 3x más que los manuales.</p>
+          </div>
+        </div>
+        <div class="flex items-start space-x-4">
+          <div class="w-10 h-10 bg-wsp rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold">⏱️</div>
+          <div>
+            <h4 class="font-bold text-lg">Ahorrá tiempo</h4>
+            <p class="text-gray-600">Tu bot trabaja por vos mientras te enfocás en lo importante.</p>
+          </div>
+        </div>
+        <div class="flex items-start space-x-4">
+          <div class="w-10 h-10 bg-wsp rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold">🎯</div>
+          <div>
+            <h4 class="font-bold text-lg">Personalización total</h4>
+            <p class="text-gray-600">Adaptado 100% a tu rubro, tus procesos y tu marca.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 gap-6">
+      <div class="bg-gradient-to-br from-wsp to-wsp-dark text-white p-8 rounded-3xl shadow-xl">
+        <p class="text-5xl font-bold">+80%</p>
+        <p class="mt-2">Reducción en tiempos de respuesta</p>
+      </div>
+      <div class="bg-gradient-to-br from-wsp-dark to-wsp-deep text-white p-8 rounded-3xl shadow-xl mt-8">
+        <p class="text-5xl font-bold">3x</p>
+        <p class="mt-2">Más conversiones en ventas</p>
+      </div>
+      <div class="bg-gradient-to-br from-wsp-deep to-wsp-dark text-white p-8 rounded-3xl shadow-xl">
+        <p class="text-5xl font-bold">24/7</p>
+        <p class="mt-2">Disponibilidad sin descanso</p>
+      </div>
+      <div class="bg-gradient-to-br from-wsp-dark to-wsp text-white p-8 rounded-3xl shadow-xl mt-8">
+        <p class="text-5xl font-bold">98%</p>
+        <p class="mt-2">Tasa de apertura en WhatsApp</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANES -->
+<section id="planes" class="py-24 px-6 bg-gray-50">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <span class="text-wsp font-semibold uppercase tracking-wide">Planes</span>
+      <h2 class="text-4xl md:text-5xl font-bold mt-3 mb-4">Elegí el plan ideal</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto text-lg">Sin sorpresas, sin contratos largos. Cancelá cuando quieras.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition">
+        <h3 class="text-xl font-bold mb-2">Básico</h3>
+        <p class="text-gray-500 mb-6">Para emprendedores</p>
+        <p class="text-5xl font-bold mb-1">$29<span class="text-lg text-gray-400">/mes</span></p>
+        <ul class="space-y-3 my-8 text-gray-600">
+          <li>✓ Bot de servicios</li>
+          <li>✓ Hasta 500 conversaciones</li>
+          <li>✓ Soporte por email</li>
+        </ul>
+        <a href="#contacto" class="block text-center border-2 border-wsp text-wsp hover:bg-wsp hover:text-white py-3 rounded-full font-bold transition">Empezar</a>
+      </div>
+      <div class="bg-wsp-deep text-white p-8 rounded-3xl shadow-2xl transform md:scale-105 relative">
+        <span class="absolute top-4 right-4 bg-yellow-300 text-wsp-deep text-xs font-bold px-3 py-1 rounded-full">MÁS ELEGIDO</span>
+        <h3 class="text-xl font-bold mb-2">Integral</h3>
+        <p class="text-white/70 mb-6">Servicios + Turnos + Ventas</p>
+        <p class="text-5xl font-bold mb-1">$79<span class="text-lg text-white/60">/mes</span></p>
+        <ul class="space-y-3 my-8">
+          <li>✓ Todas las funciones</li>
+          <li>✓ Conversaciones ilimitadas</li>
+          <li>✓ Pagos integrados</li>
+          <li>✓ Soporte prioritario 24/7</li>
+        </ul>
+        <a href="#contacto" class="block text-center bg-wsp hover:bg-yellow-300 hover:text-wsp-deep text-white py-3 rounded-full font-bold transition">Empezar ahora</a>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition">
+        <h3 class="text-xl font-bold mb-2">Empresa</h3>
+        <p class="text-gray-500 mb-6">Para grandes equipos</p>
+        <p class="text-5xl font-bold mb-1">A medida</p>
+        <ul class="space-y-3 my-8 text-gray-600">
+          <li>✓ Integración con CRM</li>
+          <li>✓ Multi-agente</li>
+          <li>✓ API personalizada</li>
+          <li>✓ Account manager</li>
+        </ul>
+        <a href="#contacto" class="block text-center border-2 border-wsp text-wsp hover:bg-wsp hover:text-white py-3 rounded-full font-bold transition">Contactar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / CONTACTO -->
+<section id="contacto" class="py-24 px-6 gradient-bg relative overflow-hidden">
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+  </div>
+  <div class="max-w-4xl mx-auto text-center text-white relative">
+    <h2 class="text-4xl md:text-5xl font-bold mb-6">¿Listo para transformar tu negocio?</h2>
+    <p class="text-xl mb-10 text-white/90">Implementamos tu bot en menos de 48hs. Probá gratis 7 días sin compromiso.</p>
+    <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 max-w-xl mx-auto">
+      <form class="space-y-4">
+        <input type="text" placeholder="Tu nombre" class="w-full px-5 py-3 rounded-full bg-white/20 placeholder-white/60 text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-yellow-300">
+        <input type="tel" placeholder="Tu WhatsApp" class="w-full px-5 py-3 rounded-full bg-white/20 placeholder-white/60 text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-yellow-300">
+        <textarea placeholder="¿Qué necesitás automatizar?" rows="3" class="w-full px-5 py-
