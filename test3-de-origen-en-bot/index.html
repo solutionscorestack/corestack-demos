@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>test3 de origen en bot | Webs Integrales</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#6366f1',
+          secondary: '#8b5cf6',
+          dark: '#0f172a'
+        },
+        fontFamily: {
+          sans: ['Inter', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  body { font-family: 'Inter', sans-serif; }
+  .gradient-bg {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+  }
+  .gradient-text {
+    background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .card-hover {
+    transition: all 0.3s ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+  }
+  .blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    z-index: 0;
+  }
+</style>
+</head>
+<body class="bg-white text-dark">
+
+<!-- Navbar -->
+<nav class="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-100">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center space-x-2">
+      <div class="w-10 h-10 gradient-bg rounded-xl flex items-center justify-center">
+        <span class="text-white font-bold text-xl">t3</span>
+      </div>
+      <span class="font-bold text-xl">test3</span>
+    </div>
+    <ul class="hidden md:flex space-x-8 text-gray-700 font-medium">
+      <li><a href="#servicios" class="hover:text-primary transition">Servicios</a></li>
+      <li><a href="#turnos" class="hover:text-primary transition">Turnos</a></li>
+      <li><a href="#tienda" class="hover:text-primary transition">Tienda</a></li>
+      <li><a href="#contacto" class="hover:text-primary transition">Contacto</a></li>
+    </ul>
+    <a href="#contacto" class="hidden md:inline-block gradient-bg text-white px-6 py-2.5 rounded-full font-semibold hover:shadow-lg hover:shadow-primary/30 transition">Empezar</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="relative pt-32 pb-20 overflow-hidden">
+  <div class="blob bg-primary w-96 h-96 -top-20 -left-20"></div>
+  <div class="blob bg-pink-400 w-96 h-96 top-40 right-0"></div>
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-6">🚀 Solución integral 360°</span>
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-black leading-tight mb-6">
+          Tu negocio <span class="gradient-text">online</span> de forma integral
+        </h1>
+        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+          Creamos webs que combinan <strong>servicios</strong>, <strong>reserva de turnos</strong> y <strong>venta online</strong> en una sola plataforma. Todo lo que tu negocio necesita.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#contacto" class="gradient-bg text-white px-8 py-4 rounded-full font-semibold text-center hover:shadow-xl hover:shadow-primary/40 transition">Solicitar demo gratis</a>
+          <a href="#servicios" class="border-2 border-gray-200 px-8 py-4 rounded-full font-semibold text-center hover:border-primary hover:text-primary transition">Ver servicios</a>
+        </div>
+        <div class="flex items-center gap-6 mt-10">
+          <div class="flex -space-x-3">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-pink-400 to-red-400 border-2 border-white"></div>
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-indigo-400 border-2 border-white"></div>
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-green-400 to-teal-400 border-2 border-white"></div>
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-yellow-400 to-orange-400 border-2 border-white"></div>
+          </div>
+          <div>
+            <div class="flex text-yellow-400 text-sm">★★★★★</div>
+            <p class="text-sm text-gray-600">+500 clientes felices</p>
+          </div>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="absolute inset-0 gradient-bg rounded-3xl blur-2xl opacity-30"></div>
+        <div class="relative bg-white rounded-3xl shadow-2xl p-8 border border-gray-100">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between p-4 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-white text-xl">📅</div>
+                <div>
+                  <p class="font-semibold">Turnos hoy</p>
+                  <p class="text-sm text-gray-500">12 reservas activas</p>
+                </div>
+              </div>
+              <span class="text-green-500 font-bold">+24%</span>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gradient-to-r from-pink-50 to-rose-50 rounded-xl">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center text-white text-xl">🛍️</div>
+                <div>
+                  <p class="font-semibold">Ventas del mes</p>
+                  <p class="text-sm text-gray-500">$48.200</p>
+                </div>
+              </div>
+              <span class="text-green-500 font-bold">+18%</span>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center text-white text-xl">⚙️</div>
+                <div>
+                  <p class="font-semibold">Servicios</p>
+                  <p class="text-sm text-gray-500">8 activos</p>
+                </div>
+              </div>
+              <span class="text-green-500 font-bold">100%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Logos / Stats -->
+<section class="py-12 bg-dark text-white">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div>
+        <p class="text-4xl font-black gradient-text">500+</p>
+        <p class="text-gray-400 mt-2">Webs creadas</p>
+      </div>
+      <div>
+        <p class="text-4xl font-black gradient-text">98%</p>
+        <p class="text-gray-400 mt-2">Satisfacción</p>
+      </div>
+      <div>
+        <p class="text-4xl font-black gradient-text">24/7</p>
+        <p class="text-gray-400 mt-2">Soporte</p>
+      </div>
+      <div>
+        <p class="text-4xl font-black gradient-text">10x</p>
+        <p class="text-gray-400 mt-2">Más conversiones</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Servicios -->
+<section id="servicios" class="py-24">
+  <div class="container mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <span class="text-primary font-semibold">NUESTROS SERVICIOS</span>
+      <h2 class="text-4xl md:text-5xl font-black mt-2 mb-4">Todo en una sola web</h2>
+      <p class="text-gray-600 text-lg">Una solución integral que reúne las tres áreas clave de tu negocio digital.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="card-hover bg-white p-8 rounded-3xl border border-gray-100 shadow-sm">
+        <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center text-3xl mb-6">⚙️</div>
+        <h3 class="text-2xl font-bold mb-3">Servicios</h3>
+        <p class="text-gray-600 mb-6">Mostrá tus servicios profesionales con descripciones, precios y galerías que enamoren a tus clientes.</p>
+        <ul class="space-y-2 text-gray-700">
+          <li class="flex items-center gap-2">✅ Catálogo profesional</li>
+          <li class="flex items-center gap-2">✅ Precios dinámicos</li>
+          <li class="flex items-center gap-2">✅ SEO optimizado</li>
+        </ul>
+      </div>
+      <div class="card-hover bg-white p-8 rounded-3xl border border-gray-100 shadow-sm">
+        <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-600 rounded-2xl flex items-center justify-center text-3xl mb-6">📅</div>
+        <h3 class="text-2xl font-bold mb-3">Turnos</h3>
+        <p class="text-gray-600 mb-6">Sistema de reservas online 24/7. Tus clientes agendan solos y vos recibís confirmación al instante.</p>
+        <ul class="space-y-2 text-gray-700">
+          <li class="flex items-center gap-2">✅ Calendario integrado</li>
+          <li class="flex items-center gap-2">✅ Recordatorios automáticos</li>
+          <li class="flex items-center gap-2">✅ Pagos online opcional</li>
+        </ul>
+      </div>
+      <div class="card-hover bg-white p-8 rounded-3xl border border-gray-100 shadow-sm">
+        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center text-3xl mb-6">🛍️</div>
+        <h3 class="text-2xl font-bold mb-3">Venta Online</h3>
+        <p class="text-gray-600 mb-6">Tienda completa con carrito, medios de pago y envíos. Vendé tus productos sin comisiones extra.</p>
+        <ul class="space-y-2 text-gray-700">
+          <li class="flex items-center gap-2">✅ Carrito de compras</li>
+          <li class="flex items-center gap-2">✅ Mercado Pago / Stripe</li>
+          <li class="flex items-center gap-2">✅ Gestión de stock</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Turnos Section -->
+<section id="turnos" class="py-24 bg-gradient-to-br from-indigo-50 via-white to-pink-50">
+  <div class="container mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="text-primary font-semibold">SISTEMA DE TURNOS</span>
+        <h2 class="text-4xl md:text-5xl font-black mt-2 mb-6">Reservas automáticas, sin estrés</h2>
+        <p class="text-gray-600 text-lg mb-8">Olvidate de coordinar por WhatsApp. Tus clientes ven tu disponibilidad y reservan en segundos. Vos te enfocás en lo importante.</p>
+        <div class="space-y-4">
+          <div class="flex gap-4">
+            <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center font-bold">1</div>
+            <div>
+              <h4 class="font-bold">El cliente elige</h4>
+              <p class="text-gray-600">Selecciona servicio, día y horario disponible.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center font-bold">2</div>
+            <div>
+              <h4 class="font-bold">Confirmación automática</h4>
+              <p class="text-gray-600">Email y WhatsApp con todos los detalles.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center font-bold">3</div>
+            <div>
+              <h4 class="font-bold">Recordatorios inteligentes</h4>
+              <p class="text-gray-600">Reduce ausencias hasta un 70%.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-3xl shadow-2xl p-8 border border-gray-100">
+        <h4 class="font-bold text-lg mb-4">Reservar turno</h4>
+        <div class="grid grid-cols-7 gap-2 mb-6 text-center text-sm">
+          <div class="text-gray-400">L</div><div class="text-gray-400">M</div><div class="text-gray-400">M</div><div class="text-gray-400">J</div><div class="text-gray-400">V</div><div class="text-gray-400">S</div><div class="text-gray-400">D</div>
+          <div class="p-2 rounded-lg hover:bg-gray-100">1</div>
+          <div class="p-2 rounded-lg hover:bg-gray-100">2</div>
+          <div class="p-2 rounded-lg hover:bg-gray-100">3</div>
+          <div class="p-2 rounded-lg hover:bg-gray-100">4</div>
+          <div class="p-2 rounded-lg gradient-bg text-white font-bold">5</div>
+          <div class="p-2 rounded-lg hover:bg-gray-100">6</div>
+          <div class="p-2 rounded-lg hover:bg-gray-100">7</div>
+          <div class="p-2 rounded-lg hover:bg-gray-100">8</div>
+          <div class="p-2 rounded-lg hover:bg-gray-100">9</div>
+          <div class="p-2 rounded-lg hover:bg-gray-100">10</div>
+          <div class="p-2 rounded-lg hover:bg-gray-100">11</div>
+          <div class="p-2 rounded-lg hover:bg-gray-100">12</div>
+          <div class="p-2 rounded-lg hover:bg-gray-100">13</div>
+          <div class="p-2 rounded-lg hover:bg-gray-100">14</div>
+        </div>
+        <h4 class="font-bold mb-3">Horarios disponibles</h4>
+        <div class="grid grid-cols-3 gap-2">
+          <button class="border border-gray-200 rounded-lg py-2 hover:border-primary hover:text-primary text-sm">09:00</button>
+          <button class="gradient-bg text-white rounded-lg py-2 text-sm font-semibold">10:30</button>
+          <button class="border border-gray-200 rounded-lg py-2 hover:border-primary hover:text-primary text-sm">12:00</button>
+          <button class="border border-gray-200 rounded-lg py-2 hover:border-primary hover:text-primary text-sm">14:00</button>
+          <button class="border border-gray-200 rounded-lg py-2 hover:border-primary hover:text-primary text-sm">15:30</button>
+          <button class="border border-gray-200 rounded-lg py-2 hover:border-primary hover:text-primary text-sm">17:00</button>
+        </div>
+        <button class="w-full mt-6 gradient-bg text-white py-3 rounded-xl font-semibold">Confirmar reserva</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tienda -->
+<section id="tienda" class="py-24">
+  <div class="container mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <span class="text-primary font-semibold">TIENDA ONLINE</span>
+      <h2 class="text-4xl md:text-5xl font-black mt-2 mb-4">Vendé sin límites</h2>
+      <p class="text-gray-600 text-lg">Tu propia tienda profesional, sin pagar comisiones a marketplaces.</p>
+    </div>
+    <div class="grid md:grid-cols-4 gap-6">
+      <div class="card-hover bg-white rounded-2xl border border-gray-100 overflow-hidden">
+        <div class="h-48 bg-gradient-to-br from-pink-300 to-rose-400 flex items-center justify-center text-6xl">🎨</div>
+        <div class="p-5">
+          <h4 class="font-bold mb-1">Pack Diseño</h4>
+          <p class="text-sm text-gray-500 mb-3">Identidad visual completa</p>
+          <div class="flex justify-between items-center">
+            <span class="font-bold text-xl">$120</span>
+            <button class="gradient-bg text-white px-4 py-1.5 rounded-full text-sm">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-hover bg-white rounded-2xl border border-gray-100 overflow-hidden">
+        <div class="h-48 bg-gradient-to-br from-indigo-300 to-purple-400 flex items-center justify-center text-6xl">💻</div>
+        <div class="p-5">
+          <h4 class="font-bold mb-1">Web Premium</h4>
+          <p class="text-sm text-gray-500 mb-3">Plantilla profesional</p>
+          <div class="flex justify-between items-center">
+            <span class="font-bold text-xl">$250</span>
+            <button class="gradient-bg text-white px-4 py-1.5 rounded-full text-sm">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-hover bg-white rounded-2xl border border-gray-100 overflow-hidden">
+        <div class="h-48 bg-gradient-to-br from-blue-300 to-cyan-400 flex items-center justify-center text-6xl">📱</div>
+        <div class="p-5">
+          <h4 class="font-bold mb-1">App Móvil</h4>
+          <p class="text-sm text-gray-500 mb-3">iOS + Android</p>
+          <div class="flex justify-between items-center">
+            <span class="font-bold text-xl">$480</span>
+            <button class="gradient-bg text-white px-4 py-1.5 rounded-full text-sm">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-hover bg-white rounded-2xl border border-gray-100 overflow-hidden">
+        <div class="h-48 bg-gradient-to-br from-green-300 to-teal-400 flex items-center justify-center text-6xl">🚀</div>
+        <div class="p-5">
+          <h4 class="font-bold mb-1">SEO Boost</h4>
+          <p class="text-sm text-gray-500 mb-3">Posicionamiento</p>
+          <div class="flex justify-between items-center">
+            <span class="font-bold text-xl">$90</span>
+            <button class="gradient-bg text-white px-4 py-1.5 rounded-full text-sm">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonios -->
+<section class="py-24 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <span class="text-primary font-semibold">TESTIMONIOS</span>
+      <h2 class="text-4xl md:text-5xl font-black mt-2 mb-4">Lo que dicen nuestros clientes</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-2xl shadow-sm">
+        <div class="flex text-yellow-400 mb-4">★★★★★</div>
+        <p class="text-gray-700 mb-6">"Triplicamos las reservas online en 2 meses. La integración con turnos y tienda fue clave."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-pink-400 to-rose-400"></div>
+          <div>
+            <p class="font-bold">Laura Martínez</p>
+            <p class="text-sm text-gray-500">Estética & Spa</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-sm">
+        <div class="flex text-yellow-400 mb-4">★★★★★</div>
+        <p class="text-gray-700 mb-6">"Profesionalismo total. La web carga rapidísimo y los clientes la usan sin problemas."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-indigo-400"></div>
+          <div>
+            <p class="font-bold">Carlos Pereyra</p>
+            <p class="text-sm text-gray-500">Estudio Jurídico</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-sm">
+        <div class="flex text-yellow-400 mb-4">★★★★★</div>
+        <p class="text-gray-700 mb-6">"El soporte es excelente. Resuelven todo al instante y siempre tienen mejoras nuevas."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-green-400 to-teal-400"></div>
+          <div>
+            <p class="font-bold">Marina López</p>
+            <p class="text-sm text-gray-500">Tienda Artesanal</p>
+          </div>
+        </div
